@@ -1,6 +1,6 @@
 +++
 date = '2025-12-07T13:11:31+01:00'
-draft = true
+draft = false
 construction = false
 title = 'Bacterial Expression Culture'
 subtitle = ''

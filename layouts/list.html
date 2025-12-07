@@ -3,23 +3,19 @@
         <h1>🚧 Under Construction 🚧</h1>
         <h3>This page will be available soon.</h3>
     {{ else }}
-        {{ range .Sections }}
-            <h2>{{ .Title }}</h2>
-            <ul>
-                {{ range .RegularPages }}
-                    <li>
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    </li>
-                {{ end }}
-            </ul>
-        {{ end }}
         <ul>
-            {{ range .RegularPages }}
-                <li>
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </li>
-            {{ end }}
+        {{ range .Sections }}
+            <li>
+                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <ul>
+                    {{ range .Pages }}
+                        <li>
+                            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </li>
+        {{ end }}
         </ul>
-
     {{ end }}
 {{ end }}

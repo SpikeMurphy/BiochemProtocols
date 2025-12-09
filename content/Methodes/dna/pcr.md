@@ -7,7 +7,7 @@ subtitle = ''
 author = 'Spike Murphy Müller ¹'
 facility = '¹ Center for Experimental Medicine, Institute of Biochemistry and Signal Transduction, Working Group Signal Transduction in Cancer'
 version = 'Version 1.0.0'
-updated = ''
+updated = '08.12.2025'
 +++
 
 {{< infobox type="warning" title="" >}}
@@ -87,12 +87,12 @@ t<sub>e</sub> = bp/1000 × 30 sec
 
 ### Preparing the Samples and Running the Program:
 {{< infobox type="info" title="" >}}
-⚠️ Prepare a mastermix when doing multiple samples containing dsH<sub>2</sub>O, GC buffer, DMSO and dNTP. Use number of samples plus at least one for the reaction multiplyer.
+⚠️ Prepare a mastermix when doing multiple samples containing dsH<sub>2</sub>O, GC buffer, DMSO and dNTP. Use number of samples plus at least one for the mastermix volume multiplyer.
 {{< /infobox >}}
 
-1. Prepare a Masternmix:
+1. <input type="checkbox"> Prepare a Mastermix:
 
-|  | V<sub>1</sub> | Reagent | c<sub>1</sub>/m<sub>1</sub> | c<sub>2</sub>/m<sub>2</sub> |
+|  | Volume V [µL] | Reagent | c<sub>1</sub>/m<sub>1</sub> | c<sub>2</sub>/m<sub>2</sub> |
 | :-- | :-- | :-- | :-- | :-- |
 | <input type="checkbox"> | <span class="pcr" data-base="30.5">30.5</span> µL | dsH<sub>2</sub>O |  |  |
 | <input type="checkbox"> | <span class="pcr" data-base="10">10</span> µL | GC buffer | 5x | 1x |
@@ -100,9 +100,9 @@ t<sub>e</sub> = bp/1000 × 30 sec
 | <input type="checkbox"> | <span class="pcr" data-base="1">1</span> µL | dNTP mix | 10 mM | 200 µM |
 |  | = <span class="pcr" data-base="43">43</span> µL |  |  |  |
 {{< pcr-factor >}}
-2. Prepare samples with mastermix by pipetting the following volumes into a 0.5 mL PCR tube:
+2. <input type="checkbox"> Prepare samples with mastermix by pipetting the following volumes into a 0.5 mL PCR tube:
 
-|  | V<sub>1</sub> | Reagent | c<sub>1</sub>/m<sub>1</sub> | c<sub>2</sub>/m<sub>2</sub> |
+|  | Volume V [µL] | Reagent | c<sub>1</sub>/m<sub>1</sub> | c<sub>2</sub>/m<sub>2</sub> |
 | :-- | :-- | :-- | :-- | :-- |
 | <input type="checkbox"> | 43 µL  | Mastermix |  |  |
 | <input type="checkbox"> | 2.5 µL| Forward Primer | 10 µM | 0.5µM |
@@ -112,7 +112,7 @@ t<sub>e</sub> = bp/1000 × 30 sec
 |  | = 50 µL |  |  |  |  
 
 Alternatively prepare samples individually by pipetting the following volumes into a 0.5 mL PCR tube:  
-|  | V<sub>1</sub> | Reagent | c<sub>1</sub>/m<sub>1</sub> | c<sub>2</sub>/m<sub>2</sub> |
+|  | Volume V [µL] | Reagent | c<sub>1</sub>/m<sub>1</sub> | c<sub>2</sub>/m<sub>2</sub> |
 | :-- | :-- | :-- | :-- | :-- |
 | <input type="checkbox"> | 30.5 µL | dsH<sub>2</sub>O |  |  |
 | <input type="checkbox"> | 10 µL | GC buffer | 5x | 1x |
@@ -125,8 +125,9 @@ Alternatively prepare samples individually by pipetting the following volumes in
 |  | = 50 µL |  |  |  |
 
 
-2. Place the PCR tubes into the Thermocycler with maximum disance between samples.
-3. Start the PCR program.
-4. Continue with suitable protocol:
-    - [Agarose Gel Electrophoresis (AGE)]({{< relref "methodes/dna/age.md" >}})
+2. <input type="checkbox"> Place the PCR tubes into the Thermocycler with maximum disance between samples.
+3. <input type="checkbox"> Start the PCR program.
+
+### Procede with Suitable Protocol:
+- [Agarose Gel Electrophoresis (AGE)]({{< relref "methodes/dna/age.md" >}})
 {{< /tab >}}

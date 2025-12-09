@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 // normal rows → "Reagent: X µL"
                 const reagent = reagentCell.innerHTML.trim();
-                result += `<b>${reagent}</b>: ${vol} µL<br>`;
+                result += `${vol} µL <b>${reagent}</b> <br>`;
             }
         });
 

@@ -7,7 +7,9 @@
 </head>
 
 <script src="/Laboratory/js/theme_toggle.js"></script>
-<script src=/Laboratory/js/select_buffer_age.js></script>
+<script src="/Laboratory/js/age_buffer_select.js"></script>
+<script src="/Laboratory/js/age_mastermix_prep_calc.js"></script>
+<script src="/Laboratory/js/age_sample_prep_calc.js"></script>
 
 <body>
 
@@ -50,6 +52,7 @@
   <thead>
       <tr>
           <th style="text-align: left">Equipment &amp; Devices⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
           <th style="text-align: left">Specifications</th>
           <th style="text-align: left"> Location</th>
       </tr>
@@ -59,8 +62,16 @@
           <td style="text-align: left">Thermocycler</td>
           <td style="text-align: left"></td>
           <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
       </tr>
       <tr>
+          <td style="text-align: left"><a href="https://tmcalculator.neb.com/#!/main">NEB T<sub>m</sub> calculator</a></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://www.thermofisher.com/de/de/home/brands/thermo-scientific/molecular-biology/molecular-biology-learning-center/molecular-biology-resource-library/thermo-scientific-web-tools/tm-calculator.html">ThermoFisher Scientific T<sub>m</sub> calculator</a></td>
           <td style="text-align: left"></td>
           <td style="text-align: left"></td>
           <td style="text-align: left"></td>
@@ -71,35 +82,40 @@
   <thead>
       <tr>
           <th style="text-align: left">Commercial Kits⠀⠀⠀⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
           <th style="text-align: left">Specifications</th>
           <th style="text-align: left"> Location</th>
       </tr>
   </thead>
   <tbody>
-      <tr>
-          <td style="text-align: left"></td>
-          <td style="text-align: left"></td>
-          <td style="text-align: left"></td>
-      </tr>
-      <tr>
-          <td style="text-align: left"></td>
-          <td style="text-align: left"></td>
-          <td style="text-align: left"></td>
-      </tr>
   </tbody>
 </table>
 <table>
   <thead>
       <tr>
           <th style="text-align: left">Containers &amp; Consumables</th>
+          <th style="text-align: left">Amount</th>
           <th style="text-align: left">Specifications</th>
           <th style="text-align: left"> Location</th>
       </tr>
   </thead>
   <tbody>
       <tr>
+          <td style="text-align: left">pipetmans and sterile pipette tips</td>
           <td style="text-align: left"></td>
           <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">PCR reaction tubes 0.5 mL</td>
+          <td style="text-align: left">1/sample</td>
+          <td style="text-align: left">for sample preparation</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">reaction tubes 1.5 mL</td>
+          <td style="text-align: left">1/30 samples</td>
+          <td style="text-align: left">for mastermix preparation</td>
           <td style="text-align: left"></td>
       </tr>
   </tbody>
@@ -108,19 +124,34 @@
   <thead>
       <tr>
           <th style="text-align: left">Reagents &amp; Solutions⠀⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
           <th style="text-align: left">Specifications</th>
           <th style="text-align: left"> Location</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left"></td>
-          <td style="text-align: left"></td>
+          <td style="text-align: left">dsH<sub>2</sub>O</td>
+          <td style="text-align: left">61 µL/sample</td>
+          <td style="text-align: left">for mastermix preparation</td>
           <td style="text-align: left"></td>
       </tr>
       <tr>
+          <td style="text-align: left">GC buffer</td>
+          <td style="text-align: left">20 µL/sample</td>
+          <td style="text-align: left">for mastermix preparation</td>
           <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">DMSO</td>
+          <td style="text-align: left">3 µL/sample</td>
+          <td style="text-align: left">for mastermix preparation</td>
           <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>dNTPs</strong> <br> dATP, dTTP, dGTP, dCTP 10 mM each <br> dNTP mix 10 mM</td>
+          <td style="text-align: left"><br> 0.5 µL/sample each <br> 2 µL/sample</td>
+          <td style="text-align: left"><br> for mastermix preparation <br> for mastermix preparation</td>
           <td style="text-align: left"></td>
       </tr>
   </tbody>
@@ -129,18 +160,33 @@
   <thead>
       <tr>
           <th style="text-align: left">Biological Materials⠀⠀⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
           <th style="text-align: left">Specifications</th>
           <th style="text-align: left"> Location</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left"></td>
+          <td style="text-align: left">forward primer 10 µM</td>
+          <td style="text-align: left">2.5 µL/sample</td>
           <td style="text-align: left"></td>
           <td style="text-align: left"></td>
       </tr>
       <tr>
+          <td style="text-align: left">reverse primer 10 µM</td>
+          <td style="text-align: left">2.5 µL/sample</td>
           <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">DNA template with GOI 10 ng/µL</td>
+          <td style="text-align: left">1 µL/sample</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Phusion Hot Start II DNA polymerase 2 U/µL</td>
+          <td style="text-align: left">1 µL/sample</td>
           <td style="text-align: left"></td>
           <td style="text-align: left"></td>
       </tr>

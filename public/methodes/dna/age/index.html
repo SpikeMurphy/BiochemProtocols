@@ -7,7 +7,9 @@
 </head>
 
 <script src="/Laboratory/js/theme_toggle.js"></script>
-<script src=/Laboratory/js/select_buffer_age.js></script>
+<script src="/Laboratory/js/age_buffer_select.js"></script>
+<script src="/Laboratory/js/age_mastermix_prep_calc.js"></script>
+<script src="/Laboratory/js/age_sample_prep_calc.js"></script>
 
 <body>
 
@@ -328,7 +330,7 @@
       </tr>
       <tr>
           <td style="text-align: left"><input type="checkbox"></td>
-          <td style="text-align: left"><span class="age_mm" data-base="3">3</span> µL</td>
+          <td style="text-align: left"><span id="h2o-vol" class="age_mm" data-base="3">3</span> µL</td>
           <td style="text-align: left">dsH<sub>2</sub>O</td>
           <td style="text-align: left"></td>
           <td style="text-align: left"></td>
@@ -345,29 +347,25 @@
   </tbody>
 </table>
 <div class="infobox info">
-  <strong>Mastermix Calculator</strong>
+  <strong>Mastermix Preparation Calculator</strong>
   <div><div id="mastermix-calculator-anchor" style="position: relative; top: -80px; visibility: hidden;"></div>
-<p>Chosen DNA loading buffer: <span id="chosen-buffer-display">—</span></p>
 <p>
-  Well volume:
-  <select id="well-volume-2" style="width:80px;">
-    <option value="5">5 µL</option>
-    <option value="10">10 µL</option>
-    <option value="15">15 µL</option>
-    <option value="20">20 µL</option>
-    <option value="25">25 µL</option>
-    <option value="30">30 µL</option>
-    <option value="35">35 µL</option>
-    <option value="40">40 µL</option>
-    <option value="45">45 µL</option>
-    <option value="50">50 µL</option>
-  </select>
-<p>Samples:
-<input type="number" id="sample-count" value="1" min="0" style="width:60px;"></p>
-<p><button id="calc-sample-well">Calculate</button></p>
+  Number of samples:
+  <input type="number" id="sample-count" value="1" min="0" style="width:60px;">
+<p>Desired well volume:
+<select id="well-volume-2" style="width:80px;">
+<option value="5">5 µL</option>
+<option value="10">10 µL</option>
+<option value="15">15 µL</option>
+<option value="20">20 µL</option>
+<option value="25">25 µL</option>
+<option value="30">30 µL</option>
+<option value="35">35 µL</option>
+<option value="40">40 µL</option>
+<option value="45">45 µL</option>
+<option value="50">50 µL</option>
+</select></p>
 </p>
-<div id="sample-well-output"></div>
-<script src="/Laboratory/js/factor_age_mastermix.js"></script>
 </div>
 </div>
 <ol start="2">
@@ -386,21 +384,21 @@
   <tbody>
       <tr>
           <td style="text-align: left"><input type="checkbox"></td>
-          <td style="text-align: left"><span class="age_well" data-base="4">4</span> µL</td>
+          <td style="text-align: left"><span class="age_sample" data-base="4">4</span> µL</td>
           <td style="text-align: left">DNA loading buffer mastermix</td>
           <td style="text-align: left"></td>
           <td style="text-align: left">1x</td>
       </tr>
       <tr>
           <td style="text-align: left"><input type="checkbox"></td>
-          <td style="text-align: left"><span class="age_well" data-base="1">1</span> µL</td>
+          <td style="text-align: left"><span class="age_sample" data-base="1">1</span> µL</td>
           <td style="text-align: left">DNA sample</td>
           <td style="text-align: left">minimum 20 ng/µL</td>
           <td style="text-align: left">minimum 20 ng</td>
       </tr>
       <tr>
           <td style="text-align: left"><input type="checkbox"></td>
-          <td style="text-align: left">= <span class="age_well" data-base="5">5</span> µL</td>
+          <td style="text-align: left">= <span class="age_sample" data-base="5">5</span> µL</td>
           <td style="text-align: left"></td>
           <td style="text-align: left"></td>
           <td style="text-align: left"></td>
@@ -410,7 +408,7 @@
 <div class="infobox info">
   <strong>Sample Preparation Calculator</strong>
   <div><p>
-  Select desired well volume:
+  Desired well volume::
   <select id="well-volume" style="width:80px;">
     <option value="5">5 µL</option>
     <option value="10">10 µL</option>
@@ -423,10 +421,9 @@
     <option value="45">45 µL</option>
     <option value="50">50 µL</option>
   </select>
-<p><button id="calc-well">Calculate</button></p>
 </p>
-<div id="well-generated-output"></div>
-<script src="/Laboratory/js/factor_age_well.js"></script>
+<p>default 6-well comb well volume: TBD<br>
+default 12-well comb well volume: TBD</p>
 </div>
 </div>
 <div class="infobox info">
@@ -480,9 +477,7 @@
 </ul>
 
 </div>
-<!--
-to-do:
-make buffer volume and factor selectable between 5x 6x and 10x and change Volume accordingly. Variable Volume output should still be usable for the Mastermix Calculator.
+
         <div style="text-align: right;">
         <br>
         09.12.2025 Version 1.0.1

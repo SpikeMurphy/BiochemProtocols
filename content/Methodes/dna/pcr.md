@@ -17,29 +17,34 @@ updated = '08.12.2025'
 
 {{< tab >}}
 ## Materials
-| Equipment & Devices⠀⠀⠀ | Specifications| Location |
-| :-- | :-- | :-- |
-| Thermocycler |  |  |
-|  |  |  |
+| Equipment & Devices⠀⠀⠀  | Amount| Specifications| Location |
+| :-- | :-- | :-- | :-- |
+| Thermocycler |  |  |  |
+| [NEB T<sub>m</sub> calculator](https://tmcalculator.neb.com/#!/main) |  |  |  |
+| [ThermoFisher Scientific T<sub>m</sub> calculator](https://www.thermofisher.com/de/de/home/brands/thermo-scientific/molecular-biology/molecular-biology-learning-center/molecular-biology-resource-library/thermo-scientific-web-tools/tm-calculator.html) |  |  |  |
 
-| Commercial Kits⠀⠀⠀⠀⠀⠀ | Specifications| Location |
-| :-- | :-- | :-- |
-|  |  |  |
-|  |  |  |
+| Commercial Kits⠀⠀⠀⠀⠀⠀  | Amount| Specifications| Location |
+| :-- | :-- | :-- | :-- |
 
-| Containers & Consumables | Specifications| Location |
-| :-- | :-- | :-- |
-|  |  |  |
+| Containers & Consumables  | Amount| Specifications| Location |
+| :-- | :-- | :-- | :-- |
+| pipetmans and sterile pipette tips |  |  |  |  |
+| PCR reaction tubes 0.5 mL | 1/sample | for sample preparation |  |
+| reaction tubes 1.5 mL | 1/30 samples | for mastermix preparation |  |
 
-| Reagents & Solutions⠀⠀⠀⠀ | Specifications| Location |
-| :-- | :-- | :-- |
-|  |  |  |
-|  |  |  |
+| Reagents & Solutions⠀⠀⠀⠀  | Amount| Specifications| Location |
+| :-- | :-- | :-- | :-- |
+| dsH<sub>2</sub>O | 61 µL/sample | for mastermix preparation |  |
+| GC buffer | 20 µL/sample | for mastermix preparation |  |
+| DMSO | 3 µL/sample | for mastermix preparation |  |
+| **dNTPs** <br> dATP, dTTP, dGTP, dCTP 10 mM each <br> dNTP mix 10 mM | <br> 0.5 µL/sample each <br> 2 µL/sample | <br> for mastermix preparation <br> for mastermix preparation |  |
 
-| Biological Materials⠀⠀⠀⠀⠀ | Specifications| Location |
-| :-- | :-- | :-- |
-|  |  |  |
-|  |  |  |
+| Biological Materials⠀⠀⠀⠀⠀  | Amount| Specifications| Location |
+| :-- | :-- | :-- | :-- |
+| forward primer 10 µM | 2.5 µL/sample |  |  |
+| reverse primer 10 µM | 2.5 µL/sample |  |  |
+| DNA template with GOI 10 ng/µL | 1 µL/sample |  |  |
+| Phusion Hot Start II DNA polymerase 2 U/µL | 1 µL/sample |  |  |
 
 {{< /tab >}}
 

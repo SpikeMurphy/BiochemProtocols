@@ -42,7 +42,7 @@ updated = '08.12.2025'
 
 | Containers & Consumables | Amount | Specifications| Location |
 | :-- | :-- | :-- | :-- |
-|  |  |  |  |
+| pipetmans and sterile pipette tips |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |

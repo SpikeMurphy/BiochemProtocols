@@ -1,0 +1,23 @@
+{{- $now := now -}}
+{{- $cutoff := $now.AddDate 0 0 -7 -}}
+
+{{- $recent := where .Site.RegularPages "Date" "gt" $cutoff -}}
+
+{{- $methodes := where $recent "Section" "methodes" -}}
+{{- $recipes := where $recent "Section" "recipes" -}}
+
+{{- $methodes = sort $methodes "Date" "desc" -}}
+{{- $recipes = sort $recipes "Date" "desc" -}}
+
+{{/* -------- RECIPES -------- */}}
+{{- if gt (len $recipes) 0 }}
+<ul>
+  {{- range $recipes }}
+    <li>
+      {{- if .Params.construction }}🚧  {{ else }}✅  {{ end -}}
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <small>({{ .Date.Format "2006-01-02 15:04" }})</small>
+    </li>
+  {{- end }}
+</ul>
+{{- end }}

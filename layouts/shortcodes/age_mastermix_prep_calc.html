@@ -1,6 +1,9 @@
 <p>
-  Select desired well volume:
-  <select id="well-volume" style="width:80px;">
+  Number of samples:
+  <input type="number" id="sample-count" value="1" min="0" style="width:60px;">
+  
+  Desired well volume:
+  <select id="well-volume-2" style="width:80px;">
     <option value="5">5 µL</option>
     <option value="10">10 µL</option>
     <option value="15">15 µL</option>
@@ -12,10 +15,4 @@
     <option value="45">45 µL</option>
     <option value="50">50 µL</option>
   </select>
-
-  <button id="calc-well">Calculate</button>
 </p>
-
-<div id="well-generated-output"></div>
-
-<script src="{{ "js/factor_age_well.js" | relURL }}"></script>

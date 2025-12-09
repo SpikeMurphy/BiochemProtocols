@@ -106,27 +106,27 @@ todo = true
 
 |  | Volume V [µL] | Reagent | Concentration c<sub>1</sub> [ng/µL] <br> Mass m<sub>1</sub> [ng] | Concentration c<sub>2</sub> [ng/µL] <br> Mass m<sub>2</sub> [ng] |
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| <input type="checkbox"> | <span  id="buffer-vol" class="age_mm" data-base="1">1</span> µL | DNA loading buffer | {{< buffer_age-select target="buffer-vol" >}} |  |
-| <input type="checkbox"> | <span class="age_mm" data-base="3">3</span> µL | dsH<sub>2</sub>O |  |  |
+| <input type="checkbox"> | <span  id="buffer-vol" class="age_mm" data-base="1">1</span> µL | DNA loading buffer | {{< age_buffer_select target="buffer-vol" >}} |  |
+| <input type="checkbox"> | <span id="h2o-vol" class="age_mm" data-base="3">3</span> µL | dsH<sub>2</sub>O |  |  |
 | <input type="checkbox"> | = <span class="age_mm" data-base="4">4</span> µL |  |  |  |  
 
-{{< infobox type="info" title="Mastermix Calculator" >}}
+{{< infobox type="info" title="Mastermix Preparation Calculator" >}}
 <div id="mastermix-calculator-anchor" style="position: relative; top: -80px; visibility: hidden;"></div>
-
-Chosen DNA loading buffer: <span id="chosen-buffer-display">—</span>
-{{< age_mastermix-factor >}}
+{{< age_mastermix_prep_calc >}}
 {{< /infobox >}}
 
 2.	<input type="checkbox"> Mix the DNA and the loading buffer to a final volume according to the capacity of the wells:
 
 |  | Volume V [µL] | Reagent | Concentration c<sub>1</sub> [ng/µL] <br> Mass m<sub>1</sub> [ng] | Concentration c<sub>2</sub> [ng/µL] <br> Mass m<sub>2</sub> [ng] |
 | :-- | :-- | :-- | :-- | :-- |
-| <input type="checkbox"> | <span class="age_well" data-base="4">4</span> µL | DNA loading buffer mastermix |  | 1x |
-| <input type="checkbox"> | <span class="age_well" data-base="1">1</span> µL | DNA sample | minimum 20 ng/µL | minimum 20 ng |
-| <input type="checkbox"> | = <span class="age_well" data-base="5">5</span> µL |  |  |  |
+| <input type="checkbox"> | <span class="age_sample" data-base="4">4</span> µL | DNA loading buffer mastermix |  | 1x |
+| <input type="checkbox"> | <span class="age_sample" data-base="1">1</span> µL | DNA sample | minimum 20 ng/µL | minimum 20 ng |
+| <input type="checkbox"> | = <span class="age_sample" data-base="5">5</span> µL |  |  |  |
 
 {{< infobox type="info" title="Sample Preparation Calculator" >}}
-{{< age_well-factor >}}
+{{< age_sample_prep_calc >}}
+default 6-well comb well volume: TBD  
+default 12-well comb well volume: TBD  
 {{< /infobox >}}
 
 {{< infobox type="info" title="" >}}
@@ -154,9 +154,3 @@ DNA is negatively charged and runs from the cathode (-) to the anode (+).
 - [Imaging following agarose gel electrophoresis (AGE)]({{< relref "methodes/dna/imaging_age.md" >}})
 - [Purification of DNA from agarose gel electrophoresis (AGE)]({{< relref "methodes/dna/purification_age.md" >}})
 {{< /tab >}}
-
-
-
-<!--
-to-do:
-make buffer volume and factor selectable between 5x 6x and 10x and change Volume accordingly. Variable Volume output should still be usable for the Mastermix Calculator.

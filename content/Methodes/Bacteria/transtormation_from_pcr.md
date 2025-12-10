@@ -2,14 +2,15 @@
 date = '2025-12-07T13:11:31+01:00'
 draft = false
 construction = false
-title = 'Bacterial Transformation'
-subtitle = 'for subsequent plate and liquid culturing for storadge, plasmid preparation or protein expression'
+title = 'Bacterial Transformation following PCR'
+subtitle = 'for subsequent plate and liquid culturing for storage, plasmid preparation or protein expression'
 author = 'Spike Murphy Müller ¹'
 facility = '¹ Center for Experimental Medicine, Institute of Biochemistry and Signal Transduction, Working Group Signal Transduction in Cancer'
-version = 'Version 1.0.1'
+version = 'Version 1.0.0'
 version_explaination = 'first: major revisions - second: minor revisions - third: revisions without changing procedure'
-updated = '20.12.2025'
+updated = '10.12.2025'
 +++
+
 
 {{< tab >}}
 ## Materials
@@ -36,7 +37,9 @@ updated = '20.12.2025'
 
 | Biological Materials⠀⠀⠀⠀⠀ | Amount | Specifications| Location |
 | :-- | :-- | :-- | :-- |
-| plasmid | 1–10 ng (e.g. 0.5–5 µL of 2 ng/µL) <br> 100-200 ng (e.g. 1-2 µL of 100 ng/µL) | for standard transformations <br> for difficult transformations |  |
+|  |  |  |  |
+| PCR product | 7.5 µL | 10 ng/µL  |  |
+| acceptor plasmid | 2.5 µL | 10 ng/µL  |  |
 | one-shot of suitable competent bacteria | 1/transformation |  |  |
 
 {{< /tab >}}
@@ -60,17 +63,47 @@ updated = '20.12.2025'
 1. <input type="checkbox"> Thaw a reaction tube of competent bacteria on ice.
 2. <input type="checkbox"> Thaw the Plasmid on ice.
 3. <input type="checkbox"> Pre-warm 1000 µL of LB medium to 37 °C.
+### Vector Generation from PRC Produkt:
+1. Prepare the mastermix:
+
+|  | Volume | Reagent | Concentration c<sub>1</sub> [ng/µL] <br> Mass m<sub>1</sub> [ng] | Concentration c<sub>2</sub> [ng/µL] <br> Mass m<sub>2</sub> [ng] |
+| :-- | :-- | :-- | :-- | :-- |
+| <input type="checkbox"> | 8.5-9.5 µL | dsH<sub>2</sub>O |  |  |
+| <input type="checkbox"> | 2.5 µL | buffer | 10x |  |
+| <input type="checkbox"> | 1 µL | ATP | 12.5 mM | 500 µM |
+| <input type="checkbox"> | 1 µL | T4 DNA ligase | 1 U/µL |  |
+| <input type="checkbox"> | 1-2µL | restriction enzyme(s) of choice |  |  |
+|  | = 15µL |  |  |  |
+
+<!-- anpassen mittels sample volume +1-->
+
+1. Prepare the reaction mix:
+
+|  | Volume | Reagent | Concentration c<sub>1</sub> [ng/µL] <br> Mass m<sub>1</sub> [ng] | Concentration c<sub>2</sub> [ng/µL] <br> Mass m<sub>2</sub> [ng] |
+| :-- | :-- | :-- | :-- | :-- |
+| <input type="checkbox"> | 15 µL | mastermix |  |  |
+| <input type="checkbox"> | 7.5 µL | PCR product | 10 ng/µL |
+| <input type="checkbox"> | 2.5 µL | acceptor vector | 10 ng/µL |  |
+|  | = 25 µL |  |  |  |
+
+3. Incubate at the optimal restriction temperature (default 37 °C) for at least 1h.
+<div style="display:flex; gap:20px; align-items:center;">
+{{< timer time="1:00:00" >}}
+{{< timer time="2:00:00" >}}
+</div>
+
 ### Transformation:
-1. <input type="checkbox"> Add 1–10 ng (up to 100-200 ng for difficult dransformations) of plasmid DNA to a one shot of 50–100 µL of competent cells.
-2. <input type="checkbox"> Mix by flicking or gentle stirring.
-3. <input type="checkbox"> Incubate on ice for 30 minutes.
+1. <input type="checkbox"> Add 10 µL of the reaction a one shot of 50–100 µL of competent cells.
+2. <input type="checkbox"> Store the residual 15 µL of the reaction mix as a backup @ 4°C for short time storage or at -20°C for longtime storage.
+3. <input type="checkbox"> Mix by flicking or gentle stirring.
+4. <input type="checkbox"> Incubate on ice for 30 minutes.
 {{< timer time="0:30:00" >}}
-4. <input type="checkbox"> Incubate in a heating block or water bath @ 42 °C for 45 to 60 seconds.
+5. <input type="checkbox"> Incubate in a heating block or water bath @ 42 °C for 45 to 60 seconds.
 {{< timer time="0:01:00" >}}
-5. <input type="checkbox"> Incubate on ice for 5 minutes.
+6. <input type="checkbox"> Incubate on ice for 5 minutes.
 {{< timer time="0:05:00" >}}
-6. <input type="checkbox"> Add 900 µL LB medium.
-7. <input type="checkbox"> Incubate on a heating block @ 37 °C and @ 250 rpm for 1 h.
+7. <input type="checkbox"> Add 900 µL LB medium.
+8. <input type="checkbox"> Incubate on a heating block @ 37 °C and @ 250 rpm for 1 h.
 {{< timer time="1:00:00" >}}
 ### Plate Preparation:
 1. <input type="checkbox"> Take two LB-agar Plates containing the appropriate antibiotic out of the fridge and let them warm up to RT.
@@ -88,5 +121,3 @@ updated = '20.12.2025'
 - 	[Bacterial Expression Culture](/content/methodes/bacteria/expression_culture.md)
 - 	[Bacterial Plasmid Preparation Culture](/content/methodes/bacteria/plasmid_prep_culture.md)
 {{< /tab >}}
-
-{{< timer time="0:00:02" >}}

@@ -144,11 +144,11 @@ DNA is negatively charged and runs from the cathode (-) to the anode (+).
 4.	<input type="checkbox"> Pipet the samples into the other wells.
 5.	<input type="checkbox"> Let the gel run at the indicated voltage below (default 80 V) for approximately 1 hour depending on the gels percentage.
 
-| Purpose | Voltage [V/cm]| Voltage for x cm |
+| Purpose | Voltage [V/cm]| Voltage for 7 cm migration distance |
 | :-- | :-- | :-- |
-| routine analyses | 5-8 V/cm |  |
-| DNA purification | 3-5 V/cm |  |
-| southern hybridisation | 1-3 V/cm |  |
+| routine analyses | 5-8 V/cm | 35-56 V |
+| DNA purification | 3-5 V/cm | 21-35 V |
+| southern hybridisation | 1-3 V/cm | 7-21 V |
 
 ### Procede with Suitable Protocol:
 - [Imaging following agarose gel electrophoresis (AGE)]({{< relref "methodes/dna/imaging_age.md" >}})

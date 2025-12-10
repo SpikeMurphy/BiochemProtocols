@@ -1,0 +1,12 @@
+{{ $time := .Get "time" }}
+
+<div class="countdown-wrapper" data-time="{{ $time }}" data-sound="{{ "sounds/timer-beep2.mp3" | relURL }}">
+    <div class="countdown-row">
+        <div class="countdown-display">{{ $time }}</div>
+        <div class="countdown-bell" data-sound="on">🔔</div>
+    </div>
+    <button class="countdown-start">Start</button>
+    <button class="countdown-reset">Reset</button>
+</div>
+
+<script src="{{ "js/timer.js" | relURL }}"></script>

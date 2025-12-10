@@ -3,11 +3,15 @@ const audioCache = {};
 document.addEventListener("DOMContentLoaded", () => {
     const timers = document.querySelectorAll(".countdown-wrapper");
 
-    // ===== WAKLOCK =====
+    // ===== WAKELOCK =====
     let wakeLock = null;
 
     async function requestWakeLock() {
-        if (!("wakeLock" in navigator)) return; 
+        if (!("wakeLock" in navigator)) {
+            console.log("WakeLock not supported");
+            return;
+        }
+
         try {
             wakeLock = await navigator.wakeLock.request("screen");
             wakeLock.addEventListener("release", () => {
@@ -19,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // WakeLock reaktivieren, wenn Tab wieder sichtbar
+    // Nach Sleep/Tab-Wechsel WakeLock neu anfordern
     document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible") {
             requestWakeLock();
@@ -28,11 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // ===== TIMER PRO INSTANZ =====
     timers.forEach(timer => {
+
+        // DOM Elemente
         const display = timer.querySelector(".countdown-display");
         const bell = timer.querySelector(".countdown-bell");
         const startBtn = timer.querySelector(".countdown-start");
         const resetBtn = timer.querySelector(".countdown-reset");
 
+        // Parameter
         const timeStr = timer.getAttribute("data-time");
 
         function parseTime(str) {
@@ -42,16 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const startSeconds = parseTime(timeStr);
 
+        // Timer Variablen
         let remaining = startSeconds;
         let elapsed = 0;
         let mode = "down";
 
         let interval = null;
 
-        // ABSOLUTE REALZEIT
-        // Zeitpunkt, zu dem wir *wirklich* gestartet haben
+        // *** Absolute Echtzeit ***
         let absoluteStart = null;
-        let previousElapsed = 0; // Zeit die bereits vergangen ist (bei Pausen wichtig)
+        let previousElapsed = 0; // für Pause/Resume wichtig
 
         // ===== SOUND =====
         const audioPath = timer.getAttribute("data-sound");
@@ -61,13 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const audio = audioCache[audioPath];
-
         audio.volume = 0.5;
-        audio.loop = true; 
+        audio.loop = true;
         let soundAllowed = true;
-
         let alarmActive = false;
 
+        // Glocke Ein/Aus
         bell.addEventListener("click", () => {
             soundAllowed = !soundAllowed;
             if (soundAllowed) {
@@ -79,13 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
+        // Alarm 15 Sekunden
         function startSoundFor15s() {
             if (!soundAllowed || alarmActive) return;
 
             alarmActive = true;
 
             audio.currentTime = 0;
-            audio.play();
+            audio.play().catch(err => {
+                console.warn("Audio play blocked:", err);
+            });
 
             const stopAt = Date.now() + 15000;
 
@@ -99,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (audio.ended) {
                     audio.currentTime = 0;
-                    audio.play();
+                    audio.play().catch(() => {});
                 }
 
                 requestAnimationFrame(tick);
@@ -122,26 +131,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 : format(elapsed);
         }
 
-        // ===== TIMER (mit echter Zeit) =====
+        // ===== TIMER-LOGIK MIT REALZEIT =====
         function startCountdown() {
             if (interval) return;
 
-            // WakeLock aktivieren – wichtig für iPad/Mac!
+            // WakeLock anfordern
             requestWakeLock();
 
-            // Falls zum ersten Mal gestartet:
+            // ERSTER START
             if (absoluteStart === null) {
                 absoluteStart = Date.now();
+            } else {
+                // FORTSETZEN NACH PAUSE / SCHLAF
+                absoluteStart = Date.now() - previousElapsed * 1000;
             }
 
-            // Falls nach Pause / Sleep fortgesetzt:
-            absoluteStart = Date.now() - (previousElapsed * 1000);
-
             interval = setInterval(() => {
-
                 const delta = Math.floor((Date.now() - absoluteStart) / 1000);
 
-                previousElapsed = delta; // merken für Pause/Fortsetzung
+                previousElapsed = delta;
 
                 if (mode === "down") {
                     remaining = startSeconds - delta;
@@ -149,22 +157,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (remaining > 0) {
                         updateDisplay();
                     } else {
+                        // Countdown fertig → Countup beginnt
                         mode = "up";
                         display.classList.add("blink");
                         startSoundFor15s();
 
                         elapsed = -remaining;
-
                         updateDisplay();
                     }
 
                 } else {
+                    // Countup
                     elapsed = delta - startSeconds;
                     updateDisplay();
                 }
             }, 200);
         }
 
+        // RESET
         function resetTimer() {
             clearInterval(interval);
             interval = null;
@@ -184,9 +194,11 @@ document.addEventListener("DOMContentLoaded", () => {
             updateDisplay();
         }
 
+        // Events
         startBtn.addEventListener("click", startCountdown);
         resetBtn.addEventListener("click", resetTimer);
 
+        // Initialanzeige
         updateDisplay();
     });
 });

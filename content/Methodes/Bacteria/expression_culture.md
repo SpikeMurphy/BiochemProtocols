@@ -1,7 +1,7 @@
 +++
 date = '2025-12-07T13:11:31+01:00'
 draft = false
-construction = true
+construction = false
 title = 'Bacterial Expression Culture'
 subtitle = ''
 author = 'Spike Murphy Müller ¹'

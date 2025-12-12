@@ -1,0 +1,72 @@
+<div class="growthcalc-wrapper">
+<div class="growthcalc">
+
+<h2>BiochemProtocols Bacterial Growth Time Calculator</h2>
+
+<!-- Current Time Button -->
+<button class="time-btn" onclick="fillStartTime()">Use Current Time</button> <button class="time-btn" onclick="calcGrowth()">Calculate</button>
+
+<table class="growth-table">
+<thead>
+<tr><th>Time</th><th>OD600</th><th>Doubling Time (min)</th></tr>
+</thead>
+<tbody id="gcRows">
+
+<!-- ROW 1 -->
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h0" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m0" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od0" type="number" step="0.001" value="0.000" readonly></td>
+  <td><input class="gc-dt" id="gc-dt0" type="number" step="0.1" value="20"></td>
+</tr>
+
+<!-- ROW 2 -->
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h1" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m1" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od1" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt1"></span></td>
+</tr>
+
+<!-- ROWS 3–12 -->
+{{ range seq 2 11 }}
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h{{ . }}" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m{{ . }}" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od{{ . }}" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt{{ . }}"></span></td>
+</tr>
+{{ end }}
+
+
+</tbody>
+</table>
+
+<h3>Projected Times</h3>
+<ul class="proj-list">
+  <li><strong>OD<sub>600</sub> = 0.400:</strong> <span id="proj04">–</span></li>
+  <li><strong>OD<sub>600</sub> = 0.600:</strong> <span id="proj06">–</span></li>
+  <li><strong>OD<sub>600</sub> = 0.800:</strong> <span id="proj08">–</span></li>
+  <li>
+    <input id="projCustomOD" type="number" step="0.001" placeholder="Custom OD">
+    <span id="projCustom">–</span>
+  </li>
+</ul>
+
+</div>
+</div>

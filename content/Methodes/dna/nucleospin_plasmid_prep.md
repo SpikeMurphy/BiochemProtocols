@@ -16,7 +16,7 @@ updated = ''
 | Equipment & Devices⠀⠀⠀ | Amount | Specifications| Location |
 | :-- | :-- | :-- | :-- |
 | heating block |  |  |  |
-| centrifuge |  |  |  |
+| centrifuge |  | microfuge for 1.5 mL tubes @ 11,000 g |  |
 |  |  |  |  |
 |  |  |  |  |
 
@@ -27,7 +27,7 @@ updated = ''
 | Containers & Consumables | Amount | Specifications| Location |
 | :-- | :-- | :-- | :-- |
 | pipetmans and sterile pipette tips |  |  |  |
-| reation tubes 1.5 mL | 2/prep <br> 1/50 preps |  |  |
+| reation tubes 1.5 mL | 2/prep <br> 1/50 preps | for pelleting bacteria <br> for pre-heating buffer AE |  |
 |  |  |  |  |
 |  |  |  |  |
 
@@ -52,27 +52,27 @@ updated = ''
 {{< timer time="0:00:30" >}}
 
 3.	<input type="checkbox"> Discard supernatant.
-1.	<input type="checkbox"> Transfer 1000 µL of the culture into a the same 1.5 mL reaction tube.
-2.	<input type="checkbox"> Pellet bacteria @ 11,000 g for 30 seconds.
+4.	<input type="checkbox"> Transfer 1000 µL of the culture into a the same 1.5 mL reaction tube.
+5.	<input type="checkbox"> Pellet bacteria @ 11,000 g for 30 seconds.
 {{< timer time="0:00:30" >}}
 
-3.	<input type="checkbox"> Discard supernatant.
-1.	<input type="checkbox"> Transfer 1000 µL of the culture into a the same 1.5 mL reaction tube.
-2.	<input type="checkbox"> Pellet bacteria @ 11,000 g for 30 seconds.
+6.	<input type="checkbox"> Discard supernatant.
+7.	<input type="checkbox"> Transfer 1000 µL of the culture into a the same 1.5 mL reaction tube.
+8.	<input type="checkbox"> Pellet bacteria @ 11,000 g for 30 seconds.
 {{< timer time="0:00:30" >}}
 
-3.	<input type="checkbox"> Discard supernatant.
-1.	<input type="checkbox"> Transfer 1000 µL of the culture into a the same 1.5 mL reaction tube.
-2.	<input type="checkbox"> Pellet bacteria @ 11,000 g for 30 seconds.
+9.	<input type="checkbox"> Discard supernatant.
+10.	<input type="checkbox"> Transfer 1000 µL of the culture into a the same 1.5 mL reaction tube.
+11.	<input type="checkbox"> Pellet bacteria @ 11,000 g for 30 seconds.
 {{< timer time="0:00:30" >}}
 
-3.	<input type="checkbox"> Discard supernatant.
-1.	<input type="checkbox"> Transfer 1000 µL of the culture into a the same 1.5 mL reaction tube.
-2.	<input type="checkbox"> Pellet bacteria @ 11,000 g for 30 seconds.
+12.	<input type="checkbox"> Discard supernatant.
+13.	<input type="checkbox"> Transfer 1000 µL of the culture into a the same 1.5 mL reaction tube.
+14.	<input type="checkbox"> Pellet bacteria @ 11,000 g for 30 seconds.
 {{< timer time="0:00:30" >}}
 
-3.	<input type="checkbox"> Discard supernatant.
-5.	<input type="checkbox"> Remove all access medium with a 100 µL pipette.
+15.	<input type="checkbox"> Discard supernatant.
+16.	<input type="checkbox"> Remove all access medium with a 100 µL pipette.
 ### Cell Lysis:
 1.	<input type="checkbox"> Add 250 µL of Buffer A1 to the pellet.
 2.	<input type="checkbox"> Resuspend the pellet completely by pipetting up and down and/or vortexing.
@@ -88,10 +88,11 @@ updated = ''
 
 ### Loading the Column:
 1.	<input type="checkbox"> Place a NucleoSpin Column onto a 2 mL collection tube.
-2.	<input type="checkbox"> Add the supernatant onto the column membrane.
+2.	<input type="checkbox"> Add the supernatant (up to 700 µL) onto the column membrane.
 3.	<input type="checkbox"> Centrifuge @ 11,000 g for 60 seconds.
 {{< timer time="0:01:00" >}}
 
+4.	<input type="checkbox"> Discard the flowthrough.
 5.	<input type="checkbox"> Add 500 µL of Buffer AW to the column membrane.
 6.	<input type="checkbox"> Centrifuge @ 11,000 g for 60 seconds.
 {{< timer time="0:01:00" >}}
@@ -106,29 +107,38 @@ updated = ''
 {{< timer time="0:02:00" >}}
 
 12.	<input type="checkbox"> Discard the collection tube and place the collum onto a fresh 1.5 mL reaction tube.
-13.	<input type="checkbox"> Add 25µL of pre-heated buffer AE (elution buffer) to the column membrane.
-14.	<input type="checkbox"> Close the lid and incubate for 5 minutes @ 70 °C.
-15.	<input type="checkbox"> Centrifuge @ 50 g (or the lowest force possible) for 60 seconds.
+12.	<input type="checkbox"> Optionally incubate the column @ 70 °C for 2 minutes to remove all residual ethanole.
+{{< timer time="0:02:00" >}}
+
+### Eluting the DNA:
+1. <input type="checkbox"> Add 25µL of pre-heated buffer AE (elution buffer) to the column membrane.
+2. <input type="checkbox"> Close the lid and incubate for 5 minutes @ RT.
+{{< infobox type="info" title="" >}}
+⚠️ Optionally, incubate at 70 °C for 5 minutes instead. Note that this may reduce the final volume but can increase the concentration and overall DNA yield.
+{{< /infobox >}}
+{{< timer time="0:05:00" >}}
+
+3. <input type="checkbox"> Centrifuge @ 50 g (or the lowest force possible) for 60 seconds.
 {{< timer time="0:01:00" >}}
 
-16.	<input type="checkbox"> Centrifuge @ 11,000 g for 60 seconds.
+4. <input type="checkbox"> Centrifuge @ 11,000 g for 60 seconds.
 {{< timer time="0:01:00" >}}
 
 {{< infobox type="info" title="" >}}
 ⚠️ You can do an additional elution to obtain more overall DNA mass. If concentration is crutial, use another reaction tube for the additional elution.
 
-1.	<input type="checkbox"> Optionally place the column on another reaction tube.
-2.	<input type="checkbox"> Add 10-25µL of pre-heated buffer AE (elution buffer) to the column membrane.
-3.	<input type="checkbox"> Close the lid and incubate for 5 minutes @ 70 °C.
-4.	<input type="checkbox"> Centrifuge @ 50 g (or the lowest force possible) for 60 seconds.
+1. <input type="checkbox"> Optionally place the column on another reaction tube.
+2. <input type="checkbox"> Add 10-25µL of pre-heated buffer AE (elution buffer) to the column membrane.
+3. <input type="checkbox"> Close the lid and incubate for 5 minutes @ 70 °C.
+4. <input type="checkbox"> Centrifuge @ 50 g (or the lowest force possible) for 60 seconds.
 {{< timer time="0:01:00" >}}
 
-16.	<input type="checkbox"> Centrifuge @ 11,000 g for 60 seconds.
+5. <input type="checkbox"> Centrifuge @ 11,000 g for 60 seconds.
 {{< timer time="0:01:00" >}}
-
 {{< /infobox >}}
 
-- Nano Drop DNA concentration determination.
+5. <input type="checkbox"> Discard the collumn and store the eluate @ -20 °C for long lime storage.
 
 ### Procede with Suitable Protocol:
+- [Nano Drop DNA concentration determination]().
 {{< /tab >}}

@@ -13,8 +13,10 @@
 <script src="/Laboratory/js/pcr_mastermix_prep_calc.js"></script>
 <script src="/Laboratory/js/age_following_pcr_buffer.js"></script>
 <script src="/Laboratory/js/timer.js"></script>
+<script src="/Laboratory/js/current_time_display.js"></script>
 <script src="/Laboratory/js/transformation_from_pcr_mastermix_prep_calc.js"></script>
 <script src="/Laboratory/js/transformation_buffer_10x_PIPES_alternative.js"></script>
+<script src="/Laboratory/js/bacterial_growth_calc.js"></script>
 
 
 <script src="/Laboratory/js/access.js"></script>
@@ -54,8 +56,333 @@
 
             
     
-        <h1>🚧 Under Construction 🚧</h1>
-        <h3>This page will be available soon.</h3>
+        <div class="tab">
+  <h2 id="materials">Materials</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Equipment &amp; Devices⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
+          <th style="text-align: left">Specifications</th>
+          <th style="text-align: left"> Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">shaker incubator</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">photometer</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">for measuring OD<sub>600</sub></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Commercial Kits⠀⠀⠀⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
+          <th style="text-align: left">Specifications</th>
+          <th style="text-align: left"> Location</th>
+      </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Containers &amp; Consumables</th>
+          <th style="text-align: left">Amount</th>
+          <th style="text-align: left">Specifications</th>
+          <th style="text-align: left"> Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">pipetmans and sterile pipette tips</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">pipetting aid and serological pipette</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">photometer cuvette</td>
+          <td style="text-align: left">1/culture</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">liquid culture tubes or sterile falcon tubes 15 mL</td>
+          <td style="text-align: left">1/culture</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">sterile reaction tube</td>
+          <td style="text-align: left">1</td>
+          <td style="text-align: left">for antibiotic aliquot</td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Reagents &amp; Solutions⠀⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
+          <th style="text-align: left">Specifications</th>
+          <th style="text-align: left"> Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Luria-Bertani liquid medium</td>
+          <td style="text-align: left">6 mL/culture</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">suitable antibiotic</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">stock solution, tpically 1000x</td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Biological Materials⠀⠀⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
+          <th style="text-align: left">Specifications</th>
+          <th style="text-align: left"> Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">LB agar plate with transformed bacteria</td>
+          <td style="text-align: left">1/plasmid</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+
+</div>
+<div class="tab">
+  <h2 id="procedure">Procedure:</h2>
+<h3 id="preparation">Preparation:</h3>
+<ol>
+<li><input type="checkbox"> <a href="/Laboratory/methodes/bacteria/transformation/">Transform a suitable strain of bacteria and plate transformed bacteria on a LB-agar Plate containing appropriate selection markers (Antibiotic, X-Gal).</a></li>
+<li><input type="checkbox"> Prepare 6 mL LB-medium per clone.</li>
+</ol>
+<h3 id="culture">Culture:</h3>
+<div class="infobox info">
+  <strong></strong>
+  <div>⚠️ To reduce risk of contamination, all subsequent steps can be carried out under laminar airflow.</div>
+</div>
+<ol>
+<li><input type="checkbox"> Transfer 1 mL of the 6 mL LB medium into a photometer cuvette for the zero value.</li>
+<li><input type="checkbox"> Transfer 5 mL of LB-medium into the sterile 15 mL falcon tube or liquid culturing tube.</li>
+<li><input type="checkbox"> Supplement the 5 mL of LB-medium with a suitable antibiotic.</li>
+</ol>
+<div class="infobox warning">
+  <strong></strong>
+  <div>❗️ To minimize exposure to microorganisms, all subsequent steps should be carried out under laminar airflow.</div>
+</div>
+<ol start="3">
+<li><input type="checkbox"> Pick a suitable clone with a pipette tip.</li>
+<li><input type="checkbox"> Optionally streak pipette tip over fresh plate as a backup.</li>
+<li><input type="checkbox"> Drop the pipette tip into the prepared medium.</li>
+<li><input type="checkbox"> Incubate the culture @ 37 °C and shaking @ 250 rpm for approximately 2–4 h until an OD<sub>600</sub> ~ 0.4–0.8 (best 0.6) is reached or incubate @ 30 °C and shaking @ 250 rpm overnight.</li>
+</ol>
+<div style="display:flex; gap:20px; align-items:center;">
+<div class="countdown-wrapper" data-time="2:00:00" data-sound="/Laboratory/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">2:00:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<div class="countdown-wrapper" data-time="3:00:00" data-sound="/Laboratory/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">3:00:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<div class="countdown-wrapper" data-time="4:00:00" data-sound="/Laboratory/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">4:00:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+</div>
+<ol start="7">
+<li><input type="checkbox"> Document the start time and refer to <a href="">BiochemProtocols bacterial growth calculator</a>.</li>
+</ol>
+<p><button class="time-btn" id="showTimeBtn">Current Time</button>
+<span class="time-display" id="currentTime"></span></p>
+<div class="growthcalc-wrapper">
+<div class="growthcalc">
+<h2>BiochemProtocols Bacterial Growth Time Calculator</h2>
+<p><button class="time-btn" onclick="fillStartTime()">Use Current Time</button> <button class="time-btn" onclick="calcGrowth()">Calculate</button></p>
+<table class="growth-table">
+<thead>
+<tr><th>Time</th><th>OD600</th><th>Doubling Time (min)</th></tr>
+</thead>
+<tbody id="gcRows">
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h0" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m0" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od0" type="number" step="0.001" value="0.000" readonly></td>
+  <td><input class="gc-dt" id="gc-dt0" type="number" step="0.1" value="20"></td>
+</tr>
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h1" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m1" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od1" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt1"></span></td>
+</tr>
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h2" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m2" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od2" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt2"></span></td>
+</tr>
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h3" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m3" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od3" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt3"></span></td>
+</tr>
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h4" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m4" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od4" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt4"></span></td>
+</tr>
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h5" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m5" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od5" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt5"></span></td>
+</tr>
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h6" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m6" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od6" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt6"></span></td>
+</tr>
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h7" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m7" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od7" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt7"></span></td>
+</tr>
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h8" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m8" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od8" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt8"></span></td>
+</tr>
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h9" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m9" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od9" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt9"></span></td>
+</tr>
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h10" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m10" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od10" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt10"></span></td>
+</tr>
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input class="gc-hh" id="gc-h11" type="number" min="0" max="23" placeholder="HH">
+      <span class="gc-colon">:</span>
+      <input class="gc-mm" id="gc-m11" type="number" min="0" max="59" placeholder="MM">
+    </div>
+  </td>
+  <td><input class="gc-od" id="gc-od11" type="number" step="0.001"></td>
+  <td><span class="gc-dt-out" id="gc-dt11"></span></td>
+</tr>
+</tbody>
+</table>
+<h3>Projected Times</h3>
+<ul class="proj-list">
+  <li><strong>OD<sub>600</sub> = 0.400:</strong> <span id="proj04">–</span></li>
+  <li><strong>OD<sub>600</sub> = 0.600:</strong> <span id="proj06">–</span></li>
+  <li><strong>OD<sub>600</sub> = 0.800:</strong> <span id="proj08">–</span></li>
+  <li>
+    <input id="projCustomOD" type="number" step="0.001" placeholder="Custom OD">
+    <span id="projCustom">–</span>
+  </li>
+</ul>
+</div>
+</div>
+<h3 id="proceed-with-the-appropriate-plasmid-prep-protocol">Proceed with the appropriate Plasmid Prep Protocol</h3>
+<ul>
+<li><a href="/Laboratory/methodes/dna/nucleospin_plasmid_prep/">NucleoSpin® Plasmid Preparation</a></li>
+</ul>
+
+</div>
+
+        <div style="text-align: right;">
+        <br>
+         Version 1.0.0
+        </div>
     
 
 

@@ -98,6 +98,6 @@ updated = '20.12.2025'
 {{< /infobox >}}
 
 ### Procede with Suitable Protocol:
-- 	[Bacterial Expression Culture](/content/methodes/bacteria/expression_culture.md)
-- 	[Bacterial Plasmid Preparation Culture](/content/methodes/bacteria/plasmid_prep_culture.md)
+- 	[Bacterial Expression Culture]({{< relref "/methodes/bacteria/expression_culture.md" >}})
+- 	[Bacterial Plasmid Preparation Culture]({{< relref "/methodes/bacteria/plasmid_prep_culture.md" >}})
 {{< /tab >}}

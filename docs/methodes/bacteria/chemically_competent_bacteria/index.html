@@ -1,0 +1,386 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/BiochemProtocols/css/styles.css">
+    <title>Document</title>
+</head>
+
+<script src="/BiochemProtocols/js/theme_toggle.js"></script>
+<script src="/BiochemProtocols/js/age_buffer_select.js"></script>
+<script src="/BiochemProtocols/js/age_mastermix_prep_calc.js"></script>
+<script src="/BiochemProtocols/js/age_sample_prep_calc.js"></script>
+<script src="/BiochemProtocols/js/pcr_mastermix_prep_calc.js"></script>
+<script src="/BiochemProtocols/js/age_following_pcr_buffer.js"></script>
+<script src="/BiochemProtocols/js/timer.js"></script>
+<script src="/BiochemProtocols/js/current_time_display.js"></script>
+<script src="/BiochemProtocols/js/transformation_from_pcr_mastermix_prep_calc.js"></script>
+<script src="/BiochemProtocols/js/transformation_buffer_10x_PIPES_alternative.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="/BiochemProtocols/js/bacterial_growth_calc.js"></script>
+
+<script src="/BiochemProtocols/js/access.js"></script>
+
+<body>
+
+    <nav class="nav">
+    <a href="/BiochemProtocols/"><img class="nav" src="/BiochemProtocols/images/3biochem_white.png" alt="Logo"></a>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul class="nav">
+        <li class="nav"><a href="/BiochemProtocols/">Home</a></li>
+        <li class="nav"><a href="/BiochemProtocols/materials">Materials</a></li>
+        <li class="nav"><a href="/BiochemProtocols/recipes">Recipes</a></li>
+        <li class="nav"><a href="/BiochemProtocols/methodes">Methodes</a></li>
+    </ul>
+</nav>
+
+    <header>
+    <h1>Chemically Competent Bacteria Generation</h1>
+
+    
+
+    
+        <h5>Spike Murphy Müller ¹</h5>
+    
+    
+    
+        <h5>¹ Center for Experimental Medicine, Institute of Biochemistry and Signal Transduction, Working Group Signal Transduction in Cancer</h3>
+    
+</header>
+    
+    <main>
+
+            
+    
+        <div class="tab">
+  <h2 id="materials">Materials</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Equipment &amp; Devices⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
+          <th style="text-align: left">Specifications</th>
+          <th style="text-align: left"> Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">shaker incubator</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">for incubation @ 30 or 37 °C</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">centrifuge</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">for centrifugation of 50 mL falcons @ 5,000 g</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">photometer</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">for measurment of OD<sub>600</sub></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">cool room</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left">@ 4 °C</td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Commercial Kits⠀⠀⠀⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
+          <th style="text-align: left">Specifications</th>
+          <th style="text-align: left"> Location</th>
+      </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Containers &amp; Consumables</th>
+          <th style="text-align: left">Amount</th>
+          <th style="text-align: left">Specifications</th>
+          <th style="text-align: left"> Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">pipetmans and sterile pipette tips</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">photometer cuvette</td>
+          <td style="text-align: left">2/strain</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Erlenmeyer flask 200 mL</td>
+          <td style="text-align: left">1/strain</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">sterile reaction tubes 1.5 mL</td>
+          <td style="text-align: left">80/strain</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">sterile falcon tubes 50 mL</td>
+          <td style="text-align: left">3/strain</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">sterile falcon tubes 15 mL</td>
+          <td style="text-align: left">2/strain</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Reagents &amp; Solutions⠀⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
+          <th style="text-align: left">Specifications</th>
+          <th style="text-align: left"> Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Luria-Bertani agarose plates</td>
+          <td style="text-align: left">1/strain</td>
+          <td style="text-align: left">no antibiotic</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Luria-Bertani liquid medium</td>
+          <td style="text-align: left">110 mL/strain</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Inoue Transformation Buffer</td>
+          <td style="text-align: left">50 mL/strain</td>
+          <td style="text-align: left">10mM PIPES/10 mM MOPES (pH 6.8 with acetic acid) <br> manganese chloride MnCl<sub>2</sub> 55mM <br> calcium chloride CaCl<sub>2</sub> 15mM <br> potassium chloride KCl  250 mM</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">(Methanesulfinyl)methane = dimethyl sulfoxide DMSO</td>
+          <td style="text-align: left">750 µL/strain</td>
+          <td style="text-align: left">for 7.5 % in Inoue storage buffer</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">glycerol 85 %</td>
+          <td style="text-align: left">1250 µL/strain</td>
+          <td style="text-align: left">for 10.625 % in Inoue storage buffer</td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Biological Materials⠀⠀⠀⠀⠀</th>
+          <th style="text-align: left">Amount</th>
+          <th style="text-align: left">Specifications</th>
+          <th style="text-align: left"> Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">one-shot of suitable competent bacteria</td>
+          <td style="text-align: left">1/strain</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+
+</div>
+<div class="tab">
+  <h2 id="procedure">Procedure:</h2>
+<h3 id="selecting-a-suitable-strain">Selecting a suitable Strain:</h3>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Strain</th>
+          <th style="text-align: left">Application</th>
+          <th style="text-align: left">Features</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">E. coli DH5α</td>
+          <td style="text-align: left">medium-yield plasmid DNA expression <br> (with blue/white screening)</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">E. coli TOP10</td>
+          <td style="text-align: left">high-yield plasmid DNA expression <br> (with blue/white screening)</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">E. coli XL1blue</td>
+          <td style="text-align: left">plasmid DNA expression <br> with blue/white screening</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">E. coli BL21(DE3)</td>
+          <td style="text-align: left">protein expression</td>
+          <td style="text-align: left">lacUV5 promoter <br> for IPTG induced expression of t-RNA polymerase</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">E. coli BL21(DE3) pLysS</td>
+          <td style="text-align: left">(toxic) protein expression</td>
+          <td style="text-align: left">T7 Inhibitor</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">E. coli Rosetta(DE3)</td>
+          <td style="text-align: left">(eucaryotic) protein expression</td>
+          <td style="text-align: left">lacUV5 promoter <br> for IPTG induced expression of t-RNA polymerase</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">E. coli C41(DE3)</td>
+          <td style="text-align: left">toxic protein expression</td>
+          <td style="text-align: left">lacUV5 promoter <br> for IPTG induced expression of t-RNA polymerase</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">E. coli C43(DE3)</td>
+          <td style="text-align: left">toxic membrane protein expression</td>
+          <td style="text-align: left">lacUV5 promoter <br> for IPTG induced expression of t-RNA polymerase</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="preparations">Preparations:</h3>
+<ol>
+<li><input type="checkbox"> Prepare one LB-agar Plate without any antibiotics.</li>
+<li><input type="checkbox"> Prepare 110 mL of LB medium.</li>
+</ol>
+<h3 id="plating-bacteria">Plating Bacteria:</h3>
+<ol>
+<li><input type="checkbox"> Choose a desired strain of Escherichia coli cells.</li>
+<li><input type="checkbox"> Plate a one shot directly on a LB-agar Plate.</li>
+<li><input type="checkbox"> Let the bacteria grow over night @ 37 °C.</li>
+</ol>
+<h3 id="pre-culture">Pre-culture:</h3>
+<ol>
+<li><input type="checkbox"> Transfer 1 mL of the 110 mL LB medium into a photometer cuvette for the zero value.</li>
+<li><input type="checkbox"> Transfer 5 mL of the 109 mL LB medium into a sterile 15 mL falcon tube.</li>
+<li><input type="checkbox"> Pick a suitable clone with pipette tip.</li>
+<li><input type="checkbox"> Drop pipette tip into the 5 mL of LB medium.</li>
+<li><input type="checkbox"> Incubate pre-culture @ 37 °C and shaking @ 250 rpm for approximately 2–4 h until an OD<sub>600</sub> ~ 0.4–0.8 (best 0.6) is reached or incubate @ 30 °C and shaking @ 250 rpm overnight.</li>
+</ol>
+<div style="display:flex; gap:20px; align-items:center;">
+<div class="countdown-wrapper" data-time="2:00:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">2:00:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<div class="countdown-wrapper" data-time="3:00:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">3:00:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<div class="countdown-wrapper" data-time="4:00:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">4:00:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+</div>
+<h3 id="main-culture">Main-culture:</h3>
+<ol>
+<li><input type="checkbox"> Transfer 1 mL of the 104 mL LB medium into a photometer cuvette for the zero value.</li>
+<li><input type="checkbox"> Transfer 100 mL LB-medium into a sterile 200 mL Erlenmeyer flask.</li>
+<li><input type="checkbox"> Inoculate the 100 mL LB-medium with the pre-culture.</li>
+<li><input type="checkbox"> Incubate batch @ 37 °C and shaking @ 250 rpm for approximately 2–4 h until an OD<sub>600</sub> of 0.4 to 0.8 (best 0.6) is reached.</li>
+</ol>
+<div style="display:flex; gap:20px; align-items:center;">
+<div class="countdown-wrapper" data-time="2:00:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">2:00:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<div class="countdown-wrapper" data-time="3:00:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">3:00:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<div class="countdown-wrapper" data-time="4:00:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">4:00:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+</div>
+<h3 id="preparations-1">Preparations:</h3>
+<ol>
+<li><input type="checkbox"> Prepare 50 mL of Inoue transformation buffer from your 10x stock or by supplementing 50mL of PIPES (or alternatively MOPES) buffer 10 mM (pH 6.8 with acetic acid) with MnCl<sub>2</sub> 55 mM, CaCl<sub>2</sub> 15 mM and KCl 250 mM and cool on ice until further use.</li>
+<li><input type="checkbox"> Prepare 10 mL of Inoue storage buffer by supplementing 8 mL of Inoue transformation buffer with 750 µL of DMSO (7.5 %) and 1250 µL of Glycerol 85% (10.625 %) and cool on ice until further use.</li>
+<li><input type="checkbox"> Pre-cool 80 x sterile 1.5 mL reaction tubes.</li>
+<li><input type="checkbox"> Pre-cool a centrifuge to 4 °C for harvesting @ 3000–6000 g.</li>
+</ol>
+<h3 id="cell-harvesting">Cell harvesting:</h3>
+<ol>
+<li><input type="checkbox"> Transfer the 100 mL of culture into 2 x sterile 50 mL falcon tubes.</li>
+<li><input type="checkbox"> Harvest cells by centrifugation @ 3000–6000 g and @ 4 °C for 10 minutes.</li>
+</ol>
+<div class="countdown-wrapper" data-time="0:10:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">0:10:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<ol start="3">
+<li><input type="checkbox"> Discard the medium and let pellet dry overhead on paper towels for 2 minutes.</li>
+</ol>
+<div class="countdown-wrapper" data-time="0:02:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">0:02:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<h3 id="generating-competency">Generating Competency:</h3>
+<ol>
+<li><input type="checkbox"> Resuspend the pellet in 16 mL of ice-cold Inoue transformation buffer each by rotating end-over-end.</li>
+<li><input type="checkbox"> Harvest cells by centrifugation @ 3000–6000 g and @ 4 °C for 10 minutes.</li>
+</ol>
+<div class="countdown-wrapper" data-time="0:10:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">0:10:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<ol start="3">
+<li><input type="checkbox"> Discard the medium and let pellet dry overhead on paper towels for 2 minutes.</li>
+</ol>
+<div class="countdown-wrapper" data-time="0:02:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">0:02:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<h3 id="storage">Storage:</h3>
+<ol>
+<li><input type="checkbox"> Resuspend the pellet in 4 mL of ice-cold Inoue storage buffer each by rotating end-over-end for 10 minutes.</li>
+</ol>
+<div class="countdown-wrapper" data-time="0:10:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">0:10:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<ol start="2">
+<li><input type="checkbox"> Prepare some liquid nitrogen.</li>
+<li><input type="checkbox"> Aliquot the cells in 100 µL fractions in the pre-cooled sterile 1.5 mL reaction tubes.</li>
+<li><input type="checkbox"> Immediately freeze aliquots in liquid nitrogen.</li>
+<li><input type="checkbox"> Store the one shots at –60 °C.</li>
+</ol>
+<div class="infobox info">
+  <strong></strong>
+  <div>⚠️ Cells from here on are extremely sensitive to temperature increases.</div>
+</div>
+<h3 id="procede-with-suitable-protocol">Procede with Suitable Protocol:</h3>
+
+</div>
+
+        <div style="text-align: right;">
+        <br>
+        11.12.2025 Version 1.0.0
+        </div>
+    
+
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-rights">© 2025 Murphy Biochemistry UG (haftungsbeschränkt) · All Rights Reserved</div>
+    <ul class="footer-nav">
+        <li><a href="/BiochemProtocols/legal/legal_notice">Legal Notice (Impressum)</a></li>
+        <li><a href="/BiochemProtocols/legal/privacy_policy">Privacy Policy</a></li>
+        <li><a href="/BiochemProtocols/legal/terms_of_use">Terms of Use</a></li>
+    </ul>
+</nav>
+    <ul class="footer-controls">
+        <li class="footer-controls">
+            <label class="switchbox">
+                <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+            </label>
+        </li>
+    </ul>
+</footer>
+
+</body>
+
+
+</html>

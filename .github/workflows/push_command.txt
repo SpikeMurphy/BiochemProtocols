@@ -1,3 +1,15 @@
 git add .
-git commit -m "update page"
+git commit -m "general update"
+git push
+
+git add .
+git commit -m "new content: xxxxx"
+git push
+
+git add .
+git commit -m "new feature: xxxxx"
+git push
+
+git add .
+git commit -m "xxxxx updated"
 git push

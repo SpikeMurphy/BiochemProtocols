@@ -1,0 +1,795 @@
+/* ========== Body (light) ========== */
+body {
+    background: linear-gradient(180deg, #e8f4ff, #ffffff);
+    color: #111827;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+/* ========== Body (light) ========== */
+/* ========== Tabs (light) ========== */
+.tab {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border-left: 2px solid #2b3950;
+}
+.tab:hover {
+    background: #eff5ff;
+    border-left-color: #1e2a3f;
+}
+/* ========== Tabs (light) ========== */
+/* ========== Tables (light) ========== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+thead {
+    background: #1f2937;
+    color: #d2e9ff;
+}
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #d2e9ff;
+}
+tbody tr:nth-child(even) {
+    background: #f3f8ff;
+}
+tbody tr:hover {
+    background: #e8f4ff;
+}
+/* ========== Tables (light) ========== */
+/* ========== alternative buttons (light) ========== */
+.alternative {
+    padding: 2px 8;
+    font-size: 0.72rem;
+    background: #e8f0ff;
+    border: 1px solid #b8c8e6;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    color: #2d4c7f;
+    white-space: nowrap;
+    float: right;
+}
+.alternative:hover {
+    background: #d9e7ff;
+    border-color: #a7bae0;
+}
+.alternative:active {
+    background: #cbdcff;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.12);
+}
+/* ========== alternative buttons (light) ========== */
+/* ========== Infobox (light) ========== */
+.infobox {
+  border-left: 4px solid #999;
+  padding: 1em;
+  margin: 1em 0;
+  background: #f5f5f5;
+  border-radius: 6px;
+}
+.infobox.info {
+  border-color: #2d7dd2;
+  background: #e9f2fb;
+}
+.infobox.warning {
+  border-color: #d27d2d;
+  background: #fbf2e9;
+}
+.infobox.danger {
+  border-color: #d22d2d;
+  background: #fbe9e9;
+}
+/* ========== Infobox (light) ========== */
+/* ========== Hyper Links (light) ========== */
+a {
+  color: #2563eb; /* nice readable blue */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+/* ========== Hyper Links (light) ========== */
+/* ========== Navigation (light) ========== */
+nav.nav {
+    align-items: center;
+    background: linear-gradient(90deg, #1f2937ee, #111827ee);
+    box-shadow: 0 2px 6px rgb(116, 136, 162);
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    padding: 15px 10%;
+}
+img.nav{
+    height: 80px;
+    width: auto;
+}
+img.nav:hover {
+    transform: scale(1.10);
+    transition: transform 0.3s ease-in-out;
+}
+ul.nav{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 0 10px 0 0;
+}
+li.nav{
+    list-style: none;
+}
+li.nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #d2e9ff;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+li.nav a:hover {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+
+}
+.nav-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-left: 0.75rem;
+    text-decoration: none;
+    color: #d2e9ff;
+    display: inline-block;
+    transition: color 0.3s ease-in-out
+}
+.nav-title:hover {
+    color: #3b82f6;
+    text-decoration: none;
+}
+/* ========== Navigation (light) ========== */
+/* ========== Header (light) ========== */
+header {
+    background: linear-gradient(135deg, #ffffff, #eaf5ff);
+    box-shadow: 0 2px 6px 0 rgb(116, 136, 162);
+    display: flex;
+    flex-direction: column;
+    margin: 30px 10%;
+    padding: 20px;
+    border-radius: 10px;
+}
+/* ========== Header (light) ========== */
+/* ========== Main (light) ========== */
+main {
+    background: linear-gradient(135deg, #ffffff, #eaf5ff);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 10% 30px 10%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgb(116, 136, 162);
+}
+/* ========== Main (light) ========== */
+/* ========== Footer (light) ========== */
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #1f2937ee, #111827ee);
+    padding: 15px 10%;
+    font-size: 0.8rem;
+    color: #d2e9ff;
+    box-shadow: 0 -2px 6px rgb(116, 136, 162);
+}
+.footer-rights {
+    color: #3b82f6;
+    font-weight: 400;
+}
+.footer-nav {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-nav li {
+    list-style: none;
+}
+.footer-nav a {
+    color: #d2e9ff;
+    text-decoration: none;
+    font-weight: 500;
+    padding-bottom: 2px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+.footer-nav a:hover {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+}
+.footer-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.language_button a {
+    color: #d2e9ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.language_button a:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+}
+.footer-controls svg {
+    width: 20px;
+    height: 20px;
+    color: #d2e9ff;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-controls a:hover svg {
+    transform: scale(1.2);
+    color: #3b82f6;
+}
+/* ========== Footer (light) END ========== */
+/* ========== Countdown Timer (light) ========== */
+.countdown-display {
+    font-family: "Inter", sans-serif;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    padding: 1px 5px;
+    width: 100px;
+    background: #f8f9fa;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+.countdown-start,
+.countdown-reset {
+    margin-right: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.countdown-start:hover,
+.countdown-reset:hover {
+    border-color: #999;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+.countdown-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.countdown-bell {
+    cursor: pointer;
+    font-size: 1.4rem;
+    user-select: none;
+    transition: opacity 0.2s ease;
+}
+
+.countdown-bell.muted {
+    opacity: 0.4;
+}
+
+.blink {
+    animation: blinkBorder 1s infinite;
+    border-color: red !important;
+}
+@keyframes blinkBorder {
+    0% { box-shadow: 0 0 0 0 rgba(255,0,0,0.8); }
+    50% { box-shadow: 0 0 10px 3px rgba(255,0,0,0.4); }
+    100% { box-shadow: 0 0 0 0 rgba(255,0,0,0.8); }
+}
+/* ========== Countdown Timer (light) ========== */
+/* ========== Growth Calc Current Time (light) ========== */
+.time-btn {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    background: #e8f0ff;
+    border: 1px solid #b8c8e6;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #2d4c7f;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+.time-btn:hover {
+    background: #d9e7ff;
+    border-color: #a7bae0;
+}
+.time-btn:active {
+    background: #cbdcff;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.12);
+}
+.time-display {
+    margin-left: 10px;
+    padding: 2px 8px;
+    font-family: "Inter", sans-serif;
+    background: #f8fbff;
+    border: 1px solid #d2e9ff;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #2d4c7f;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+}
+/* ========== Growth Calc Current Time (light) ========== */
+/* ========== Growth Calc (light) ========== */
+.growthcalc-wrapper {
+    background: linear-gradient(135deg, #ffffff, #eaf5ff);
+    padding: 20px 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(116,136,162,0.5);
+}
+.growth-table th {
+  text-align: left;
+}
+.gc-time-wrap {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+.gc-hh, .gc-mm {
+  width: 5em;
+  text-align: center;
+}
+.gc-colon {
+  font-weight: bold;
+  padding: 0 2px;
+}
+.proj-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5em;
+}
+.proj-list li {
+  padding: 4px 0;
+  font-size: 1.1em;
+}
+.proj-list strong {
+  width: 120px;
+  display: inline-block;
+}
+.proj-list input[type="number"] {
+  width: 120px;
+}
+/* ========== Growth Calc Projected Time  (light) ========== */
+/* ========== Contact Form (light) ========== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px 20px;
+    background: linear-gradient(135deg, #ffffff, #eaf5ff);
+    box-shadow: 0 2px 6px 0 rgb(116, 136, 162);
+    border-radius: 10px;
+}
+.contact-form .form-row {
+    display: flex;
+    flex-direction: column;
+}
+.contact-form label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #000000;
+}
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #d2e9ff;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 2px 6px 0 #3b82f6;
+}
+.contact-form select {
+    height: 42px;
+    line-height: 42px;
+    padding: 10px;
+    border: 1px solid #d2e9ff;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background: #ffffff;
+    color: #000;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form select:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 2px 6px 0 #3b82f6;
+}
+.contact-form input[type="file"] {
+    padding: 8px;
+    border: 1px solid #d2e9ff;
+    border-radius: 6px;
+    background: #f8fbff;
+    font-size: 0.95rem;
+    color: #000;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form input[type="file"]:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 2px 6px 0 #3b82f6;
+}
+.contact-form button {
+    padding: 12px;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.contact-form button:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+/* ========== Contact Form (light) ========== */
+
+
+
+
+
+/* ========== Mode Switch ========== */
+.switchbox {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+}
+.switchbox input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #d2e9ff;
+    transition: 0.5s;
+    border-radius: 30px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.5s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px #3b82f6;
+}
+input:checked + .slider {
+    background-color: #3b82f6;
+}
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+.switchbox .slider:hover {
+    box-shadow: 0 2px 6px #3b82f6;
+}
+/* ========== Mode Switch ========== */
+
+
+
+
+
+/* ========== Body (dark) ========== */
+body.darkmode {
+    background: linear-gradient(180deg, #111827, #1f2937);
+    color: #c2e1ff;
+}
+/* ========== Body (dark) ========== */
+/* ========== Tabs (dark) ========== */
+body.darkmode .tab {
+    background: #1f2937;
+    border-left: 2px solid #60a5fa;
+    color: #dce9ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+body.darkmode .tab:hover {
+    background: #263447;
+    border-left-color: #93c5fd;
+}
+/* ========== Tabs (dark) ========== */
+/* ========== Tables (dark) ========== */
+body.darkmode table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+    background: #1f2937;
+    border-radius: 10px;
+    overflow: hidden;
+}
+body.darkmode thead {
+    background: #0f172a;
+    color: #c2e1ff;
+}
+body.darkmode th, 
+body.darkmode td {
+    border-bottom: 1px solid #334155;
+    padding: 12px 15px;
+    color: #e2eeff;
+}
+body.darkmode tbody tr:nth-child(even) {
+    background: #1e293b;
+}
+body.darkmode tbody tr:hover {
+    background: #2b3a4e;
+}
+/* ========== Tables (dark) ========== */
+/* ========== Infobox (dark) ========== */
+body.darkmode .infobox {
+  background: #273549;
+  border-left: 4px solid #6b7280;
+  color: #dce9ff;
+}
+body.darkmode .infobox.info {
+  border-color: #60a5fa;
+  background: #1e3a5f;
+}
+body.darkmode .infobox.warning {
+  border-color: #fbbf24;
+  background: #4a3b0a;
+}
+body.darkmode .infobox.danger {
+  border-color: #f87171;
+  background: #5a1f1f;
+}
+/* ========== Infobox (dark) ========== */
+/* ========== Hyper Links (light) ========== */
+body.darkmode a {
+  color: #60a5fa;
+}
+body.darkmode a:hover {
+  color: #93c5fd;
+}
+/* ========== Hyper Links (light) ========== */
+/* ========== Navigation (dark) ========== */
+body.darkmode nav.nav {
+    background: linear-gradient(90deg, #111827, #000000);
+    box-shadow: 0 2px 6px rgb(29, 47, 68);
+}
+li.nav a {
+    color: #c2e1ff;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+li.nav a:hover {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+}
+body.darkmode .nav-title {
+    color: #c2e1ff;
+}
+body.darkmode .nav-title:hover {
+    color: #3b82f6;  
+}
+/* ========== Navigation (dark) ========== */
+/* ========== Header (dark) ========== */
+body.darkmode header {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    box-shadow: 0 2px 6px rgb(29, 47, 68);
+    color: white;
+}
+/* ========== Header (dark) ========== */
+/* ========== Main (dark) ========== */
+body.darkmode main {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    box-shadow: 0 2px 6px rgb(29, 47, 68);
+    color: white;
+}
+/* ========== Main (dark) ========== */
+/* ========== Footer (dark) ========== */
+body.darkmode footer {
+    background: linear-gradient(90deg, #111827, #000000);
+    box-shadow: 0 2px 6px rgb(29, 47, 68);
+    color: #c2e1ff;
+}
+body.darkmode .footer-rights {
+    color: #d2e9ff;
+    font-weight: 400;
+}
+/* ========== Footer (dark) ========== */
+/* ========== Countdown Timer (dark) ========== */
+body.darkmode .countdown-display {
+    background: #1f2937;
+    border: 1px solid #334155;
+    color: #dce9ff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+body.darkmode .countdown-start,
+body.darkmode .countdown-reset {
+    background: #111827;
+    border: 1px solid #334155;
+    color: #dce9ff;
+}
+body.darkmode .countdown-start:hover,
+body.darkmode .countdown-reset:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 1px 3px rgba(96,165,250,0.4);
+}
+body.darkmode .countdown-row {
+}
+body.darkmode .countdown-bell {
+    color: #dce9ff;
+}
+body.darkmode .countdown-bell.muted {
+    opacity: 0.3;
+}
+body.darkmode .blink {
+    border-color: #f87171 !important;
+}
+@keyframes blinkBorderDark {
+    0%   { box-shadow: 0 0 0 0 rgba(248,113,113,0.8); }
+    50%  { box-shadow: 0 0 10px 3px rgba(248,113,113,0.4); }
+    100% { box-shadow: 0 0 0 0 rgba(248,113,113,0.8); }
+}
+body.darkmode .blink {
+    animation: blinkBorderDark 1s infinite;
+}
+/* ========== Countdown Timer (dark) ========== */
+/* ========== Growth Calc Current Time (dark) ========== */
+body.darkmode .time-btn {
+    background: #1f2937;
+    border: 1px solid #334155;
+    color: #dce9ff;
+}
+body.darkmode .time-btn:hover {
+    background: #263447;
+    border-color: #60a5fa;
+}
+body.darkmode .time-btn:active {
+    background: #1e293b;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.4);
+}
+body.darkmode .time-display {
+    background: #1f2937;
+    border: 1px solid #334155;
+    color: #dce9ff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+/* ========== Growth Calc Current Time (dark) ========== */
+/* ========== Growth Calc Projected Time  (dark) ========== */
+body.darkmode table input,
+body.darkmode table select {
+    background: #1f2937;
+    border: 1px solid #334155;
+    color: #dce9ff;
+    border-radius: 6px;
+    padding: 6px;
+}
+
+body.darkmode table input:focus,
+body.darkmode table select:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 4px rgba(96,165,250,0.4);
+    outline: none;
+}
+body.darkmode .proj-list input[type="number"] {
+    background: #1f2937;
+    border: 1px solid #334155;
+    color: #dce9ff;
+    border-radius: 6px;
+    padding: 6px;
+}
+body.darkmode .proj-list input[type="number"]:focus {
+    border-color: #60a5fa;
+    outline: none;
+    box-shadow: 0 0 4px rgba(96,165,250,0.4);
+}
+body.darkmode .growthcalc-wrapper {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(29,47,68,0.8);
+}
+/* ========== Growth Calc Projected Time  (dark) ========== */
+/* ========== Contact Form (dark) ========== */
+body.darkmode .contact-form {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    box-shadow: 0 2px 6px rgb(29, 47, 68);
+}
+body.darkmode .contact-form label {
+    color: white;
+}
+body.darkmode .contact-form input,
+body.darkmode .contact-form textarea {
+    background: linear-gradient(135deg, #2d3847, #252d3f);
+    box-shadow: 0 2px 6px rgb(29, 47, 68);
+    border: #111827;
+    color: white;
+}
+body.darkmode .contact-form input:focus,
+body.darkmode .contact-form textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 2px 6px 0 #3b82f6;
+}
+body.darkmode .contact-form select {
+    background: linear-gradient(135deg, #2d3847, #252d3f);
+    border: 1px solid #111827;
+    color: white;
+    box-shadow: 0 2px 6px rgb(29, 47, 68);
+}
+body.darkmode .contact-form select:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 2px 6px 0 #3b82f6;
+}
+body.darkmode .contact-form input[type="file"] {
+    background: #2d3847;
+    border: 1px solid #111827;
+    color: white;
+    box-shadow: 0 2px 6px rgb(29, 47, 68);
+}
+body.darkmode .contact-form input[type="file"]:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 2px 6px 0 #3b82f6;
+}
+body.darkmode .contact-form input[type="file"]::file-selector-button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+body.darkmode .contact-form input[type="file"]::file-selector-button:hover {
+    background: #2563eb;
+}
+body.darkmode .contact-form button {
+    padding: 12px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+body.darkmode .contact-form button:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+body.darkmode .language_button a {
+    color: #c2e1ff;
+}
+body.darkmode .language_button a:hover {
+    color: #3b82f6;
+}
+/* ========== Contact Form (dark) ========== */

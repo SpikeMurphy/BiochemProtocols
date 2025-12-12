@@ -1,0 +1,274 @@
+<html lang="en">
+<head><script src="/BiochemProtocols/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=BiochemProtocols/livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/BiochemProtocols/css/styles.css">
+    <title>Document</title>
+</head>
+
+<script src="/BiochemProtocols/js/theme_toggle.js"></script>
+<script src="/BiochemProtocols/js/age_buffer_select.js"></script>
+<script src="/BiochemProtocols/js/age_mastermix_prep_calc.js"></script>
+<script src="/BiochemProtocols/js/age_sample_prep_calc.js"></script>
+<script src="/BiochemProtocols/js/pcr_mastermix_prep_calc.js"></script>
+<script src="/BiochemProtocols/js/age_following_pcr_buffer.js"></script>
+<script src="/BiochemProtocols/js/timer.js"></script>
+<script src="/BiochemProtocols/js/current_time_display.js"></script>
+<script src="/BiochemProtocols/js/transformation_from_pcr_mastermix_prep_calc.js"></script>
+<script src="/BiochemProtocols/js/transformation_buffer_10x_PIPES_alternative.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script src="/BiochemProtocols/js/bacterial_growth_calc.js"></script>
+
+<script src="/BiochemProtocols/js/access.js"></script>
+
+<body>
+
+    <nav class="nav">
+    <a href="/BiochemProtocols/"><img class="nav" src="/BiochemProtocols/images/3biochem_white.png" alt="Logo"></a>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul class="nav">
+        <li class="nav"><a href="/BiochemProtocols/">Home</a></li>
+        <li class="nav"><a href="/BiochemProtocols/materials">Materials</a></li>
+        <li class="nav"><a href="/BiochemProtocols/recipes">Recipes</a></li>
+        <li class="nav"><a href="/BiochemProtocols/methodes">Methodes</a></li>
+    </ul>
+</nav>
+
+    <header>
+    <h1>Inoue Transformation Buffer Stock 10x</h1>
+
+    
+
+    
+        <h5>Spike Murphy Müller ¹</h5>
+    
+    
+    
+        <h5>¹ Center for Experimental Medicine, Institute of Biochemistry and Signal Transduction, Working Group Signal Transduction in Cancer</h3>
+    
+</header>
+    
+    <main>
+
+            
+    
+        <div class="tab">
+  <h2 id="materials">Materials</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Material</th>
+          <th style="text-align: left">Molecular Weight</th>
+          <th style="text-align: left">Specifications</th>
+          <th style="text-align: left">Location</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><span id="pipes-material"><a href="https://www.carlroth.com/.../">PIPES <sup>SDB</sup></a></span><span style="display:none" id="mopes-material"><a href="https://www.carlroth.com/.../">MOPES <sup>SDB</sup></a></span> <button button class="alternative" id="pipes_alternative_switch">Use MOPES</button></td>
+          <td style="text-align: left"><span id="pipes-mw">302.37 g/mol</span><span style="display:none" id="mopes-mw">241.26 g/mol</span></td>
+          <td style="text-align: left"><span id="pipes-specs">solid</span><span style="display:none" id="mopes-specs">solid, alternative buffer</span></td>
+          <td style="text-align: left"> <span id="pipes-location"></span><span style="display:none" id="mopes-location"></span></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://www.carlroth.com/.../">manganese chloride MnCl<sub>2</sub><sup>SDB</sup></a></td>
+          <td style="text-align: left">197.91 g/mol</td>
+          <td style="text-align: left">solid</td>
+          <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://www.carlroth.com/.../">calcium chloride CaCl<sub>2</sub><sup>SDB</sup></a></td>
+          <td style="text-align: left">147.01 g/mol</td>
+          <td style="text-align: left">solid</td>
+          <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://www.carlroth.com/.../">potassium chloride KCl<sup>SDB</sup></a></td>
+          <td style="text-align: left">74.55 g/mol</td>
+          <td style="text-align: left">solid</td>
+          <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+          <td style="text-align: left">dsH<sub>2</sub>O</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><a href="https://www.carlroth.com/.../">acetic acid CH<sub>3</sub>COOH<sup>SDB</sup></a></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"> </td>
+      </tr>
+      <tr>
+          <td style="text-align: left">bucket of ices</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"> </td>
+      </tr>
+  </tbody>
+</table>
+
+</div>
+<div class="tab">
+  <h2 id="recipe">Recipe</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"></th>
+          <th style="text-align: left">Material/Step</th>
+          <th style="text-align: left"> Volume/Mass</th>
+          <th style="text-align: left"> molar/%/comment</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><input type="checkbox"></td>
+          <td style="text-align: left"> <span id="pipes-r-material">PIPES</span><span style="display:none" id="mopes-r-material">MOPES</span></td>
+          <td style="text-align: left"><span id="pipes-r-vol">3.00 g</span> <span style="display:none" id="mopes-r-vol">2.10 g</span></td>
+          <td style="text-align: left"><span id="pipes-r-mol">100 mM (1x 10 mM)</span> <span style="display:none" id="mopes-r-mol">100 mM (1x 10 mM)</span></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><input type="checkbox"></td>
+          <td style="text-align: left"> MnCl<sub>2</sub></td>
+          <td style="text-align: left">10.89 g</td>
+          <td style="text-align: left">550 mM (1x 55 mM)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><input type="checkbox"></td>
+          <td style="text-align: left"> CaCl<sub>2</sub></td>
+          <td style="text-align: left">2.20 g</td>
+          <td style="text-align: left">150 mM (1x 15 mM)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><input type="checkbox"></td>
+          <td style="text-align: left"> KCl</td>
+          <td style="text-align: left">18.65 g</td>
+          <td style="text-align: left">2.5 M (1x 250 mM)</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><input type="checkbox"></td>
+          <td style="text-align: left"> dsH<sub>2</sub>O</td>
+          <td style="text-align: left">to 80 mL</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><input type="checkbox"></td>
+          <td style="text-align: left"> optionally cool on ice for approximately 30 minutes</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><input type="checkbox"></td>
+          <td style="text-align: left"> adjust pH to 6.8 with acetic acid</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><input type="checkbox"></td>
+          <td style="text-align: left"> dsH<sub>2</sub>O</td>
+          <td style="text-align: left">to 100 mL</td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><input type="checkbox"></td>
+          <td style="text-align: left"> filter through 0.22 µm syringe filter</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><input type="checkbox"></td>
+          <td style="text-align: left"> store in 50 mL aliquots at 4 °C or –20 °C</td>
+          <td style="text-align: left"></td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+
+</div>
+<div class="countdown-wrapper" data-time="0:30:00" data-sound="/BiochemProtocols/sounds/timer-beep2.mp3"><div class="countdown-row"><div class="countdown-display">0:30:00</div><div class="countdown-bell" data-sound="on">🔔</div></div><button class="countdown-start">Start</button><button class="countdown-reset">Reset</button></div>
+<div class="tab">
+  <h2 id="usecases">Usecases</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Usecase</th>
+          <th style="text-align: left"> Specifications</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"> <a href="/BiochemProtocols/methodes/bacteria/chemically_competent_bacteria/">Chemically Competent Bacteria Generation</a></td>
+          <td style="text-align: left">50 mL of 1x Inoue transformation buffer for bacterial transformation with 8 mL being used for Inoue storage buffer</td>
+      </tr>
+  </tbody>
+</table>
+
+</div>
+<div class="tab">
+  <h2 id="storage">Storage</h2>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"> Conditions</th>
+          <th style="text-align: left">Duration</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">@ 25 °C</td>
+          <td style="text-align: left">1 day</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">@ 4 °C</td>
+          <td style="text-align: left">1 month</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">@ -20 °C</td>
+          <td style="text-align: left">12 month</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">@ –80 °C</td>
+          <td style="text-align: left"></td>
+      </tr>
+  </tbody>
+</table>
+
+</div>
+
+        <div style="text-align: right;">
+        <br>
+         Version 1.0.0
+        </div>
+    
+
+
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-rights">© 2025 Murphy Biochemistry UG (haftungsbeschränkt) · All Rights Reserved</div>
+    <ul class="footer-nav">
+        <li><a href="/BiochemProtocols/legal/legal_notice">Legal Notice (Impressum)</a></li>
+        <li><a href="/BiochemProtocols/legal/privacy_policy">Privacy Policy</a></li>
+        <li><a href="/BiochemProtocols/legal/terms_of_use">Terms of Use</a></li>
+    </ul>
+</nav>
+    <ul class="footer-controls">
+        <li class="footer-controls">
+            <label class="switchbox">
+                <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+            </label>
+        </li>
+    </ul>
+</footer>
+
+</body>
+
+
+</html>

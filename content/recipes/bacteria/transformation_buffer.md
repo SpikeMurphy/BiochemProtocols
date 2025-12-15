@@ -51,3 +51,4 @@ updated = ''
 {{< /tab >}}
 
 {{< comment_box >}}
+{{< save_page >}}

@@ -312,7 +312,6 @@ main {
     font-size: 10pt !important;
     line-height: 1.4 !important;
   }
-  }
   textarea {
     resize: none !important;
     border: none !important;
@@ -325,6 +324,31 @@ main {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+}
+#save-pdf {
+    margin-top: 2rem;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    background: #e8f0ff;
+    border: 1px solid #b8c8e6;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #2d4c7f;
+    transition: background 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+    white-space: nowrap;
+}
+
+#save-pdf:hover {
+    background: #d9e7ff;
+    border-color: #a7bae0;
+    box-shadow: 0 1px 3px rgba(59,130,246,0.25);
+}
+
+#save-pdf:active {
+    background: #cbdcff;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.12);
 }
 /* ========== Save Page (light) ========== */
 /* ========== Footer (light) ========== */
@@ -766,37 +790,47 @@ body.darkmode main {
 }
 /* ========== Main (dark) ========== */
 /* ========== Comment Box (dark) ========== */
+/* ========== Local Comment Box Text Fix (dark) ========== */
 body.darkmode .local-comment {
     background: linear-gradient(135deg, #1f2937, #111827);
-    box-shadow: 0 2px 6px rgb(29, 47, 68);
+    color: #e2eeff;
 }
 body.darkmode .local-comment label {
-    color: #c2e1ff;
+    color: #e2eeff;
 }
 body.darkmode .local-comment textarea {
     background: linear-gradient(135deg, #2d3847, #252d3f);
     border: 1px solid #334155;
+    color: #ffffff;
+}
+body.darkmode .local-comment textarea::placeholder {
+    color: #93c5fd;
+    opacity: 0.8;
+}
+body.darkmode .local-comment textarea:disabled {
     color: #e2eeff;
-}
-body.darkmode .local-comment textarea:focus {
-    border-color: #60a5fa;
-    box-shadow: 0 2px 6px rgba(96,165,250,0.4);
-}
-body.darkmode .local-comment button.save,
-body.darkmode .local-comment button.delete {
-    background: #1f2937;
-    border: 1px solid #334155;
-    color: #dce9ff;
-}
-body.darkmode .local-comment button.save:hover,
-body.darkmode .local-comment button.delete:hover {
-    background: #263447;
-    border-color: #60a5fa;
+    opacity: 0.85;
 }
 body.darkmode .local-comment .status {
     color: #93c5fd;
 }
 /* ========== Comment Box (dark) ========== */
+/* ========== Save Page (dark) ========== */
+body.darkmode #save-pdf {
+    background: #1f2937;
+    border: 1px solid #334155;
+    color: #e2eeff;
+}
+body.darkmode #save-pdf:hover {
+    background: #263447;
+    border-color: #60a5fa;
+    box-shadow: 0 1px 3px rgba(96,165,250,0.4);
+}
+body.darkmode #save-pdf:active {
+    background: #1e293b;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.4);
+}
+/* ========== Save Page (dark) ========== */
 /* ========== Footer (dark) ========== */
 body.darkmode footer {
     background: linear-gradient(90deg, #111827, #000000);

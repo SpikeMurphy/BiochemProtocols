@@ -19,3 +19,4 @@ imaging in general, but add that lanes with samples for gel extraction need to b
 {{< /infobox >}}
 
 {{< comment_box >}}
+{{< save_page >}}

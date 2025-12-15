@@ -52,3 +52,4 @@ updated = '05.09.2025'
 {{< /tab >}}
 
 {{< comment_box >}}
+{{< save_page >}}

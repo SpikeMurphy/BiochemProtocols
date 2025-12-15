@@ -11,7 +11,7 @@ git commit -m "new feature: xxxxx"
 git push
 
 git add .
-git commit -m "xxxxx updated"
+git commit -m "update: xxxxx"
 git push
 
 git add .

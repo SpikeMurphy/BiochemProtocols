@@ -2,30 +2,30 @@
   const path = new URL(window.location.href).pathname;
 
   // === Homepage freigeben ===
-  if (path === "/Laboratory/" || path === "/Laboratory/index.html" || path.startsWith("/Laboratory/?")) {
+  if (path === "/BiochemProtocols/" || path === "/BiochemProtocols/index.html" || path.startsWith("/BiochemProtocols/?")) {
     return;
   }
 
   // === Login-Seite freigeben ===
-  if (path.startsWith("/Laboratory/access")) return;
+  if (path.startsWith("/BiochemProtocols/access")) return;
 
   // === Statische Assets freigeben ===
   const publicPrefixes = [
-    "/Laboratory/css/", 
-    "/Laboratory/js/", 
-    "/Laboratory/images/", 
-    "/Laboratory/img/", 
-    "/Laboratory/fonts/", 
-    "/Laboratory/static/"
+    "/BiochemProtocols/css/", 
+    "/BiochemProtocols/js/", 
+    "/BiochemProtocols/images/", 
+    "/BiochemProtocols/img/", 
+    "/BiochemProtocols/fonts/", 
+    "/BiochemProtocols/static/"
   ];
   for (const prefix of publicPrefixes) {
     if (path.startsWith(prefix)) return;
   }
 
   const allowFiles = [
-    "/Laboratory/favicon.ico",
-    "/Laboratory/robots.txt",
-    "/Laboratory/sitemap.xml"
+    "/BiochemProtocols/favicon.ico",
+    "/BiochemProtocols/robots.txt",
+    "/BiochemProtocols/sitemap.xml"
   ];
   if (allowFiles.includes(path)) return;
 
@@ -39,5 +39,5 @@
   } catch (_) {}
 
   // === Redirect auf Login ===
-  window.location.href = "/Laboratory/access/";
+  window.location.href = "/BiochemProtocols/access/";
 })();

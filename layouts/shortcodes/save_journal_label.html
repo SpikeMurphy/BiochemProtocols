@@ -1,0 +1,41 @@
+<div class="label-preview-wrapper">
+    <div style="padding: 5px 20px;">Label 30x37 mm for HERMA 4390</div>
+  <div id="label-preview" class="label">
+    <div class="label-qr">
+      <canvas id="label-qr-canvas"></canvas>
+    </div>
+    <div class="label-text">
+      <div class="line company"><b>Murphy Biochemistry</b></div>
+      <div class="line website"><b>BiochemProtocols</b></div>
+      <br>
+      <div class="line title">{{ .Page.Params.title }}</div>
+      <br>
+      <div class="line date" id="label-date"></div>
+      <div class="line version">{{ .Page.Params.version }}</div>
+    </div>
+  </div>
+
+  <div class="label-controls" style="padding: 0px 25px">
+    <select id="label-column">
+      <option value="1">Column 1</option>
+      <option value="2">Column 2</option>
+      <option value="3">Column 3</option>
+    </select>
+
+    <select id="label-row">
+      {{ range seq 1 8 }}
+      <option value="{{ . }}">Row {{ . }}</option>
+      {{ end }}
+    </select>
+
+    <button id="label-print-btn">Print</button>
+  </div>
+</div>
+
+<script>
+  window.labelPrintData = {
+    title: {{ .Page.Params.title | jsonify }},
+    version: {{ .Page.Params.version | jsonify }},
+    url: {{ .Page.Permalink | jsonify }}
+  };
+</script>

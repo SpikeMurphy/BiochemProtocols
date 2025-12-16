@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SDS-Page &amp; Western Blotting on BiochemProtocols</title>
-    <link>https://spikemurphy.github.io/BiochemProtocols/methodes/sds-page_and_western_blotting/</link>
+    <link>http://localhost:1313/BiochemProtocols/methodes/sds-page_and_western_blotting/</link>
     <description>Recent content in SDS-Page &amp; Western Blotting on BiochemProtocols</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://spikemurphy.github.io/BiochemProtocols/methodes/sds-page_and_western_blotting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/BiochemProtocols/methodes/sds-page_and_western_blotting/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

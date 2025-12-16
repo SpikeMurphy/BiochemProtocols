@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!btn) return;
 
   btn.addEventListener("click", () => {
+    document.body.classList.add("print-page");
     window.print();
+    document.body.classList.remove("print-page");
   });
 });

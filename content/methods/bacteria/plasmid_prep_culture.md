@@ -86,13 +86,7 @@ Incubation @ 30 °C and shaking @ 250 rpm overnight is also possible.
 
 8. {{< checkbox >}} Document the start time and refer to [BiochemProtocols bacterial growth calculator](#growth-calc-anchor).
 
-{{< current_time_display >}}
-
-<!-- markdownlint-disable MD033 -->
-<div id="growth-calc-anchor" style="position: relative; top: -80px; visibility: hidden;"></div>
-<!-- markdownlint-enable MD033 -->
-
-{{< calculators/bacterial_growth_calc >}}
+{{< calculators/display_current_time >}}
 
 ### Procede with Suitable Protocol
 
@@ -103,3 +97,9 @@ Incubation @ 30 °C and shaking @ 250 rpm overnight is also possible.
 {{< save_page >}}
 
 {{< save_journal_label >}}
+
+<!-- markdownlint-disable MD033 -->
+<div id="growth-calc-anchor" style="position: relative; top: -80px; visibility: hidden;"></div>
+<!-- markdownlint-enable MD033 -->
+
+{{< calculators/calc_bacterial_growth >}}

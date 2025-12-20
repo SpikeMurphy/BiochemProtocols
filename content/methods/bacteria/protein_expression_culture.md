@@ -107,17 +107,11 @@ Incubation @ 30 °C and shaking @ 250 rpm overnight is also possible.
 </div>
 <!-- markdownlint-enable MD033 -->
 
-8. {{< checkbox >}} Document the start time and refer to [BiochemProtocols bacterial growth calculator](#growth-calc-anchor).
+8. {{< checkbox >}} Document the start time and refer to [BiochemProtocols bacterial growth calculator](#growth-calc-anchor1).
 
-{{< current_time_display >}}
+{{< calculators/display_current_time >}}
 
 9. {{< checkbox >}} Measure the OD600 after 120 minutes and then every 60 minutes and until an OD600 of approximately 2.000 is reached.
-
-<!-- markdownlint-disable MD033 -->
-<div id="growth-calc-anchor" style="position: relative; top: -80px; visibility: hidden;"></div>
-<!-- markdownlint-enable MD033 -->
-
-{{< calculators/bacterial_growth_calc >}}
 
 ### Expression Culture
 
@@ -154,16 +148,15 @@ Isopropyl-β-D-thiogalactopyranosid *IPTG* to a final concentration of 0.5 mM (2
 </div>
 <!-- markdownlint-enable MD033 -->
 
-8. {{< checkbox >}} Document the start time and refer to BiochemProtocols bacterial growth calculator.
+8. {{< checkbox >}} Document the start time and refer to [BiochemProtocols bacterial growth calculator](#growth-calc-anchor2).
 
-{{< current_time_display >}} <!-- update so multiple can be on one page or split protocol in two pages -->
+
+{{< calculators/display_current_time >}}
 
 9. {{< checkbox >}} Measure the OD<sub>600</sub> after 120 minutes and then every 60 minutes and until an OD<sub>600</sub> of approximately 2.000 is reached.
 {{< infobox type="info" title="Bacterial Growth Phases" >}}
 ⚠️ Cells should be harvested at the end of the logarythmic growth phase, typically at an OD<sub>600</sub> of approximately 2.000, and before stationary phase is reached at an OD<sub>600</sub> of 2.500–4.000.
 {{< /infobox >}}
-
-{{< calculators/bacterial_growth_calc >}} <!-- update so multiple can be on one page or split protocol in two pages -->
 
 ### Preparations 1 h before Harvesting
 
@@ -256,6 +249,18 @@ When doing multiple samples, just cycle through the samples, which gives them en
 - [MagStrep® Strep-Tactin®XT Beads Protein Purification](Link) <!-- TODO: insert link-->
 - [Gluthatione-Sepharose Protein Purification](Link) <!-- TODO: insert link-->
 {{< /tab >}}
+
+<!-- markdownlint-disable MD033 -->
+<div id="growth-calc-anchor1" style="position: relative; top: -80px; visibility: hidden;"></div>
+<!-- markdownlint-enable MD033 -->
+
+{{< calculators/calc_bacterial_growth >}}
+
+<!-- markdownlint-disable MD033 -->
+<div id="growth-calc-anchor2" style="position: relative; top: -80px; visibility: hidden;"></div>
+<!-- markdownlint-enable MD033 -->
+
+{{< calculators/calc_bacterial_growth >}}
 
 {{< comment_box >}}
 {{< save_page >}}

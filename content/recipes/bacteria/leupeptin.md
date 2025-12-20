@@ -10,9 +10,8 @@ version = 'Version 1.0.0'
 version_explanation = 'first: major revisions - second: minor revisions - third: revisions without changing procedure'
 updated = '16.12.2025'
 finished = true
-tested = false
+tested = true
 +++
-<!-- DONE: tested = true, delete -->
 
 {{< infobox type="info" title="" >}}
 ⚠️ Working concentrations are stable for a few hours only.
@@ -50,8 +49,8 @@ tested = false
 <!-- markdownlint-disable MD033 -->
 | | Material/Step | Volume/Mass | molar/%/comment |
 | :-- | :-- | :-- | :-- |
-| {{< checkbox >}} | Leupeptin | 5 mg <!-- TODO: after adding mol calc, standards are 0.5-5 mg/mL --> | 10mM <!-- TODO: after adding mol calc, standards are 1-10 mM --> |
-| {{< checkbox >}} | <span id="alt_leupeptin_r_ms_etoh">EtOH</span>     <span id="alt_leupeptin_r_ms_h2o" style="display:none">dsH<sub>2</sub>O</span> | 1 mL | |
+| {{< checkbox >}} | Leupeptin | 4.76 mg <!-- TODO: after adding mol calc, standards are 0.5-5 mg/mL --> | 10mM <!-- TODO: after adding mol calc, standards are 1-10 mM --> |
+| {{< checkbox >}} | <span id="alt_leupeptin_r_ms_h2o">dsH<sub>2</sub>O</span>     <span id="alt_leupeptin_r_ms_etoh" style="display:none">EtOH</span> | 1 mL | |
 | {{< checkbox >}} | filter through 0.22 µm syringe filter | | |
 | {{< checkbox >}} | store in 50 µL aliquots @ -20 °C | | |
 <!-- markdownlint-enable MD033 -->

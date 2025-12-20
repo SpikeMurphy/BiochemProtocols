@@ -10,9 +10,8 @@ version = 'Version 1.0.0'
 version_explanation = 'first: major revisions - second: minor revisions - third: revisions without changing procedure'
 updated = ''
 finished = true
-tested = false
+tested = true
 +++
-<!-- DONE: tested = true, delete -->
 
 {{< infobox type="info" title="" >}}
 ⚠️ Pepstatin A dissolves more readily in DMSO. When using MeOH, adding 10–50 % (v/v) (1.7-8.7 M) acetic acid may be required to achieve complete dissolution.

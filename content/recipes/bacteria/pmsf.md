@@ -10,9 +10,8 @@ version = 'Version 1.0.0'
 version_explanation = 'first: major revisions - second: minor revisions - third: revisions without changing procedure'
 updated = '19.12.2025'
 finished = true
-tested = false
+tested = true
 +++
-<!-- DONE: tested = true, delete -->
 
 {{< infobox type="info" title="" >}}
 ⚠️ Working concentrations in aqueous solutions are only stable for a few hours.
@@ -45,7 +44,7 @@ tested = false
 <!-- markdownlint-disable MD033 -->
 | | Material/Step | Volume/Mass | molar/%/comment |
 | :-- | :-- | :-- | :-- |
-| {{< checkbox >}} | PMSF | 174 mg | 100 mM |
+| {{< checkbox >}} | PMSF | 174.19 mg | 100 mM |
 | {{< checkbox >}} | <span id="alt_pmsf_r_ms_etoh">EtOH</span>     <span id="alt_pmsf_r_ms_meoh" style="display:none">MeOH</span> | <span id="alt_pmsf_r_vm_etoh">10 mL</span>     <span id="alt_pmsf_r_vm_meoh" style="display:none">10 mL</span> | |
 | {{< checkbox >}} | store in 500 µL aliquots @ -20 °C | | |
 <!-- markdownlint-enable MD033 -->

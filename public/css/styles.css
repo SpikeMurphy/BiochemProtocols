@@ -513,79 +513,7 @@ main {
     100% { box-shadow: 0 0 0 0 rgba(255,0,0,0.8); }
 }
 /* ========== Countdown Timer (light) ========== */
-/* ========== Growth Calc Current Time (light) ========== */
-.time-btn {
-    padding: 4px 10px;
-    font-size: 0.8rem;
-    background: #e8f0ff;
-    border: 1px solid #b8c8e6;
-    border-radius: 12px;
-    cursor: pointer;
-    color: #2d4c7f;
-    transition: background 0.2s ease, box-shadow 0.2s ease;
-    white-space: nowrap;
-}
-.time-btn:hover {
-    background: #d9e7ff;
-    border-color: #a7bae0;
-}
-.time-btn:active {
-    background: #cbdcff;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.12);
-}
-.time-display {
-    margin-left: 10px;
-    padding: 2px 8px;
-    font-family: "Inter", sans-serif;
-    background: #f8fbff;
-    border: 1px solid #d2e9ff;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    color: #2d4c7f;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
-}
-/* ========== Growth Calc Current Time (light) ========== */
-/* ========== Growth Calc (light) ========== */
-.growthcalc-wrapper {
-    background: linear-gradient(135deg, #ffffff, #eaf5ff);
-    padding: 20px 25px;
-    margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(116,136,162,0.5);
-}
-.growth-table th {
-  text-align: left;
-}
-.gc-time-wrap {
-  display: flex;
-  gap: 2px;
-  align-items: center;
-}
-.gc-hh, .gc-mm {
-  width: 5em;
-  text-align: center;
-}
-.gc-colon {
-  font-weight: bold;
-  padding: 0 2px;
-}
-.proj-list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0.5em;
-}
-.proj-list li {
-  padding: 4px 0;
-  font-size: 1.1em;
-}
-.proj-list strong {
-  width: 120px;
-  display: inline-block;
-}
-.proj-list input[type="number"] {
-  width: 120px;
-}
-/* ========== Growth Calc Projected Time  (light) ========== */
+
 /* ========== Contact Form (light) ========== */
 .contact-form {
     display: flex;
@@ -921,62 +849,7 @@ body.darkmode .blink {
     animation: blinkBorderDark 1s infinite;
 }
 /* ========== Countdown Timer (dark) ========== */
-/* ========== Growth Calc Current Time (dark) ========== */
-body.darkmode .time-btn {
-    background: #1f2937;
-    border: 1px solid #334155;
-    color: #dce9ff;
-}
-body.darkmode .time-btn:hover {
-    background: #263447;
-    border-color: #60a5fa;
-}
-body.darkmode .time-btn:active {
-    background: #1e293b;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.4);
-}
-body.darkmode .time-display {
-    background: #1f2937;
-    border: 1px solid #334155;
-    color: #dce9ff;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-/* ========== Growth Calc Current Time (dark) ========== */
-/* ========== Growth Calc Projected Time  (dark) ========== */
-body.darkmode table input,
-body.darkmode table select {
-    background: #1f2937;
-    border: 1px solid #334155;
-    color: #dce9ff;
-    border-radius: 6px;
-    padding: 6px;
-}
 
-body.darkmode table input:focus,
-body.darkmode table select:focus {
-    border-color: #60a5fa;
-    box-shadow: 0 0 4px rgba(96,165,250,0.4);
-    outline: none;
-}
-body.darkmode .proj-list input[type="number"] {
-    background: #1f2937;
-    border: 1px solid #334155;
-    color: #dce9ff;
-    border-radius: 6px;
-    padding: 6px;
-}
-body.darkmode .proj-list input[type="number"]:focus {
-    border-color: #60a5fa;
-    outline: none;
-    box-shadow: 0 0 4px rgba(96,165,250,0.4);
-}
-body.darkmode .growthcalc-wrapper {
-    background: linear-gradient(135deg, #1f2937, #111827);
-    padding: 20px 25px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(29,47,68,0.8);
-}
-/* ========== Growth Calc Projected Time  (dark) ========== */
 /* ========== Contact Form (dark) ========== */
 body.darkmode .contact-form {
     background: linear-gradient(135deg, #1f2937, #111827);

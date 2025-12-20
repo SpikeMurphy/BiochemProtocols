@@ -10,9 +10,8 @@ version = 'Version 1.0.0'
 version_explanation = 'first: major revisions - second: minor revisions - third: revisions without changing procedure'
 updated = '16.12.2025'
 finished = true
-tested = false
+tested = true
 +++
-<!-- DONE: delete when tested = true -->
 
 {{< tab >}}
 
@@ -21,7 +20,6 @@ tested = false
 | Material | Molecular Weight | Specifications | Location |
 | :-- | :-- | :-- | :-- |
 | aprotenin [<sup>SDS</sup>](https://www.carlroth.com/medias/SDS-A162-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyMzk1OTF8YXBwbGljYXRpb24vcGRmfGFERTVMMmd5TWk4NU1qQTJPRFExT1RZME16RTRMMU5FUWw5Qk1UWXlYMFJGWDBWT0xuQmtaZ3w3MGY1MDRiNjA4OWRkMGZmNzNlNTVkMDk5YmMxNGQ0M2YzOTJmNmFiOWUzZTdjNGU2YWM1YjFmYWZkODIxZTFh) | 6511.44 g/mol | | {{< chemical_location chemical="aprotenin_solid" >}} |
-| {{< checkbox >}} | filter through 0.22 µm syringe filter | | |
 | deionized sterilized Water *dsH<sub>2</sub>O* | 18.015 g/mol | liquid | |
 | syringe filter | | 0.22 µm | {{< chemical_location chemical="syringe filter" >}} |
 
@@ -38,6 +36,7 @@ tested = false
 | :-- | :-- | :-- | :-- |
 | {{< checkbox >}} | Aprotenin | 10 mg | 1.54 mM |
 | {{< checkbox >}} | dsH<sub>2</sub>O | 1 mL | |
+| {{< checkbox >}} | filter through 0.22 µm syringe filter | | |
 | {{< checkbox >}} | store in 50 µL aliquots @ -20 °C | | |
 
 {{< /tab >}}

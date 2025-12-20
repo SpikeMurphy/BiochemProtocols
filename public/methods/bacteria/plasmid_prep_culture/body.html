@@ -171,166 +171,9 @@
 <ol start="8">
 <li><input type="checkbox"> Document the start time and refer to <a href="#growth-calc-anchor">BiochemProtocols bacterial growth calculator</a>.</li>
 </ol>
-<p><button class="time-btn" id="showTimeBtn">Current Time</button>
-<span class="time-display" id="currentTime"></span></p>
-<!-- markdownlint-disable MD033 -->
-<div id="growth-calc-anchor" style="position: relative; top: -80px; visibility: hidden;"></div>
-<!-- markdownlint-enable MD033 -->
-<div class="growthcalc-wrapper">
-<div class="growthcalc">
-<h2>BiochemProtocols Bacterial Growth Time Calculator</h2>
-<p><button class="time-btn" onclick="fillStartTime()">Use Current Time</button> <button class="time-btn" onclick="calcGrowth()">Calculate</button></p>
-<table class="growth-table">
-<thead>
-<tr><th>Time [hh:mm]</th><th>OD<sub>600</sub></th><th>Doubling Time [min]</th></tr>
-</thead>
-<tbody id="gcRows">
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h0" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m0" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od0" type="number" step="0.001" value="0.000" readonly></td>
-  <td><input class="gc-dt" id="gc-dt0" type="number" step="0.1" value="20"></td>
-</tr>
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h1" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m1" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od1" type="number" step="0.001" placeholder="0.000"></td>
-  <td><span class="gc-dt-out" id="gc-dt1"></span></td>
-</tr>
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h2" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m2" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od2" type="number" step="0.001" placeholder="0.000"></td>
-  <td><span class="gc-dt-out" id="gc-dt2"></span></td>
-</tr>
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h3" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m3" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od3" type="number" step="0.001" placeholder="0.000"></td>
-  <td><span class="gc-dt-out" id="gc-dt3"></span></td>
-</tr>
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h4" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m4" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od4" type="number" step="0.001" placeholder="0.000"></td>
-  <td><span class="gc-dt-out" id="gc-dt4"></span></td>
-</tr>
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h5" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m5" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od5" type="number" step="0.001" placeholder="0.000"></td>
-  <td><span class="gc-dt-out" id="gc-dt5"></span></td>
-</tr>
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h6" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m6" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od6" type="number" step="0.001" placeholder="0.000"></td>
-  <td><span class="gc-dt-out" id="gc-dt6"></span></td>
-</tr>
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h7" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m7" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od7" type="number" step="0.001" placeholder="0.000"></td>
-  <td><span class="gc-dt-out" id="gc-dt7"></span></td>
-</tr>
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h8" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m8" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od8" type="number" step="0.001" placeholder="0.000"></td>
-  <td><span class="gc-dt-out" id="gc-dt8"></span></td>
-</tr>
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h9" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m9" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od9" type="number" step="0.001" placeholder="0.000"></td>
-  <td><span class="gc-dt-out" id="gc-dt9"></span></td>
-</tr>
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h10" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m10" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od10" type="number" step="0.001" placeholder="0.000"></td>
-  <td><span class="gc-dt-out" id="gc-dt10"></span></td>
-</tr>
-<tr>
-  <td>
-    <div class="gc-time-wrap">
-      <input class="gc-hh" id="gc-h11" type="number" min="0" max="23" placeholder="hh">
-      <span class="gc-colon">:</span>
-      <input class="gc-mm" id="gc-m11" type="number" min="0" max="59" placeholder="mm">
-    </div>
-  </td>
-  <td><input class="gc-od" id="gc-od11" type="number" step="0.001" placeholder="0.000"></td>
-  <td><span class="gc-dt-out" id="gc-dt11"></span></td>
-</tr>
-</tbody>
-</table>
-<h3>Projected Times</h3>
-<ul class="proj-list">
-  <li><strong>OD<sub>600</sub> = 0.400:</strong> <span id="proj04">–</span></li>
-  <li><strong>OD<sub>600</sub> = 0.600:</strong> <span id="proj06">–</span></li>
-  <li><strong>OD<sub>600</sub> = 0.800:</strong> <span id="proj08">–</span></li>
-  <li>
-    <input id="projCustomOD" type="number" step="0.001" placeholder="Custom OD">
-    <span id="projCustom">–</span>
-  </li>
-</ul>
-<p><button class="time-btn" onclick="downloadExcel()">Download Excel</button></p>
-</div>
+<div class="current-time-widget">
+  <button class="time-btn showTimeBtn">Current Time</button>
+  <span class="time-display currentTime"></span>
 </div>
 <h3 id="procede-with-suitable-protocol">Procede with Suitable Protocol</h3>
 <ul>
@@ -410,6 +253,642 @@
     url: "\"https://spikemurphy.github.io/BiochemProtocols/methods/bacteria/plasmid_prep_culture/\""
   };
 </script>
+
+<!-- markdownlint-disable MD033 -->
+<div id="growth-calc-anchor" style="position: relative; top: -80px; visibility: hidden;"></div>
+<!-- markdownlint-enable MD033 -->
+<div class="growthcalc-wrapper" data-gc="5">
+<div class="growthcalc">
+
+<h2>BiochemProtocols Bacterial Growth Time Calculator</h2>
+
+<button class="time-btn gc-filltime">Use Current Time</button>
+<button class="time-btn gc-calc">Calculate</button>
+
+<table class="growth-table">
+<thead>
+<tr>
+  <th>Time [hh:mm]</th>
+  
+    <th>OD<sub>600</sub> A</th>
+    <th>DT A [min]</th>
+  
+    <th>OD<sub>600</sub> B</th>
+    <th>DT B [min]</th>
+  
+    <th>OD<sub>600</sub> C</th>
+    <th>DT C [min]</th>
+  
+    <th>OD<sub>600</sub> D</th>
+    <th>DT D [min]</th>
+  
+    <th>OD<sub>600</sub> E</th>
+    <th>DT E [min]</th>
+  
+</tr>
+</thead>
+
+<tbody>
+
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h0" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m0" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td><input id="gc-od0-A" type="number" step="0.001" value="0.000" readonly></td>
+    <td><input id="gc-dt0-A" type="number" step="1" value="00"></td>
+  
+    <td><input id="gc-od0-B" type="number" step="0.001" value="0.000" readonly></td>
+    <td><input id="gc-dt0-B" type="number" step="1" value="00"></td>
+  
+    <td><input id="gc-od0-C" type="number" step="0.001" value="0.000" readonly></td>
+    <td><input id="gc-dt0-C" type="number" step="1" value="00"></td>
+  
+    <td><input id="gc-od0-D" type="number" step="0.001" value="0.000" readonly></td>
+    <td><input id="gc-dt0-D" type="number" step="1" value="00"></td>
+  
+    <td><input id="gc-od0-E" type="number" step="0.001" value="0.000" readonly></td>
+    <td><input id="gc-dt0-E" type="number" step="1" value="00"></td>
+  
+</tr>
+
+
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h1" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m1" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td>
+      <input id="gc-od1-A" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt1-A"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od1-B" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt1-B"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od1-C" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt1-C"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od1-D" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt1-D"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od1-E" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt1-E"></span>
+    </td>
+  
+</tr>
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h2" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m2" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td>
+      <input id="gc-od2-A" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt2-A"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od2-B" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt2-B"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od2-C" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt2-C"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od2-D" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt2-D"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od2-E" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt2-E"></span>
+    </td>
+  
+</tr>
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h3" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m3" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td>
+      <input id="gc-od3-A" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt3-A"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od3-B" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt3-B"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od3-C" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt3-C"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od3-D" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt3-D"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od3-E" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt3-E"></span>
+    </td>
+  
+</tr>
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h4" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m4" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td>
+      <input id="gc-od4-A" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt4-A"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od4-B" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt4-B"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od4-C" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt4-C"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od4-D" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt4-D"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od4-E" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt4-E"></span>
+    </td>
+  
+</tr>
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h5" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m5" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td>
+      <input id="gc-od5-A" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt5-A"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od5-B" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt5-B"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od5-C" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt5-C"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od5-D" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt5-D"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od5-E" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt5-E"></span>
+    </td>
+  
+</tr>
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h6" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m6" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td>
+      <input id="gc-od6-A" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt6-A"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od6-B" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt6-B"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od6-C" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt6-C"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od6-D" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt6-D"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od6-E" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt6-E"></span>
+    </td>
+  
+</tr>
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h7" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m7" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td>
+      <input id="gc-od7-A" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt7-A"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od7-B" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt7-B"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od7-C" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt7-C"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od7-D" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt7-D"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od7-E" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt7-E"></span>
+    </td>
+  
+</tr>
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h8" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m8" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td>
+      <input id="gc-od8-A" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt8-A"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od8-B" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt8-B"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od8-C" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt8-C"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od8-D" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt8-D"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od8-E" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt8-E"></span>
+    </td>
+  
+</tr>
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h9" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m9" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td>
+      <input id="gc-od9-A" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt9-A"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od9-B" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt9-B"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od9-C" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt9-C"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od9-D" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt9-D"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od9-E" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt9-E"></span>
+    </td>
+  
+</tr>
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h10" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m10" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td>
+      <input id="gc-od10-A" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt10-A"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od10-B" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt10-B"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od10-C" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt10-C"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od10-D" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt10-D"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od10-E" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt10-E"></span>
+    </td>
+  
+</tr>
+
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h11" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m11" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  
+    <td>
+      <input id="gc-od11-A" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt11-A"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od11-B" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt11-B"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od11-C" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt11-C"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od11-D" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt11-D"></span>
+    </td>
+  
+    <td>
+      <input id="gc-od11-E" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt11-E"></span>
+    </td>
+  
+</tr>
+
+
+
+</tbody>
+</table>
+
+<h3>Projected Times</h3>
+
+<table class="growth-table">
+<thead>
+<tr>
+  <th>Target OD</th>
+  <th>A</th><th>B</th><th>C</th><th>D</th><th>E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0.400</td>
+  <td id="proj04-A">–</td><td id="proj04-B">–</td><td id="proj04-C">–</td><td id="proj04-D">–</td><td id="proj04-E">–</td>
+</tr>
+<tr>
+  <td>0.600</td>
+  <td id="proj06-A">–</td><td id="proj06-B">–</td><td id="proj06-C">–</td><td id="proj06-D">–</td><td id="proj06-E">–</td>
+</tr>
+<tr>
+  <td>0.800</td>
+  <td id="proj08-A">–</td><td id="proj08-B">–</td><td id="proj08-C">–</td><td id="proj08-D">–</td><td id="proj08-E">–</td>
+</tr>
+<tr>
+  <td>
+    <input id="projCustomOD" type="number" step="0.001" placeholder="Custom">
+  </td>
+  <td id="projCustom-A">–</td><td id="projCustom-B">–</td><td id="projCustom-C">–</td><td id="projCustom-D">–</td><td id="projCustom-E">–</td>
+</tr>
+</tbody>
+</table>
+
+<div class="gc-formula">
+  <strong>Doubling time calculation:</strong><br>
+  DT =
+  <span style="display:inline-block; vertical-align:middle;">
+    (t<sub>2</sub> − t<sub>1</sub>) ln(2)
+    <hr style="margin:2px 0;">
+    ln(OD<sub>2</sub> / OD<sub>1</sub>)
+  </span>
+</div>
+
+<br>
+
+<button class="time-btn gc-export">Download Excel</button>
+
+</div>
+</div>
 
 
 </article>

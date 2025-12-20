@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/buttons.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/dropdowns.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/calc_bacterial_growth.css" | relURL }}">
     <title>Document</title>
 </head>
 
@@ -15,7 +16,6 @@
 <script src="{{ "js/calculators/pcr_mastermix_prep_calc.js" | relURL }}"></script>
 <script src="{{ "js/calculators/age_following_pcr_buffer.js" | relURL }}"></script>
 <script src="{{ "js/timer.js" | relURL }}"></script>
-<script src="{{ "js/current_time_display.js" | relURL }}"></script>
 <script src="{{ "js/calculators/transformation_from_pcr_mastermix_prep_calc.js" | relURL }}"></script>
 <script src="{{ "js/alternative_switches/primer_alternative.js" | relURL }}"></script>
 
@@ -27,9 +27,14 @@
 
 <script src="{{ "js/save_page.js" | relURL }}"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script> <!-- save as excel -->
-<script src="{{ "js/calculators/bacterial_growth_calc.js" | relURL }}"></script>
+{{ if .HasShortcode "calculators/calc_bacterial_growth" }}
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>  <!-- save as excel -->
+  <script src="{{ "js/calculators/calc_bacterial_growth.js" | relURL }}"></script>
+{{ end }}
 
+{{ if .HasShortcode "calculators/display_current_time" }}
+<script src="{{ "js/calculators/display_current_time.js" | relURL }}"></script>
+{{ end }}
 
 <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script> <!-- generate QR -->
 <script src="{{ "js/save_journal_label.js" | relURL }}"></script>

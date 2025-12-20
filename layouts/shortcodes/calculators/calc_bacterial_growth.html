@@ -1,0 +1,110 @@
+<div class="growthcalc-wrapper" data-gc="{{ .Ordinal }}">
+<div class="growthcalc">
+
+<h2>BiochemProtocols Bacterial Growth Time Calculator</h2>
+
+<button class="time-btn gc-filltime">Use Current Time</button>
+<button class="time-btn gc-calc">Calculate</button>
+
+<table class="growth-table">
+<thead>
+<tr>
+  <th>Time [hh:mm]</th>
+  {{ range slice "A" "B" "C" "D" "E" }}
+    <th>OD<sub>600</sub> {{ . }}</th>
+    <th>DT {{ . }} [min]</th>
+  {{ end }}
+</tr>
+</thead>
+
+<tbody>
+
+<!-- ROW 0 -->
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h0" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m0" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  {{ range slice "A" "B" "C" "D" "E" }}
+    <td><input id="gc-od0-{{ . }}" type="number" step="0.001" value="0.000" readonly></td>
+    <td><input id="gc-dt0-{{ . }}" type="number" step="1" value="00"></td>
+  {{ end }}
+</tr>
+
+<!-- ROWS 1–11 -->
+{{ range $i := seq 1 11 }}
+<tr>
+  <td>
+    <div class="gc-time-wrap">
+      <input id="gc-h{{ $i }}" type="number" min="0" max="23" placeholder="hh">
+      :
+      <input id="gc-m{{ $i }}" type="number" min="0" max="59" placeholder="mm">
+    </div>
+  </td>
+
+  {{ range $c := slice "A" "B" "C" "D" "E" }}
+    <td>
+      <input id="gc-od{{ $i }}-{{ $c }}" type="number" step="0.001">
+    </td>
+    <td>
+      <span id="gc-dt{{ $i }}-{{ $c }}"></span>
+    </td>
+  {{ end }}
+</tr>
+{{ end }}
+
+
+</tbody>
+</table>
+
+<h3>Projected Times</h3>
+
+<table class="growth-table">
+<thead>
+<tr>
+  <th>Target OD</th>
+  {{ range slice "A" "B" "C" "D" "E" }}<th>{{ . }}</th>{{ end }}
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0.400</td>
+  {{ range slice "A" "B" "C" "D" "E" }}<td id="proj04-{{ . }}">–</td>{{ end }}
+</tr>
+<tr>
+  <td>0.600</td>
+  {{ range slice "A" "B" "C" "D" "E" }}<td id="proj06-{{ . }}">–</td>{{ end }}
+</tr>
+<tr>
+  <td>0.800</td>
+  {{ range slice "A" "B" "C" "D" "E" }}<td id="proj08-{{ . }}">–</td>{{ end }}
+</tr>
+<tr>
+  <td>
+    <input id="projCustomOD" type="number" step="0.001" placeholder="Custom">
+  </td>
+  {{ range slice "A" "B" "C" "D" "E" }}<td id="projCustom-{{ . }}">–</td>{{ end }}
+</tr>
+</tbody>
+</table>
+
+<div class="gc-formula">
+  <strong>Doubling time calculation:</strong><br>
+  DT =
+  <span style="display:inline-block; vertical-align:middle;">
+    (t<sub>2</sub> − t<sub>1</sub>) ln(2)
+    <hr style="margin:2px 0;">
+    ln(OD<sub>2</sub> / OD<sub>1</sub>)
+  </span>
+</div>
+
+<br>
+
+<button class="time-btn gc-export">Download Excel</button>
+
+</div>
+</div>

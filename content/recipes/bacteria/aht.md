@@ -15,6 +15,10 @@ tested = false
 <!-- DONE: tested = true, delete -->
 
 {{< infobox type="info" title="" >}}
+⚠️ AHT is a light sensitive chemical.
+{{< /infobox >}}
+
+{{< infobox type="info" title="" >}}
 ⚠️ AHT dissolves more readily in DMSO than in EtOH.
 {{< /infobox >}}
 
@@ -29,8 +33,8 @@ tested = false
 <!-- markdownlint-disable MD033 -->
 | Material | Molecular Weight | Specifications | Location |
 | :-- | :-- | :-- | :-- |
-| anhydrotetracycline hydrochloride *AHT* [<sup>SDB</sup>](https://www.carlroth.com/.../) | 478.88 g/mol | solid | {{< chemical_location chemical="aht_solid" >}} |
-| <span id="alt_aht_m_m_dmso">(methanesulfinyl)methane (= dimethylsulfoxid) *DMSO* [<sup>SDB</sup>](https://www.carlroth.com/medias/SDB-7029-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNjE5ODN8YXBwbGljYXRpb24vcGRmfGFHSmxMMmc1Wmk4NU1qQTJOelkyTURRek1UWTJMMU5FUWw4M01ESTVYMFJGWDBWT0xuQmtaZ3xmZTllZjBmZjI2OGQ4YjNhZDdlZjhjNjI2MTgwNWY2NGUwMGJlZTNhYWE3ODY2NTllNWMzY2VlYTJiN2JhYTEz)</span>     <span id="alt_aht_m_m_etoh" style="display:none">Ethanol *EtOH*</span> {{< alternative_switches/alt_aht_dmso >}} | <span id="alt_aht_m_mw_dmso">78.13 g/mol</span>     <span id="alt_aht_m_mw_etoh" style="display:none">46.068 g/mol</span> | <span id="alt_aht_m_specs_dmso">organic solvent</span>     <span id="alt_aht_m_specs_etoh" style="display:none">alternative organic solvent</span> | <span id="alt_aht_m_l_dmso">{{< chemical_location chemical="dmso" >}}</span>     <span id="alt_aht_m_l_etoh" style="display:none">{{< chemical_location chemical="etoh_100%" >}}</span> |
+| anhydrotetracycline hydrochloride *AHT* [<sup>SDS</sup>](https://www.carlroth.com/.../) | 478.88 g/mol | solid | {{< chemical_location chemical="aht_solid" >}} |
+| <span id="alt_aht_m_m_dmso">(methanesulfinyl)methane (= dimethylsulfoxid) *DMSO* [<sup>SDS</sup>](https://www.carlroth.com/medias/SDS-7029-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNjE5ODN8YXBwbGljYXRpb24vcGRmfGFHSmxMMmc1Wmk4NU1qQTJOelkyTURRek1UWTJMMU5FUWw4M01ESTVYMFJGWDBWT0xuQmtaZ3xmZTllZjBmZjI2OGQ4YjNhZDdlZjhjNjI2MTgwNWY2NGUwMGJlZTNhYWE3ODY2NTllNWMzY2VlYTJiN2JhYTEz)</span>     <span id="alt_aht_m_m_etoh" style="display:none">Ethanol *EtOH*</span> {{< alternative_switches/alt_aht_dmso >}} | <span id="alt_aht_m_mw_dmso">78.13 g/mol</span>     <span id="alt_aht_m_mw_etoh" style="display:none">46.068 g/mol</span> | <span id="alt_aht_m_specs_dmso">organic solvent</span>     <span id="alt_aht_m_specs_etoh" style="display:none">alternative organic solvent</span> | <span id="alt_aht_m_l_dmso">{{< chemical_location chemical="dmso" >}}</span>     <span id="alt_aht_m_l_etoh" style="display:none">{{< chemical_location chemical="etoh_100%" >}}</span> |
 <!-- markdownlint-enable MD033 -->
 
 {{< /tab >}}

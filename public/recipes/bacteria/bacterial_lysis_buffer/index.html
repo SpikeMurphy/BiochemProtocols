@@ -1,5 +1,5 @@
 <html lang="en">
-<head><script src="/BiochemProtocols/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=BiochemProtocols/livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/BiochemProtocols/css/styles.css">
@@ -20,6 +20,7 @@
 <script src="/BiochemProtocols/js/alternative_switches/primer_alternative.js"></script>
 
 <script src="/BiochemProtocols/js/calculators/calc_recipe_x.js"></script> 
+<script src="/BiochemProtocols/js/calculators/calc_recipe_vol.js"></script> 
 <script src="/BiochemProtocols/js/calculators/calc_recipe_mol.js"></script> 
 
 <script src="/BiochemProtocols/js/comment_box.js"></script>
@@ -88,25 +89,25 @@
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left">tris base <a href="https://www.carlroth.com/medias/SDB-4855-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNDg5MDd8YXBwbGljYXRpb24vcGRmfGFEaG1MMmd4T1M4NU1qQTJOekV3TVRRd09UVTRMMU5FUWw4ME9EVTFYMFJGWDBWT0xuQmtaZ3xhMDM2MzQ2ZGYxZTg3NDk1MTZjNmFiOTEyZDYzOTUyMjU4MWFkNDhhZTY1NDY1YTUyNDFhMjk3Y2UxYjkyYjVm"><sup>SDB</sup></a></td>
+          <td style="text-align: left">tris base <a href="https://www.carlroth.com/medias/SDS-4855-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNDg5MDd8YXBwbGljYXRpb24vcGRmfGFEaG1MMmd4T1M4NU1qQTJOekV3TVRRd09UVTRMMU5FUWw4ME9EVTFYMFJGWDBWT0xuQmtaZ3xhMDM2MzQ2ZGYxZTg3NDk1MTZjNmFiOTEyZDYzOTUyMjU4MWFkNDhhZTY1NDY1YTUyNDFhMjk3Y2UxYjkyYjVm"><sup>SDS</sup></a></td>
           <td style="text-align: left">121.14 g/mol</td>
           <td style="text-align: left">solid</td>
           <td style="text-align: left"><span class="chemical_location" data-chemical="trisbase_solid"><input type="text" class="location-input" placeholder="Enter location..."/><button class="save-btn" aria-label="Save location" disabled>💾</button></span><script src="/BiochemProtocols/js/chemical_location.js"></script></td>
       </tr>
       <tr>
-          <td style="text-align: left">sodium chloride <em>NaCl</em> <a href="https://www.carlroth.com/medias/SDB-9265-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyMjczOTJ8YXBwbGljYXRpb24vcGRmfGFEa3hMMmc0WXk4NU1qQTJPREkyTVRNNU5qYzRMMU5FUWw4NU1qWTFYMFJGWDBWT0xuQmtaZ3wwMDM0YzI2YTljODliODMzMDg5YjFjNzBjOTcwMjU5ZDQ1OGMwYjRlZGIxOTRjMzQyOTNmYmU4NjA1YzQ1ZGQ0"><sup>SDB</sup></a></td>
+          <td style="text-align: left">sodium chloride <em>NaCl</em> <a href="https://www.carlroth.com/medias/SDS-9265-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyMjczOTJ8YXBwbGljYXRpb24vcGRmfGFEa3hMMmc0WXk4NU1qQTJPREkyTVRNNU5qYzRMMU5FUWw4NU1qWTFYMFJGWDBWT0xuQmtaZ3wwMDM0YzI2YTljODliODMzMDg5YjFjNzBjOTcwMjU5ZDQ1OGMwYjRlZGIxOTRjMzQyOTNmYmU4NjA1YzQ1ZGQ0"><sup>SDS</sup></a></td>
           <td style="text-align: left">58.44 g/mol</td>
           <td style="text-align: left">solid</td>
           <td style="text-align: left"><span class="chemical_location" data-chemical="nacl_solid"><input type="text" class="location-input" placeholder="Enter location..."/><button class="save-btn" aria-label="Save location" disabled>💾</button></span><script src="/BiochemProtocols/js/chemical_location.js"></script> </td>
       </tr>
       <tr>
-          <td style="text-align: left">magnesium chloride <em>MgCl<sub>2</sub> · 6 H<sub>2</sub>O</em> <a href="https://www.carlroth.com/medias/SDB-2189-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNDI3MDJ8YXBwbGljYXRpb24vcGRmfGFETXpMMmcxTlM4NU1qQTJNemswTlRnMU1URTRMMU5FUWw4eU1UZzVYMFJGWDBWT0xuQmtaZ3wwNDBmNmVlOGQ1M2UzMDYwZjFlNTY2MzIxNjVhNTkwNDk5ZTdkNTQzMTdjMTdkZWQ1NzZjZjEwNTIzYjRkNTgz"><sup>SDB</sup></a></td>
+          <td style="text-align: left">magnesium chloride <em>MgCl<sub>2</sub> · 6 H<sub>2</sub>O</em> <a href="https://www.carlroth.com/medias/SDS-2189-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNDI3MDJ8YXBwbGljYXRpb24vcGRmfGFETXpMMmcxTlM4NU1qQTJNemswTlRnMU1URTRMMU5FUWw4eU1UZzVYMFJGWDBWT0xuQmtaZ3wwNDBmNmVlOGQ1M2UzMDYwZjFlNTY2MzIxNjVhNTkwNDk5ZTdkNTQzMTdjMTdkZWQ1NzZjZjEwNTIzYjRkNTgz"><sup>SDS</sup></a></td>
           <td style="text-align: left">203.3 g/mol</td>
           <td style="text-align: left">solid</td>
           <td style="text-align: left"><span class="chemical_location" data-chemical="chemicalname_spec"><input type="text" class="location-input" placeholder="Enter location..."/><button class="save-btn" aria-label="Save location" disabled>💾</button></span><script src="/BiochemProtocols/js/chemical_location.js"></script></td>
       </tr>
       <tr>
-          <td style="text-align: left">hydrogen chloride <em>HCl</em> <a href="https://www.carlroth.com/medias/SDB-X897-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wzMjYwMzd8YXBwbGljYXRpb24vcGRmfGFHWmlMMmd6TUM4NU1qQTJPVEEyT1RRMU5UWTJMMU5FUWw5WU9EazNYMFJGWDBWT0xuQmtaZ3xmODE5ZDYzYjAyZjk2OTY2ZWZlZjViMDkyZTkwODJjZDk2MTNjMmI0MDlhZjEzYTE0MDJjNmUwNjQ2MTE2NDFi"><sup>SDB</sup></a></td>
+          <td style="text-align: left">hydrogen chloride <em>HCl</em> <a href="https://www.carlroth.com/medias/SDS-X897-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wzMjYwMzd8YXBwbGljYXRpb24vcGRmfGFHWmlMMmd6TUM4NU1qQTJPVEEyT1RRMU5UWTJMMU5FUWw5WU9EazNYMFJGWDBWT0xuQmtaZ3xmODE5ZDYzYjAyZjk2OTY2ZWZlZjViMDkyZTkwODJjZDk2MTNjMmI0MDlhZjEzYTE0MDJjNmUwNjQ2MTE2NDFi"><sup>SDS</sup></a></td>
           <td style="text-align: left">36.461 g/mol</td>
           <td style="text-align: left">7.76 M (25%), liquid</td>
           <td style="text-align: left"><span class="chemical_location" data-chemical="hcl25_liquid"><input type="text" class="location-input" placeholder="Enter location..."/><button class="save-btn" aria-label="Save location" disabled>💾</button></span><script src="/BiochemProtocols/js/chemical_location.js"></script></td>
@@ -130,11 +131,13 @@
 </div>
 <div class="tab">
   <h2 id="recipe">Recipe</h2>
-<div class="calc-recipe-controls">
+<div class="calc-recipe-x-controls">
   <label>
     Concentration:
     <select class="calc-factor">
       <option value="1" selected>1×</option>
+      <option value="2">2×</option>
+      <option value="4">4×</option>
       <option value="5">5×</option>
       <option value="10">10×</option>
     </select>
@@ -145,6 +148,9 @@
       <option value="1" selected>1 L</option>
       <option value="0.5">0.5 L</option>
       <option value="0.1">0.1 L</option>
+      <option value="0.01">0.01 L</option>
+      <option value="0.005">0.005 L</option>
+      <option value="0.001">0.001 L</option>
     </select>
   </label>
 </div>
@@ -162,25 +168,25 @@
       <tr>
           <td style="text-align: left"><input type="checkbox"></td>
           <td style="text-align: left">tris base</td>
-          <td style="text-align: left"><span class="calc_recipe" data-default-mass="6.06">6.06 g</span></td>
-          <td style="text-align: left"><span class="calc_recipe" data-default-mol="50">50 mM</span></td>
+          <td style="text-align: left"><span class="calc_recipe_x" data-default-mass="6.06">6.06 g</span></td>
+          <td style="text-align: left"><span class="calc_recipe_x" data-default-mol="50">50 mM</span></td>
       </tr>
       <tr>
           <td style="text-align: left"><input type="checkbox"></td>
           <td style="text-align: left">NaCl</td>
-          <td style="text-align: left"><span class="calc_recipe" data-default-mass="8.77">8.77 g</span></td>
-          <td style="text-align: left"><span class="calc_recipe" data-default-mol="150">150 mM</span></td>
+          <td style="text-align: left"><span class="calc_recipe_x" data-default-mass="8.77">8.77 g</span></td>
+          <td style="text-align: left"><span class="calc_recipe_x" data-default-mol="150">150 mM</span></td>
       </tr>
       <tr>
           <td style="text-align: left"><input type="checkbox"></td>
           <td style="text-align: left">MgCl<sub>2</sub></td>
-          <td style="text-align: left"><span class="calc_recipe" data-default-mass="1.02">1.02 g</span></td>
-          <td style="text-align: left"><span class="calc_recipe" data-default-mol="5">5mM</span></td>
+          <td style="text-align: left"><span class="calc_recipe_x" data-default-mass="1.02">1.02 g</span></td>
+          <td style="text-align: left"><span class="calc_recipe_x" data-default-mol="5">5mM</span></td>
       </tr>
       <tr>
           <td style="text-align: left"><input type="checkbox"></td>
           <td style="text-align: left">dsH<sub>2</sub>O</td>
-          <td style="text-align: left"><span class="calc_recipe" data-default-vol="800">800 mL</span></td>
+          <td style="text-align: left"><span class="calc_recipe_x" data-default-vol="800">800 mL</span></td>
           <td style="text-align: left"></td>
       </tr>
       <tr>
@@ -192,7 +198,7 @@
       <tr>
           <td style="text-align: left"><input type="checkbox"></td>
           <td style="text-align: left">dsH<sub>2</sub>O</td>
-          <td style="text-align: left">to <span class="calc_recipe" data-default-vol="1000">1000 mL</span></td>
+          <td style="text-align: left">to <span class="calc_recipe_x" data-default-vol="1000">1000 mL</span></td>
           <td style="text-align: left"></td>
       </tr>
       <tr>
@@ -338,7 +344,7 @@
   window.labelPrintData = {
     title: "\"Tris-HCl-NaCl-MgCl2 Bacterial Lysis Buffer\"",
     version: "\"Version 1.0.1\"",
-    url: "\"http://localhost:1313/BiochemProtocols/recipes/bacteria/bacterial_lysis_buffer/\""
+    url: "\"https://spikemurphy.github.io/BiochemProtocols/recipes/bacteria/bacterial_lysis_buffer/\""
   };
 </script>
 

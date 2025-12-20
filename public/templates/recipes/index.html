@@ -1,5 +1,5 @@
 <html lang="en">
-<head><script src="/BiochemProtocols/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=BiochemProtocols/livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/BiochemProtocols/css/styles.css">
@@ -20,6 +20,7 @@
 <script src="/BiochemProtocols/js/alternative_switches/primer_alternative.js"></script>
 
 <script src="/BiochemProtocols/js/calculators/calc_recipe_x.js"></script> 
+<script src="/BiochemProtocols/js/calculators/calc_recipe_vol.js"></script> 
 <script src="/BiochemProtocols/js/calculators/calc_recipe_mol.js"></script> 
 
 <script src="/BiochemProtocols/js/comment_box.js"></script>
@@ -105,12 +106,12 @@ r = recipe table
 d = ms for material/steps, vm for volume/mass and mol for molar/%/comment
 
 -->
-<!-- Calc Recipe x:
+<!-- Calc Recipe x (only use one x/vol/mol):
 
 for factoring 1x/5x/10x buffers (default volume 1000mL, 1x)
-into the <span>
+into the <span> (new or from alt_switch)
 
-add class="calc_recipe" 
+add class="calc_recipe_x" 
 
 for masses add data-default-mass"e"
 for volumes add data-default-vol"e"
@@ -119,9 +120,25 @@ for molarities add data-default-mol"e"
 e = value
 
 -->
-<!-- Calc Recipe mol:
+<!-- Calc Recipe vol (only use one x/vol/mol):
+
+for factoring volumes (default volume 1000mL)
+into the <span>  (new or from alt_switch)
+
+add class="calc_recipe_vol" 
+
+for masses add data-default-mass"e"
+for volumes add data-default-vol"e"
+for molarities add data-default-mol"e"
+
+e = value
+
+-->
+<!-- Calc Recipe mol (only use one x/vol/mol):
 
 upcoming
+
+add class="calc_recipe_mol" 
 
 -->
 <!--_____________________________delete_____________________________-->
@@ -151,7 +168,7 @@ upcoming
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left">ChemicalName <em>ChemicalFormula</em> <a href="https://www.carlroth.com/.../"><sup>SDB</sup></a></td>
+          <td style="text-align: left">ChemicalName <em>ChemicalFormula</em> <a href="https://www.carlroth.com/.../"><sup>SDS</sup></a></td>
           <td style="text-align: left">g/mol</td>
           <td style="text-align: left"></td>
           <td style="text-align: left"><span class="chemical_location" data-chemical="chemicalname_spec"><input type="text" class="location-input" placeholder="Enter location..."/><button class="save-btn" aria-label="Save location" disabled>💾</button></span><script src="/BiochemProtocols/js/chemical_location.js"></script></td>
@@ -188,6 +205,7 @@ upcoming
 <div class="tab">
   <h2 id="recipe">Recipe</h2>
 <!-- { {< calculators/calc_recipe_x >}} -->
+<!-- { {< calculators/calc_recipe_vol >}} -->
 <!-- { {< calculators/calc_recipe_mol >}} -->
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -356,7 +374,7 @@ upcoming
   window.labelPrintData = {
     title: "\"Recipes Template\"",
     version: "\"Version 1.0.2\"",
-    url: "\"http://localhost:1313/BiochemProtocols/templates/recipes/\""
+    url: "\"https://spikemurphy.github.io/BiochemProtocols/templates/recipes/\""
   };
 </script>
 

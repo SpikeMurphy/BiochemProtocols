@@ -23,7 +23,7 @@ tested = false
 | Material | Molecular Weight | Specifications | Location |
 | :-- | :-- | :-- | :-- |
 | primer |  | lyophilized |  |
-| <span id="primer_te-material">[TE buffer <sup>SDB</sup>]()</span><span style="display:none" id="primer_h2o-material">dsH<sub>2</sub>O</span>{{< alternative_switches/primer_alternative >}} | <span id="primer_te-mw"></span><span style="display:none" id="primer_h2o-mw"></span> | <span id="primer_te-specs">resuspention solution</span><span style="display:none" id="primer_h2o-specs">alternative resuspention solution</span> | <span id="primer_te-location"></span><span style="display:none" id="primer_h2o-location"></span> |
+| <span id="primer_te-material">[TE buffer <sup>SDS</sup>]()</span><span style="display:none" id="primer_h2o-material">dsH<sub>2</sub>O</span>{{< alternative_switches/primer_alternative >}} | <span id="primer_te-mw"></span><span style="display:none" id="primer_h2o-mw"></span> | <span id="primer_te-specs">resuspention solution</span><span style="display:none" id="primer_h2o-specs">alternative resuspention solution</span> | <span id="primer_te-location"></span><span style="display:none" id="primer_h2o-location"></span> |
 
 {{< infobox type="info" title="" >}}
 ⚠️ dsH<sub>2</sub>O can be used for primer resuspension and long-term storage in most cases without noticeable issues. However, TE buffer is generally recommended, as dsH<sub>2</sub>O is slightly acidic and may, over time, contribute to primer degradation.

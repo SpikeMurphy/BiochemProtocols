@@ -21,7 +21,7 @@ tested = false
 <!-- markdownlint-disable MD033 -->
 | Material | Molecular Weight | Specifications | Location |
 | :-- | :-- | :-- | :-- |
-| isopropyl-β-D-thiogalactopyranosid *IPTG* [<sup>SDB</sup>](https://www.carlroth.com/medias/SDB-2316-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyMzgwMzh8YXBwbGljYXRpb24vcGRmfGFETTNMMmcyTXk4NU1qQTJOREEyT0Rjek1URTRMMU5FUWw4eU16RTJYMFJGWDBWT0xuQmtaZ3xlMWEyMWQyMjNhNjk0YjQ0YmJmYzg0ZDA2YjgzZDFmZDUxODU4ZjQ3MWM3MTRjMzM4MDFiYzkwOGU4ZTRjNTg3) |  238.30 g/mol | | {{< chemical_location chemical="iptg_solid" >}} |
+| isopropyl-β-D-thiogalactopyranosid *IPTG* [<sup>SDS</sup>](https://www.carlroth.com/medias/SDS-2316-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyMzgwMzh8YXBwbGljYXRpb24vcGRmfGFETTNMMmcyTXk4NU1qQTJOREEyT0Rjek1URTRMMU5FUWw4eU16RTJYMFJGWDBWT0xuQmtaZ3xlMWEyMWQyMjNhNjk0YjQ0YmJmYzg0ZDA2YjgzZDFmZDUxODU4ZjQ3MWM3MTRjMzM4MDFiYzkwOGU4ZTRjNTg3) |  238.30 g/mol | | {{< chemical_location chemical="iptg_solid" >}} |
 | deionized sterilized Water *dsH<sub>2</sub>O* | 18.015 g/mol | liquid | |
 | syringe filter | | 0.22 µm | {{< chemical_location chemical="syringe filter" >}} |
 <!-- markdownlint-enable MD033 -->

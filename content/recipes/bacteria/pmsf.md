@@ -19,7 +19,7 @@ tested = false
 {{< /infobox >}}
 
 {{< infobox type="danger" title="" >}}
-‼️ PMSF is rapidly absorbed through skin and is highly neurotoxic. Handle exclusively in a chemical fume hood and consider wearing double gloves. Refer to the Safety Data Sheet [<sup>SDS</sup>](https://www.carlroth.com/medias/SDB-6367-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wzNzg0MTF8YXBwbGljYXRpb24vcGRmfGFHRTVMMmhoTUM4NU1qSXpNVFF4TXpreU5ERTBMMU5FUWw4Mk16WTNYMFJGWDBWT0xuQmtaZ3wyNWFiOGM3NjI3Njk4OGNlMmQzOGIwMDVlNGJkMmJiN2VhNGExNWQyMWM4NDhlNTcxOTgzMGMzMDY2ZWMxMzNl) for further information.
+‼️ PMSF is rapidly absorbed through skin and is highly neurotoxic. Handle exclusively in a chemical fume hood and consider wearing double gloves. Refer to the Safety Data Sheet [<sup>SDS</sup>](https://www.carlroth.com/medias/SDS-6367-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wzNzg0MTF8YXBwbGljYXRpb24vcGRmfGFHRTVMMmhoTUM4NU1qSXpNVFF4TXpreU5ERTBMMU5FUWw4Mk16WTNYMFJGWDBWT0xuQmtaZ3wyNWFiOGM3NjI3Njk4OGNlMmQzOGIwMDVlNGJkMmJiN2VhNGExNWQyMWM4NDhlNTcxOTgzMGMzMDY2ZWMxMzNl) for further information.
 {{< /infobox >}}
 
 {{< tab >}}
@@ -29,7 +29,7 @@ tested = false
 <!-- markdownlint-disable MD033 -->
 | Material | Molecular Weight | Specifications | Location |
 | :-- | :-- | :-- | :-- |
-| Phenylmethylsulfonyl Fluoride *PMSF* [<sup>SDB</sup>](https://www.carlroth.com/medias/SDB-6367-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wzNzg0MTF8YXBwbGljYXRpb24vcGRmfGFHRTVMMmhoTUM4NU1qSXpNVFF4TXpreU5ERTBMMU5FUWw4Mk16WTNYMFJGWDBWT0xuQmtaZ3wyNWFiOGM3NjI3Njk4OGNlMmQzOGIwMDVlNGJkMmJiN2VhNGExNWQyMWM4NDhlNTcxOTgzMGMzMDY2ZWMxMzNl) | 174.19 g/mol | | {{< chemical_location chemical="pmsf_spec" >}} |
+| Phenylmethylsulfonyl Fluoride *PMSF* [<sup>SDS</sup>](https://www.carlroth.com/medias/SDS-6367-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wzNzg0MTF8YXBwbGljYXRpb24vcGRmfGFHRTVMMmhoTUM4NU1qSXpNVFF4TXpreU5ERTBMMU5FUWw4Mk16WTNYMFJGWDBWT0xuQmtaZ3wyNWFiOGM3NjI3Njk4OGNlMmQzOGIwMDVlNGJkMmJiN2VhNGExNWQyMWM4NDhlNTcxOTgzMGMzMDY2ZWMxMzNl) | 174.19 g/mol | | {{< chemical_location chemical="pmsf_spec" >}} |
 | <span id="alt_pmsf_m_m_etoh">Ethanol *EtOH*</span>     <span id="alt_pmsf_m_m_meoh" style="display:none">Methanol *MeOH*</span> {{< alternative_switches/alt_pmsf_etoh >}} | <span id="alt_pmsf_m_mw_etoh">46.07 g/mol</span>     <span id="alt_pmsf_m_mw_meoh" style="display:none">32.04 g/mol</span> | <span id="alt_pmsf_m_specs_etoh">organic solvent</span>     <span id="alt_pmsf_m_specs_meoh" style="display:none">alternative organic solvent</span> | <span id="alt_pmsf_m_l_etoh">{{< chemical_location chemical="pmsf_spec" >}}</span>     <span id="alt_pmsf_m_l_meoh" style="display:none">{{< chemical_location chemical="meoh_100%" >}}</span> |
 <!-- markdownlint-enable MD033 -->
 

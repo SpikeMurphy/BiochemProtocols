@@ -7,11 +7,19 @@
             <ul>
             {{ range sort .Sections "Title" }}
                 <li>
-                    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                    <h2><a href="{{ .RelPermalink }}">
+                        {{ .Title }}
+                    </a></h2>
                     <ul>
                         {{ range sort .Pages "Title" }}
                             <li>
-                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                <a href="{{ .RelPermalink }}">
+                                    {{- if .Params.construction -}}🚧 
+                                    {{- else if .Params.tested -}}⭐️ 
+                                    {{- else -}}✅ 
+                                    {{- end -}}
+                                    {{ .Title }}
+                                </a>
                             </li>
                         {{ end }}
                     </ul>
@@ -21,9 +29,18 @@
         {{ else }}
             <ul>
             {{ range sort .Pages "Title" }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                <li><a href="{{ .RelPermalink }}">
+                    {{- if .Params.construction -}}🚧 
+                    {{- else if .Params.tested -}}⭐️ 
+                    {{- else -}}✅ 
+                    {{- end -}}
+                    {{ .Title }}
+                </a></li>
             {{ end }}
             </ul>
+        {{ end }}
+        {{ with .Content }}
+        {{ . }}
         {{ end }}
     {{ end }}
 {{ end }}

@@ -18,8 +18,8 @@ tested = false
 ❗️ Not suitable for Strep-Tactin® resins as biotin irreversibly binds to the resin. Only used for Strep-Tactin®XT resins.
 {{< /infobox >}}
 
-{{< infobox type="danger" title="" >}}
-‼️ Danger
+{{< infobox type="info" title="" >}}
+⚠️ Biotin only dissolves under alkaline conditions.
 {{< /infobox >}}
 
 {{< tab >}}
@@ -29,9 +29,9 @@ tested = false
 <!-- markdownlint-disable MD033 -->
 | Material | Molecular Weight | Specifications | Location |
 | :-- | :-- | :-- | :-- |
-| tris base [<sup>SDB</sup>](https://www.carlroth.com/medias/SDB-4855-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNDg5MDd8YXBwbGljYXRpb24vcGRmfGFEaG1MMmd4T1M4NU1qQTJOekV3TVRRd09UVTRMMU5FUWw4ME9EVTFYMFJGWDBWT0xuQmtaZ3xhMDM2MzQ2ZGYxZTg3NDk1MTZjNmFiOTEyZDYzOTUyMjU4MWFkNDhhZTY1NDY1YTUyNDFhMjk3Y2UxYjkyYjVm) | 121.14 g/mol | solid | {{< chemical_location chemical="trisbase_solid" >}} |
-| sodium chloride *NaCl* [<sup>SDB</sup>](https://www.carlroth.com/medias/SDB-9265-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyMjczOTJ8YXBwbGljYXRpb24vcGRmfGFEa3hMMmc0WXk4NU1qQTJPREkyTVRNNU5qYzRMMU5FUWw4NU1qWTFYMFJGWDBWT0xuQmtaZ3wwMDM0YzI2YTljODliODMzMDg5YjFjNzBjOTcwMjU5ZDQ1OGMwYjRlZGIxOTRjMzQyOTNmYmU4NjA1YzQ1ZGQ0) | 58.44 g/mol | solid | {{< chemical_location chemical="nacl_solid" >}} |
-| hydrogen chloride *HCl* [<sup>SDB</sup>](https://www.carlroth.com/medias/SDB-X897-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wzMjYwMzd8YXBwbGljYXRpb24vcGRmfGFHWmlMMmd6TUM4NU1qQTJPVEEyT1RRMU5UWTJMMU5FUWw5WU9EazNYMFJGWDBWT0xuQmtaZ3xmODE5ZDYzYjAyZjk2OTY2ZWZlZjViMDkyZTkwODJjZDk2MTNjMmI0MDlhZjEzYTE0MDJjNmUwNjQ2MTE2NDFi) | 36.46 g/mol | 7.76 M (25%), liquid | {{< chemical_location chemical="hcl25_liquid" >}} |
+| tris base [<sup>SDS</sup>](https://www.carlroth.com/medias/SDS-4855-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNDg5MDd8YXBwbGljYXRpb24vcGRmfGFEaG1MMmd4T1M4NU1qQTJOekV3TVRRd09UVTRMMU5FUWw4ME9EVTFYMFJGWDBWT0xuQmtaZ3xhMDM2MzQ2ZGYxZTg3NDk1MTZjNmFiOTEyZDYzOTUyMjU4MWFkNDhhZTY1NDY1YTUyNDFhMjk3Y2UxYjkyYjVm) | 121.14 g/mol | solid | {{< chemical_location chemical="trisbase_solid" >}} |
+| sodium chloride *NaCl* [<sup>SDS</sup>](https://www.carlroth.com/medias/SDS-9265-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyMjczOTJ8YXBwbGljYXRpb24vcGRmfGFEa3hMMmc0WXk4NU1qQTJPREkyTVRNNU5qYzRMMU5FUWw4NU1qWTFYMFJGWDBWT0xuQmtaZ3wwMDM0YzI2YTljODliODMzMDg5YjFjNzBjOTcwMjU5ZDQ1OGMwYjRlZGIxOTRjMzQyOTNmYmU4NjA1YzQ1ZGQ0) | 58.44 g/mol | solid | {{< chemical_location chemical="nacl_solid" >}} |
+| sodium hydroxide *NaOH* [<sup>SDS</sup>](https://www.carlroth.com/medias/SDB-6771-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyOTc5NTd8YXBwbGljYXRpb24vcGRmfGFEWTNMMmczWlM4NU1qQTJOelUxT0RVeU16RTRMMU5FUWw4Mk56Y3hYMFJGWDBWT0xuQmtaZ3w4OGY2MTdkN2VlZTZjYTJhOGUwMjJhZWM0MzhhMjkzZmNiYjhlNzU4ZDEwNjcxMWMwNDk2MWNkY2YxNWM1ZTVl) | 40.00 g/mol | liquid, 1 M | {{< chemical_location chemical="naoh_1M" >}} |
 | biotin | 244.31 g/mol | solid | {{< chemical_location chemical="chemicalname_spec" >}} |
 | deionized sterilized Water *dsH<sub>2</sub>O* | 18.015 g/mol | liquid | |
 | vacuum filter | | 0.22 µm | |
@@ -49,12 +49,12 @@ tested = false
 <!-- markdownlint-disable MD033 -->
 | | Material/Step | Volume/Mass | molar/%/comment |
 | :-- | :-- | :-- | :-- |
-| {{< checkbox >}} | tris base | <span class="calc_recipe" data-default-mass="12.12">12.12 g</span> | <span class="calc_recipe" data-default-mol="100">100 mM</span> |
-| {{< checkbox >}} | NaCl | <span class="calc_recipe" data-default-mass="8.77">8.77 g</span> | <span class="calc_recipe" data-default-mol="150">150 mM</span> |
-| {{< checkbox >}} | dsH<sub>2</sub>O | <span class="calc_recipe" data-default-vol="800">800 mL</span> | |
-| {{< checkbox >}} | HCl 25 % | pH to 8.0 | |
-| {{< checkbox >}} | biotin | <span class="calc_recipe" data-default-mass="12.22">12.22 g</span> | <span class="calc_recipe" data-default-mol="50">50 mM</span> |
-| {{< checkbox >}} | dsH<sub>2</sub>O | to <span class="calc_recipe" data-default-vol="1000">1000 mL</span> | |
+| {{< checkbox >}} | tris base | <span class="calc_recipe_x" data-default-mass="12.11">12.11 g</span> | <span class="calc_recipe_x" data-default-mol="100">100 mM</span> |
+| {{< checkbox >}} | NaCl | <span class="calc_recipe_x" data-default-mass="8.77">8.77 g</span> | <span class="calc_recipe_x" data-default-mol="150">150 mM</span> |
+| {{< checkbox >}} | dsH<sub>2</sub>O | <span class="calc_recipe_x" data-default-vol="800">800 mL</span> | |
+| {{< checkbox >}} | NaOH 1M | pH to 8.0 | |
+| {{< checkbox >}} | biotin | <span class="calc_recipe_x" data-default-mass="12.22">12.22 g</span> | <span class="calc_recipe_x" data-default-mol="50">50 mM</span> |
+| {{< checkbox >}} | dsH<sub>2</sub>O | to <span class="calc_recipe_x" data-default-vol="1000">1000 mL</span> | |
 | {{< checkbox >}} | filter through 0.22 µm vacuum filter | | |
 | {{< checkbox >}} | store @ 4 °C or in 50 mL aliquots @ –20 °C | | |
 <!-- markdownlint-enable MD033 -->

@@ -33,7 +33,7 @@ tested = false
 <!-- markdownlint-disable MD033 -->
 | Material | Molecular Weight | Specifications | Location |
 | :-- | :-- | :-- | :-- |
-| leupeptin hemisulphate [<sup>SDB</sup>](https://www.carlroth.com/medias/SDB-CN33-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyMzU5MDV8YXBwbGljYXRpb24vcGRmfGFESmtMMmhsWXk4NU1qQTJPRFUyT0RRek1qazBMMU5FUWw5RFRqTXpYMFJGWDBWT0xuQmtaZ3w2MDg1ZDg0NGNiOTZmNzVkODFiMGM0YjY4ZDNmMDQ3MDc0N2JhMjM0MmVjZGJjMGUzMDExNTk0NTdhODYyM2Uz) | 475.99 g/mol | solid | {{< chemical_location chemical="leupeptin_solid" >}} |
+| leupeptin hemisulphate [<sup>SDS</sup>](https://www.carlroth.com/medias/SDS-CN33-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyMzU5MDV8YXBwbGljYXRpb24vcGRmfGFESmtMMmhsWXk4NU1qQTJPRFUyT0RRek1qazBMMU5FUWw5RFRqTXpYMFJGWDBWT0xuQmtaZ3w2MDg1ZDg0NGNiOTZmNzVkODFiMGM0YjY4ZDNmMDQ3MDc0N2JhMjM0MmVjZGJjMGUzMDExNTk0NTdhODYyM2Uz) | 475.99 g/mol | solid | {{< chemical_location chemical="leupeptin_solid" >}} |
 | <span id="alt_leupeptin_m_m_h2o">deionized sterilized Water *dsH<sub>2</sub>O*</span>     <span id="alt_leupeptin_m_m_etoh" style="display:none">Ethanol *EtOH*</span> {{< alternative_switches/alt_leupeptin_h2o >}} | <span id="alt_leupeptin_m_mw_h20">18.02 g/mol</span>     <span id="alt_leupeptin_m_mw_etoh" style="display:none">46.068 g/mol</span> | <span id="alt_leupeptin_m_specs_h2o">solvent</span>     <span id="alt_leupeptin_m_specs_etoh" style="display:none">alternative organic solvent</span> | <span id="alt_leupeptin_m_l_h2o"></span>     <span id="alt_leupeptin_m_l_etoh_100%" style="display:none">{{< chemical_location chemical="etoh_100%" >}}</span> |
 | syringe filter | | 0.22 µm | {{< chemical_location chemical="syringe filter" >}} |
 <!-- markdownlint-enable MD033 -->

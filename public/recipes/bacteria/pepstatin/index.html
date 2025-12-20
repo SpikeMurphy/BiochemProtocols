@@ -1,5 +1,5 @@
 <html lang="en">
-<head><script src="/BiochemProtocols/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=BiochemProtocols/livereload" data-no-instant defer></script>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/BiochemProtocols/css/styles.css">
@@ -20,6 +20,7 @@
 <script src="/BiochemProtocols/js/alternative_switches/primer_alternative.js"></script>
 
 <script src="/BiochemProtocols/js/calculators/calc_recipe_x.js"></script> 
+<script src="/BiochemProtocols/js/calculators/calc_recipe_vol.js"></script> 
 <script src="/BiochemProtocols/js/calculators/calc_recipe_mol.js"></script> 
 
 <script src="/BiochemProtocols/js/comment_box.js"></script>
@@ -92,13 +93,13 @@
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left">pepstatin A <a href="https://www.carlroth.com/.../"><sup>SDB</sup></a></td>
+          <td style="text-align: left">pepstatin A <a href="https://www.carlroth.com/.../"><sup>SDS</sup></a></td>
           <td style="text-align: left">685.91 g/mol</td>
           <td style="text-align: left"></td>
           <td style="text-align: left"><span class="chemical_location" data-chemical="pepstatin_solid"><input type="text" class="location-input" placeholder="Enter location..."/><button class="save-btn" aria-label="Save location" disabled>💾</button></span><script src="/BiochemProtocols/js/chemical_location.js"></script></td>
       </tr>
       <tr>
-          <td style="text-align: left"><span id="alt_pepstatin_m_m_dmso">(methanesulfinyl)methane (= dimethylsulfoxid) <em>DMSO</em> <a href="https://www.carlroth.com/medias/SDB-7029-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNjE5ODN8YXBwbGljYXRpb24vcGRmfGFHSmxMMmc1Wmk4NU1qQTJOelkyTURRek1UWTJMMU5FUWw4M01ESTVYMFJGWDBWT0xuQmtaZ3xmZTllZjBmZjI2OGQ4YjNhZDdlZjhjNjI2MTgwNWY2NGUwMGJlZTNhYWE3ODY2NTllNWMzY2VlYTJiN2JhYTEz"><sup>SDB</sup></a></span>     <span id="alt_pepstatin_m_m_meoh" style="display:none">Methanol <em>MeOH</em></span> <button button class="alternative" id="pepstatin_dmso_alternative_switch">Use MeOH</button><script src="/BiochemProtocols/js/alternative_switches/alt_pepstatin_dmso.js"></script> <!-- TODO: add SDS link--></td>
+          <td style="text-align: left"><span id="alt_pepstatin_m_m_dmso">(methanesulfinyl)methane (= dimethylsulfoxid) <em>DMSO</em> <a href="https://www.carlroth.com/medias/SDS-7029-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNjE5ODN8YXBwbGljYXRpb24vcGRmfGFHSmxMMmc1Wmk4NU1qQTJOelkyTURRek1UWTJMMU5FUWw4M01ESTVYMFJGWDBWT0xuQmtaZ3xmZTllZjBmZjI2OGQ4YjNhZDdlZjhjNjI2MTgwNWY2NGUwMGJlZTNhYWE3ODY2NTllNWMzY2VlYTJiN2JhYTEz"><sup>SDS</sup></a></span>     <span id="alt_pepstatin_m_m_meoh" style="display:none">Methanol <em>MeOH</em></span> <button button class="alternative" id="pepstatin_dmso_alternative_switch">Use MeOH</button><script src="/BiochemProtocols/js/alternative_switches/alt_pepstatin_dmso.js"></script> <!-- TODO: add SDS link--></td>
           <td style="text-align: left"><span id="alt_pepstatin_m_mw_dmso">78.13 g/mol</span>     <span id="alt_pepstatin_m_mw_meoh" style="display:none">32.04 g/mol</span></td>
           <td style="text-align: left"><span id="alt_pepstatin_m_specs_dmso">organic solvent</span>     <span id="alt_pepstatin_m_specs_meoh" style="display:none">alternative organic solvent</span></td>
           <td style="text-align: left"><span id="alt_pepstatin_m_l_dmso"><span class="chemical_location" data-chemical="dmso"><input type="text" class="location-input" placeholder="Enter location..."/><button class="save-btn" aria-label="Save location" disabled>💾</button></span><script src="/BiochemProtocols/js/chemical_location.js"></script></span>     <span id="alt_pepstatin_m_l_meoh" style="display:none"><span class="chemical_location" data-chemical="meoh_100%"><input type="text" class="location-input" placeholder="Enter location..."/><button class="save-btn" aria-label="Save location" disabled>💾</button></span><script src="/BiochemProtocols/js/chemical_location.js"></script></span></td>
@@ -263,7 +264,7 @@
   window.labelPrintData = {
     title: "\"Pepstatin A Stock 1 mM\"",
     version: "\"Version 1.0.0\"",
-    url: "\"http://localhost:1313/BiochemProtocols/recipes/bacteria/pepstatin/\""
+    url: "\"https://spikemurphy.github.io/BiochemProtocols/recipes/bacteria/pepstatin/\""
   };
 </script>
 

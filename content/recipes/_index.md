@@ -12,3 +12,9 @@ outputs = ["html", "JournalIndex"]
 [cascade]
 outputs = ["html", "Body"]
 +++
+
+{{< infobox type="info" title="Legend" >}}
+🚧 = under construction  
+✅ = finished  
+⭐️ = lab tested  
+{{< /infobox >}}

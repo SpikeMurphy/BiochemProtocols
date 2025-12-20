@@ -52,12 +52,12 @@ d = ms for material/steps, vm for volume/mass and mol for molar/%/comment
 
 -->
 
-<!-- Calc Recipe x:
+<!-- Calc Recipe x (only use one x/vol/mol):
 
 for factoring 1x/5x/10x buffers (default volume 1000mL, 1x)
-into the <span>
+into the <span> (new or from alt_switch)
 
-add class="calc_recipe" 
+add class="calc_recipe_x" 
 
 for masses add data-default-mass"e"
 for volumes add data-default-vol"e"
@@ -67,9 +67,26 @@ e = value
 
 -->
 
-<!-- Calc Recipe mol:
+<!-- Calc Recipe vol (only use one x/vol/mol):
+
+for factoring volumes (default volume 1000mL)
+into the <span>  (new or from alt_switch)
+
+add class="calc_recipe_vol" 
+
+for masses add data-default-mass"e"
+for volumes add data-default-vol"e"
+for molarities add data-default-mol"e"
+
+e = value
+
+-->
+
+<!-- Calc Recipe mol (only use one x/vol/mol):
 
 upcoming
+
+add class="calc_recipe_mol" 
 
 -->
 
@@ -94,7 +111,7 @@ upcoming
 <!-- markdownlint-disable MD033 -->
 | Material | Molecular Weight | Specifications | Location |
 | :-- | :-- | :-- | :-- |
-| ChemicalName *ChemicalFormula* [<sup>SDB</sup>](https://www.carlroth.com/.../) | g/mol | | {{< chemical_location chemical="chemicalname_spec" >}} |
+| ChemicalName *ChemicalFormula* [<sup>SDS</sup>](https://www.carlroth.com/.../) | g/mol | | {{< chemical_location chemical="chemicalname_spec" >}} |
 | | g/mol | | {{< chemical_location chemical="chemicalname_spec" >}} |
 | | g/mol | | {{< chemical_location chemical="chemicalname_spec" >}} |
 | deionized sterilized Water *dsH<sub>2</sub>O* | 18.015 g/mol | liquid | |
@@ -108,6 +125,7 @@ upcoming
 ## Recipe
 
 <!-- { {< calculators/calc_recipe_x >}} -->
+<!-- { {< calculators/calc_recipe_vol >}} -->
 <!-- { {< calculators/calc_recipe_mol >}} -->
 
 <!-- markdownlint-disable MD033 -->

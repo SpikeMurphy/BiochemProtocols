@@ -9,10 +9,9 @@ facility = '¹ Center for Experimental Medicine, Institute of Biochemistry and S
 version = 'Version 1.0.0'
 version_explanation = 'first: major revisions - second: minor revisions - third: revisions without changing procedure'
 updated = ''
-finished = false
-tested = false
+finished = true
+tested = true
 +++
-<!-- DONE: tested = true, delete -->
 
 {{< tab >}}
 
@@ -21,8 +20,9 @@ tested = false
 <!-- markdownlint-disable MD033 -->
 | Material | Molecular Weight | Specifications | Location |
 | :-- | :-- | :-- | :-- |
-| <span id="alt_lb_m_m_lb">Luria-Bertani medium</span>     <span id="alt_lb_m_m_individual" style="display:none">tryptone <br> yeast extract <br> sodium chloride *NaCl*</span> {{< alternative_switches/alt_lb_lb >}} | <span id="alt_lb_m_mw_lb">XXXXXXXXXX</span>     <span id="alt_lb_m_mw_individual" style="display:none">x <br> y <br> z</span> | <span id="alt_lb_m_specs_lb">solid (powdered or granulated)</span>     <span id="alt_lb_m_specs_individual" style="display:none">powder <br> powder <br> powder</span> | <span id="alt_lb_m_l_lb">{{< chemical_location chemical="lb_solid" >}}</span>     <span id="alt_lb_m_l_individual" style="display:none">{{< chemical_location chemical="tryptone_solid" >}} <br> {{< chemical_location chemical="yeastextract_solid" >}} <br> {{< chemical_location chemical="nacl_solid" >}}</span> |
+| <span id="alt_lb_m_m_lb">Luria-Bertani medium</span>     <span id="alt_lb_m_m_individual" style="display:none">tryptone <br> yeast extract <br> sodium chloride *NaCl*</span> {{< alternative_switches/alt_lb_lb >}} | <span id="alt_lb_m_mw_lb">N/A (complex mixture)</span>     <span id="alt_lb_m_mw_individual" style="display:none">N/A (complex mixture) <br> N/A (complex mixture) <br> N/A (complex mixture)</span> | <span id="alt_lb_m_specs_lb">solid (powdered or granulated)</span>     <span id="alt_lb_m_specs_individual" style="display:none">solid <br> solid <br> solid</span> | <span id="alt_lb_m_l_lb">{{< chemical_location chemical="lb_solid" >}}</span>     <span id="alt_lb_m_l_individual" style="display:none">{{< chemical_location chemical="tryptone_solid" >}} <br> {{< chemical_location chemical="yeastextract_solid" >}} <br> {{< chemical_location chemical="nacl_solid" >}}</span> |
 | deionized Water *dH<sub>2</sub>O* | 18.015 g/mol | liquid | |
+| autoclave | | | |
 <!-- markdownlint-enable MD033 -->
 
 {{< /tab >}}
@@ -32,13 +32,14 @@ tested = false
 ## Recipe
 
 <!-- { {< calculators/calc_recipe_x >}} -->
+{{< calculators/calc_recipe_vol >}}
 <!-- { {< calculators/calc_recipe_mol >}} -->
 
 <!-- markdownlint-disable MD033 -->
 | | Material/Step | Volume/Mass | molar/%/comment |
 | :-- | :-- | :-- | :-- |
-| {{< checkbox >}} | <span id="alt_lb_r_ms_lb">Luria-Bertani medium</span>     <span id="alt_lb_r_ms_individual" style="display:none">tryptone <br> yeast extract <br> NaCl</span> | <span id="alt_lb_r_vm_lb">25 g</span>     <span id="alt_lb_r_vm_individual" style="display:none">10 g <br> 5 g <br> 10 g</span> | <span id="alt_lb_r_mol_lb">XXXXXXXXXX</span>     <span id="alt_lb_r_mol_individual" style="display:none">x <br>  y<br>  z<br> </span> |
-| {{< checkbox >}} | deionized Water *dH<sub>2</sub>O* | 1000 mL| |
+| {{< checkbox >}} | <span id="alt_lb_r_ms_lb">Luria-Bertani medium</span>     <span id="alt_lb_r_ms_individual" style="display:none">tryptone <br> yeast extract <br> NaCl</span> | <span id="alt_lb_r_vm_lb" class="calc_recipe_vol" data-default-mass="25">25 g</span>     <span id="alt_lb_r_vm_individual" style="display:none" class="calc_recipe_vol" data-default-mass="10,5,10">10 g <br> 5 g <br> 10 g</span> | <span id="alt_lb_r_mol_lb">N/A (complex mixture)</span>     <span id="alt_lb_r_mol_individual" style="display:none">N/A (complex mixture) <br>  N/A (complex mixture)<br>  N/A (complex mixture)<br> </span> |
+| {{< checkbox >}} | deionized Water *dH<sub>2</sub>O* | <span class="calc_recipe_vol" data-default-vol="1000">1000 mL</span> | |
 | {{< checkbox >}} | autoclave on liquid cycle according to the device's manual <br> (typically @ 121 °C for 25 min) | | |
 | {{< checkbox >}} | let cool down to 60°C or until oly warm to touch | | |
 | {{< checkbox >}} | add the appropriate antibiotic if necessary | | |

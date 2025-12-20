@@ -20,7 +20,7 @@ tested = false
 
 | Material | Molecular Weight | Specifications | Location |
 | :---- | :----- | :----- | :----- |
-| [ampicillin <sup>SDB</sup>](https://www.carlroth.com/medias/SDB-HP62-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNTk2NzZ8YXBwbGljYXRpb24vcGRmfGFEQTRMMmc0WVM4NU1qQTJPRGN6T0RRNU9EZzJMMU5FUWw5SVVEWXlYMFJGWDBWT0xuQmtaZ3w4M2I0OGFmMGQ5ZDkyMzhkNDYyYWQwZDcwZDU5MzllMjgwMDhkYzYzMzY1ZDY2ZTZjM2IzMGEyMDUyMTlkYjgz) | 349.406 g/mol  | solid | {{< chemical_location chemical="ampicillin_solid" >}} |
+| [ampicillin <sup>SDS</sup>](https://www.carlroth.com/medias/SDS-HP62-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNTk2NzZ8YXBwbGljYXRpb24vcGRmfGFEQTRMMmc0WVM4NU1qQTJPRGN6T0RRNU9EZzJMMU5FUWw5SVVEWXlYMFJGWDBWT0xuQmtaZ3w4M2I0OGFmMGQ5ZDkyMzhkNDYyYWQwZDcwZDU5MzllMjgwMDhkYzYzMzY1ZDY2ZTZjM2IzMGEyMDUyMTlkYjgz) | 349.406 g/mol  | solid | {{< chemical_location chemical="ampicillin_solid" >}} |
 | deionized sterilized Water *dsH<sub>2</sub>O* | 18.015 g/mol | liquid |  |
 | syringe filter | | 0.22 µm | {{< chemical_location chemical="syringe filter" >}} |
 | store in 1 mL aliquots @ -20 °C | | | |

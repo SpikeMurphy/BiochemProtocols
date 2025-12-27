@@ -12,9 +12,56 @@
     <link rel="stylesheet" href="{{ "css/calc_bacterial_growth.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/table_sds-page_gels.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/footer.css" | relURL }}">
+    
+    <!-- math -->
+    {{ if .Params.math }}
+      {{ partial "math.html" . }}
+    {{ end }}
+    <!-- math -->
+    
     <title>Document</title>
 </head>
 
+<body>
+
+    {{ partial "navigation" . }}
+
+    {{ partial "login" . }}
+
+    {{ partial "header" . }}
+    
+    <main>
+
+            {{block "main" . }}
+
+            {{end}}
+
+    </main>
+
+    {{ partial "footer" . }}
+
+<!-- Supabase initialization -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  window.supabaseClient = supabase.createClient(
+    'https://hkcytxqlswwcfwegpjnf.supabase.co',
+    'sb_publishable_jOItw6osT5EVsEVtQ3K16w_MWQR3YBf'
+  );
+</script>
+<!-- Supabase initialization -->
+
+<!-- authentication -->
+<script src="{{ "js/user/auth.js" | relURL }}"></script>
+<!-- authentication -->
+
+<!-- access code -->
+<script>
+  window.ACCESS_CODES = {{ .Site.Data.access.passwords | jsonify | safeJS }};
+</script>
+<script src="{{ "js/user/access.js" | relURL }}"></script>
+<!-- access code -->
+
+<!-- scripts -->
 <script src="{{ "js/theme_toggle.js" | relURL }}"></script>
 <script src="{{ "js/calculators/age_buffer_select.js" | relURL }}"></script>
 <script src="{{ "js/calculators/age_mastermix_prep_calc.js" | relURL }}"></script>
@@ -31,7 +78,6 @@
 <script src="{{ "js/calculators/calc_recipe_vol.js" | relURL }}"></script> <!-- baseof is correct -->
 <script src="{{ "js/calculators/calc_recipe_mol.js" | relURL }}"></script> <!-- baseof is correct -->
 <script src="{{ "js/calculators/calc_recipe_amount.js" | relURL }}"></script> <!-- baseof is correct -->
-
 
 <script src="{{ "js/comment_box.js" | relURL }}"></script>
 
@@ -54,41 +100,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script> <!-- generate QR -->
 <script src="{{ "js/save_journal_label.js" | relURL }}"></script>
-
-<script src="{{ "js/user/access.js" | relURL }}"></script>
-
-<!-- Supabase initialization -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-  window.supabaseClient = supabase.createClient(
-    'https://hkcytxqlswwcfwegpjnf.supabase.co',
-    'sb_publishable_jOItw6osT5EVsEVtQ3K16w_MWQR3YBf'
-  );
-</script>
-<!-- Supabase initialization -->
-
-
-{{ if .Params.math }}
-  {{ partial "math.html" . }}
-{{ end }}
-
-<body>
-
-    {{ partial "navigation" . }}
-
-    {{ partial "login" . }}
-
-    {{ partial "header" . }}
-    
-    <main>
-
-            {{block "main" . }}
-
-            {{end}}
-
-    </main>
-
-    {{ partial "footer" . }}
+<!-- scripts -->
 
 </body>
 

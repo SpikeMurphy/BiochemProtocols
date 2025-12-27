@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://spikemurphy.github.io/BiochemProtocols/user/</loc>
+    <lastmod>2025-12-27T18:37:48+01:00</lastmod>
+  </url><url>
+    <loc>https://spikemurphy.github.io/BiochemProtocols/user/registration/pricing/</loc>
+    <lastmod>2025-12-27T18:37:48+01:00</lastmod>
+  </url><url>
     <loc>https://spikemurphy.github.io/BiochemProtocols/methods/sds-page_and_western_blotting/sds-page/</loc>
     <lastmod>2025-12-25T19:33:04+01:00</lastmod>
   </url><url>
@@ -236,14 +242,10 @@
     <loc>https://spikemurphy.github.io/BiochemProtocols/</loc>
     <lastmod>2025-12-07T12:53:56+01:00</lastmod>
   </url><url>
-    <loc>https://spikemurphy.github.io/BiochemProtocols/user/access/</loc>
-  </url><url>
     <loc>https://spikemurphy.github.io/BiochemProtocols/categories/</loc>
   </url><url>
     <loc>https://spikemurphy.github.io/BiochemProtocols/user/registration/callback/</loc>
   </url><url>
     <loc>https://spikemurphy.github.io/BiochemProtocols/tags/</loc>
-  </url><url>
-    <loc>https://spikemurphy.github.io/BiochemProtocols/user/</loc>
   </url>
 </urlset>

@@ -92,6 +92,9 @@ if (registerForm) {
         data: {
         first_name: firstName,
         last_name: lastName
+        },
+        app_metadata: {
+          plan: 'free'
         }
     }
     });

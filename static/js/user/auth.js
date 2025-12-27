@@ -57,7 +57,24 @@ window.getCurrentUser = getCurrentUser;
 window.requireAuth = requireAuth;
 window.logout = logout;
 
-// ✅ SAFE BOOT
-document.addEventListener('DOMContentLoaded', () => {
-  initAuth().catch(console.error);
+document.addEventListener('DOMContentLoaded', async () => {
+  await initAuth();
+
+  const btn = document.querySelector('.btn_login');
+  if (btn && window.auth.user) {
+    btn.textContent = 'Logout';
+    btn.onclick = logout;
+  }
+});
+
+document.addEventListener('auth:login', async () => {
+  const user = await getCurrentUser();
+  console.log('User after login:', user);
+
+  // Example: change Login button to Logout
+  const btn = document.querySelector('.btn_login');
+  if (btn && user) {
+    btn.textContent = 'Logout';
+    btn.onclick = logout;
+  }
 });

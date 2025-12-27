@@ -11,6 +11,7 @@ version_explanation = 'first: major revisions - second: minor revisions - third:
 updated = ''
 finished = false
 tested = false
+required_plan = 'office,admin'
 +++
 <!-- CONTENT_NEW: delete when finished = true + tested = true -->
 

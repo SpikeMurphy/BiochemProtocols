@@ -159,7 +159,7 @@ Isopropyl-β-D-thiogalactopyranosid *IPTG* to a final concentration of 0.5 mM (2
 
 9. {{< checkbox >}} Measure the OD<sub>600</sub> after 120 minutes and then every 60 minutes and until an OD<sub>600</sub> of approximately 2.000 is reached.
 {{< infobox type="info" title="Bacterial Growth Phases" >}}
-⚠️ Cells should be harvested at the end of the logarythmic growth phase, typically at an OD<sub>600</sub> of approximately 2.000, and before stationary phase is reached at an OD<sub>600</sub> of 2.500–4.000.
+⚠️ Cells should be harvested at the end of the logarithmic growth phase, typically at an OD<sub>600</sub> of approximately 2.000, and before stationary phase is reached at an OD<sub>600</sub> of 2.500–4.000.
 {{< /infobox >}}
 
 ### Preparations 1 h before Harvesting
@@ -207,7 +207,7 @@ Sorvall SS-34 fixed angle rotor: $1.118 \cdot 10^{-5} \ cm^{-1} \ min ^{2} \cdot
 
 1. {{< checkbox >}} Overlay bacteria pellet from 500 mL culture volume with 20 mL freshly prepared lysis buffer (2 mL/pellet).
 {{< infobox type="info" title="" >}}
-⚠️ For subsequent purification using affinity chromatography columns, try and keep lysate as concentrated as possible and therefore the volume as little as possible. Try using only 5 mL and increase the volume only when resuspention is not possible.
+⚠️ For subsequent purification using affinity chromatography columns, try and keep lysate as concentrated as possible and therefore the volume as little as possible. Try using only 5 mL and increase the volume only when resuspension is not possible.
 {{< /infobox >}}
 
 2. {{< checkbox >}} Break up the pellet with a pipette.
@@ -268,7 +268,7 @@ When doing multiple samples, just cycle through the samples, which gives them en
 
 - [StrepTag Gravity Flow Protein Purification]({{< relref "/methods/proteins/streptag_protein_purification" >}})
 - [MagStrep® Strep-Tactin®XT Beads Protein Purification](Link) <!-- CONTENT_TODO: insert link-->
-- [Gluthatione-Sepharose Protein Purification](Link) <!-- CONTENT_TODO: insert link-->
+- [Glutathione-Sepharose Protein Purification](Link) <!-- CONTENT_TODO: insert link-->
 {{< /tab >}}
 
 <!-- markdownlint-disable MD033 -->

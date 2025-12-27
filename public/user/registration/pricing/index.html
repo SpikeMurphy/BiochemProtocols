@@ -20,7 +20,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body data-required-plan="">
 
     
 
@@ -187,6 +187,13 @@
           <td style="text-align: center">✔️</td>
       </tr>
       <tr>
+          <td style="text-align: left"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+          <td style="text-align: center"></td>
+      </tr>
+      <tr>
           <td style="text-align: left"><strong>SOP – Chemicals Recipes</strong></td>
           <td style="text-align: center">❌</td>
           <td style="text-align: center">✔️</td>
@@ -194,7 +201,7 @@
           <td style="text-align: center">✔️</td>
       </tr>
       <tr>
-          <td style="text-align: left"><strong>SExport Labels</strong></td>
+          <td style="text-align: left"><strong>Export Labels</strong></td>
           <td style="text-align: center">❌</td>
           <td style="text-align: center">✔️</td>
           <td style="text-align: center">✔️</td>
@@ -257,7 +264,7 @@
           <td style="text-align: center">✔️</td>
       </tr>
       <tr>
-          <td style="text-align: left"><strong>Export (PDF / Excel)</strong></td>
+          <td style="text-align: left"><strong>Export Calculations</strong></td>
           <td style="text-align: center">❌</td>
           <td style="text-align: center">❌</td>
           <td style="text-align: center">✔️</td>
@@ -272,6 +279,13 @@
       </tr>
       <tr>
           <td style="text-align: left"><strong>Lab Journal</strong></td>
+          <td style="text-align: center">❌</td>
+          <td style="text-align: center">❌</td>
+          <td style="text-align: center">❌</td>
+          <td style="text-align: center">✔️</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>Workflows</strong></td>
           <td style="text-align: center">❌</td>
           <td style="text-align: center">❌</td>
           <td style="text-align: center">❌</td>
@@ -327,6 +341,9 @@ Export data to PDF and Excel for reporting and documentation.</p>
 <p>Document experiments, connect protocols and results, and maintain a complete experimental history.
 Built for traceability, continuity, and long-term data integrity.</p>
 <p>Included in: <strong>Office</strong></p>
+<h3 id="-workflows">🔀 Workflows</h3>
+<p>See common workflows with all the neccessary recipes and methods in order.</p>
+<p>Included in: <strong>Office</strong></p>
 <p>All plans receive continuous updates and are designed for long-term data compatibility and scientific reproducibility.</p>
 
         
@@ -355,17 +372,24 @@ Built for traceability, continuity, and long-term data integrity.</p>
 </footer>
 
 
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   window.supabaseClient = supabase.createClient(
     'https://hkcytxqlswwcfwegpjnf.supabase.co',
-    'sb_publishable_jOItw6osT5EVsEVtQ3K16w_MWQR3YBf'
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrY3l0eHFsc3d3Y2Z3ZWdwam5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY4Mjg2NjIsImV4cCI6MjA4MjQwNDY2Mn0.EPVpZ-1HaM3jhN87FXpJyCP7mmOEzS7zy-HQNZlytF0'
   );
 </script>
 
 
-
 <script src="/BiochemProtocols/js/user/auth.js"></script>
+
+
+<script src="/BiochemProtocols/js/user/subscription.js"></script>
+
+
+<script src="/BiochemProtocols/js/user/guard.js"></script>
+
 
 
 

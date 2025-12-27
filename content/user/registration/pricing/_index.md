@@ -20,8 +20,9 @@ tested = false
 | | [Get Started](#) | [Upgrade](#) | [Upgrade](#) | [Upgrade](#) |
 | | | | | |
 | **Chemicals Recipes – General Buffers** | ✔️ | ✔️ | ✔️ | ✔️ |
+| | | | | |
 | **SOP – Chemicals Recipes** | ❌ | ✔️ | ✔️ | ✔️ |
-| **SExport Labels** | ❌ | ✔️ | ✔️ | ✔️ |
+| **Export Labels** | ❌ | ✔️ | ✔️ | ✔️ |
 | **Volume Calculators** | ❌ | ✔️ | ✔️ | ✔️ |
 | **Molarity Calculators** | ❌ | ✔️ | ✔️ | ✔️ |
 | **Concentration Calculators** | ❌ | ✔️ | ✔️ | ✔️ |
@@ -30,9 +31,10 @@ tested = false
 | **Advanced Calculators** | ❌ | ❌ | ✔️ | ✔️ |
 | **Advanced Gel-Tables** | ❌ | ❌ | ✔️ | ✔️ |
 | **Advanced Cell Growth Calculators** | ❌ | ❌ | ✔️ | ✔️ |
-| **Export (PDF / Excel)** | ❌ | ❌ | ✔️ | ✔️ |
+| **Export Calculations** | ❌ | ❌ | ✔️ | ✔️ |
 | | | | | |
 | **Lab Journal** | ❌ | ❌ | ❌ | ✔️ |
+| **Workflows** | ❌ | ❌ | ❌ | ✔️ |
 | **Priority Updates** | ❌ | ❌ | ❌ | ✔️ |
 | | | | | |
 | **Price** | **Free** | **1 €/month** | **4 €/month** | **15 €/month** |
@@ -75,6 +77,12 @@ Included in: **Labbench** · **Office**
 
 Document experiments, connect protocols and results, and maintain a complete experimental history.
 Built for traceability, continuity, and long-term data integrity.
+
+Included in: **Office**
+
+### 🔀 Workflows
+
+See common workflows with all the neccessary recipes and methods in order.
 
 Included in: **Office**
 

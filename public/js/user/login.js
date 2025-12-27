@@ -67,9 +67,17 @@ if (loginForm) {
     }
 
     console.log('LOGIN OK:', data);
-    location.reload();
+
+    // ✅ Close login modal
+    wrapper_login.classList.remove('active_popup');
+    login_overlay.classList.remove('active');
+    document.body.style.overflow = '';
+
+    // ✅ Optional: update UI immediately
+    document.dispatchEvent(new Event('auth:login'));
   });
 }
+
 
 // Registrierung anbinden //
 const registerForm = document.querySelector('.registration_form form');
@@ -84,21 +92,17 @@ if (registerForm) {
     const password  = registerForm.querySelector('input[type="password"]').value;
 
     const { data, error } = await supabaseClient.auth.signUp({
-    email,
-    password,
-    options: {
+      email,
+      password,
+      options: {
         emailRedirectTo:
-        'https://spikemurphy.github.io/BiochemProtocols/user/registration/callback',
+          'https://spikemurphy.github.io/BiochemProtocols/user/registration/callback',
         data: {
-        first_name: firstName,
-        last_name: lastName
-        },
-        app_metadata: {
-          plan: 'free'
+          first_name: firstName,
+          last_name: lastName
         }
-    }
+      }
     });
-
 
     if (error) {
       alert(error.message);

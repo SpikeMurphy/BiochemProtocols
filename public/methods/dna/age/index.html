@@ -20,7 +20,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body data-required-plan="labbench,office,admin">
 
     
 
@@ -700,17 +700,24 @@ default 12-well comb well volume: TBD</p>
 </footer>
 
 
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
   window.supabaseClient = supabase.createClient(
     'https://hkcytxqlswwcfwegpjnf.supabase.co',
-    'sb_publishable_jOItw6osT5EVsEVtQ3K16w_MWQR3YBf'
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrY3l0eHFsc3d3Y2Z3ZWdwam5mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY4Mjg2NjIsImV4cCI6MjA4MjQwNDY2Mn0.EPVpZ-1HaM3jhN87FXpJyCP7mmOEzS7zy-HQNZlytF0'
   );
 </script>
 
 
-
 <script src="/BiochemProtocols/js/user/auth.js"></script>
+
+
+<script src="/BiochemProtocols/js/user/subscription.js"></script>
+
+
+<script src="/BiochemProtocols/js/user/guard.js"></script>
+
 
 
 

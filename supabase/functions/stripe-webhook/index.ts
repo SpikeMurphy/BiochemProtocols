@@ -15,8 +15,31 @@ const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY")!, {
 ───────────────────────────────────────────── */
 
 const PRICE_TO_PLAN: Record<string, string> = {
-  "price_1AAA111": "Execute",
-  "price_1AAA222": "Execute-Yearly",
+  // Explore
+  "price_1SjHYKRrC5pt0KcWz0XLi9PO": "Explore", // monthly
+  "price_1SjLXGRrC5pt0KcWd1sxWiUZ": "Explore", // yearly
+
+  // Prepare
+  "price_1SjL9sRrC5pt0KcWvY7lbJtL": "Prepare", // monthly
+  "price_1SjLE1RrC5pt0KcWYEHejeeJ": "Prepare", // yearly
+
+  // Execute
+  "price_1SjLAlRrC5pt0KcWKmnb6RrI": "Execute", // monthly
+  "price_1SjLEQRrC5pt0KcWsaR84PUA": "Execute", // yearly
+
+  // Document
+  "price_1SjLB7RrC5pt0KcWcniCIPhU": "Document", // monthly
+  "price_1SjLHjRrC5pt0KcW79OoPw5M": "Document", // yearly
+
+  // Optimize
+  "price_1SjLBURrC5pt0KcWFTXzDOzt": "Optimize", // monthly
+  "price_1SjLFDRrC5pt0KcWltgAgVsA": "Optimize", // yearly
+  "price_1SjLGARrC5pt0KcWDsa1EfYG": "Optimize", // one-off
+
+  // Learn
+  "price_1SjL64RrC5pt0KcWJw4fkK81": "Learn", // monthly
+  "price_1SjLDJRrC5pt0KcWmNDdCHXi": "Learn", // yearly
+  "price_1SjLGiRrC5pt0KcWe4FUJLBh": "Learn", // one-off
 };
 
 /* ─────────────────────────────────────────────
@@ -27,7 +50,6 @@ serve(async (req) => {
   try {
     const signature = req.headers.get("stripe-signature");
 
-    // Stripe sends occasional test calls without signature
     if (!signature) {
       console.warn("⚠️ Missing stripe-signature");
       return new Response("ok", { status: 200 });
@@ -37,7 +59,7 @@ serve(async (req) => {
     let event: Stripe.Event;
 
     try {
-      event = stripe.webhooks.constructEvent(
+      event = await stripe.webhooks.constructEventAsync(
         body,
         signature,
         Deno.env.get("STRIPE_WEBHOOK_SECRET")!
@@ -55,6 +77,12 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_URL")!,
       Deno.env.get("SERVICE_ROLE_KEY")!
     );
+
+
+    console.log("ENV CHECK", {
+      hasServiceKey: !!Deno.env.get("SERVICE_ROLE_KEY"),
+      hasUrl: !!Deno.env.get("SUPABASE_URL"),
+    });
 
     /* ─────────────────────────────────────────────
        Idempotency protection
@@ -90,38 +118,53 @@ serve(async (req) => {
         return new Response("ok", { status: 200 });
       }
 
-      // Retrieve customer (contains Supabase user ID in metadata)
-      const customer = await stripe.customers.retrieve(customerId);
-      const supabaseUserId = (customer as Stripe.Customer).metadata
-        ?.supabase_user_id;
+      // ✅ Prefer session email (Pricing Tables!)
+      let email = session.customer_details?.email ?? null;
 
-      if (!supabaseUserId) {
-        console.warn("⚠️ Missing supabase_user_id in Stripe metadata");
+      if (!email) {
+        const customer = await stripe.customers.retrieve(customerId);
+        email = (customer as Stripe.Customer).email ?? null;
+      }
+
+      if (!email) {
+        console.warn("⚠️ No email found for session:", session.id);
         return new Response("ok", { status: 200 });
       }
 
-      // Retrieve subscription
+      // ✅ Find Supabase user by email
+      const { data: profile, error } = await supabase
+        .from("profiles")
+        .select("id")
+        .ilike("email", email)
+        .single();
+
+      if (error || !profile) {
+        console.warn("⚠️ No Supabase profile for email:", email);
+        return new Response("ok", { status: 200 });
+      }
+
+      const supabaseUserId = profile.id;
+
+      // ✅ Retrieve subscription
       const subscription = await stripe.subscriptions.retrieve(
         subscriptionId
       );
 
-      const priceId =
-        subscription.items.data[0]?.price.id ?? "";
-
+      const priceId = subscription.items.data[0]?.price.id ?? "";
       const plan = PRICE_TO_PLAN[priceId] ?? "free";
 
-      // Persist customer ID on profile (optional but useful)
+      // ✅ Update profile with Stripe customer ID
       await supabase
         .from("profiles")
         .update({ stripe_customer_id: customerId })
         .eq("id", supabaseUserId);
 
-      // Upsert subscription (one row per user)
+      // ✅ Upsert subscription
       await supabase.from("subscriptions").upsert({
         user_id: supabaseUserId,
         stripe_customer_id: customerId,
         stripe_subscription_id: subscription.id,
-        plan: plan,
+        plan,
         status: subscription.status,
         current_period_end: new Date(
           subscription.current_period_end * 1000
@@ -131,8 +174,8 @@ serve(async (req) => {
 
       console.log("✅ Subscription synced:", {
         user: supabaseUserId,
+        email,
         plan,
-        status: subscription.status,
       });
     }
 

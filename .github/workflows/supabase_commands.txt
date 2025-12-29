@@ -1,0 +1,28 @@
+give user admin access:
+
+update auth.users
+set raw_app_meta_data = jsonb_set(
+  raw_app_meta_data,
+  '{role}',
+  '"admin"',
+  true
+)
+where email = 'USERS_EMAIL';
+
+
+
+
+check users access rights:
+
+select email, raw_app_meta_data
+from auth.users
+where email = 'biochemprotocols@gmail.com';
+
+
+
+
+Stripe canonical test card (creditcard for sandbox testing):
+4242 4242 4242 4242
+Any future date
+Any CVC
+Any ZIP

@@ -15,8 +15,15 @@ window.subscription = {
 async function loadSubscription() {
   const user = await getCurrentUser();
 
-  // Not logged in → free access
   if (!user) {
+    window.subscription.loaded = true;
+    return;
+  }
+
+  // Admin override
+  if (user.app_metadata?.role === 'admin') {
+    window.subscription.plan = 'Admin';
+    window.subscription.status = 'active';
     window.subscription.loaded = true;
     return;
   }
@@ -28,7 +35,6 @@ async function loadSubscription() {
     .single();
 
   if (error || !data) {
-    console.warn('Subscription not found, defaulting to free:', error?.message);
     window.subscription.loaded = true;
     return;
   }

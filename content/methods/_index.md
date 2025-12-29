@@ -11,7 +11,7 @@ updated = ''
 outputs = ["html", "JournalIndex"]
 [cascade]
 outputs = ["html", "Body"]
-required_plan = 'labbench,office,admin'
+required_plan = ['Execute', 'Document', 'Optimize', 'Admin']
 +++
 
 {{< infobox type="info" title="Legend" >}}

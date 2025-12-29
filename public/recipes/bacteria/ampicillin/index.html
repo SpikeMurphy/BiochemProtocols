@@ -20,7 +20,7 @@
     <title>Document</title>
 </head>
 
-<body data-required-plan="chemicals,labbench,office,admin">
+<body  data-required-plan='Prepare,Execute,Document,Optimize,Admin' >
 
     
 
@@ -33,7 +33,7 @@
         <li class="navigation"><a href="/BiochemProtocols/workflows">Workflows</a></li>
         <li class="navigation"><a href="/BiochemProtocols/labjournal">Labjournal</a></li>
         <li class="navigation"><a href="/BiochemProtocols/user/registration/pricing/">Pricing</a></li>
-        <li class="navigation"><button class="btn_login">Login</button></li>
+        <li class="navigation"><button class="btn_login" data-state="logged-out">Login</button></li>
     </ul>
 </nav>
 
@@ -93,7 +93,13 @@
                     <label>Password</label>
                 </div>
                 <div class="remember_forgot">
-                    <label><input type="checkbox">Agree to the Terms of Use</label>
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        I agree to the
+                        <a href="/BiochemProtocols/legal/privacy_policy/" target="_blank">Privacy Policy</a>
+                        and
+                        <a href="/BiochemProtocols/legal/terms_of_use/" target="_blank">Terms of Use</a>
+                    </label>
                 </div>
                 <button type="submit" class="btn_login_form">Register</button>
                 <div class="login_register">
@@ -383,6 +389,7 @@
 <footer class="footer">
     <div class="footer_rights">  </div>
     <ul class="footer_navigation">
+        <li class="footer_navigation"><a href="/BiochemProtocols/contact/submission">Contact</a></li>
         <li class="footer_navigation"><a href="/BiochemProtocols/legal/legal_notice">Legal Notice (Impressum)</a></li>
         <li class="footer_navigation"><a href="/BiochemProtocols/legal/privacy_policy">Privacy Policy</a></li>
         <li class="footer_navigation"><a href="/BiochemProtocols/legal/terms_of_use">Terms of Use</a></li>

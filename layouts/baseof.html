@@ -22,7 +22,7 @@
     <title>Document</title>
 </head>
 
-<body data-required-plan="{{ .Params.required_plan }}">
+<body {{ with .Params.required_plan }} data-required-plan='{{ delimit . "," }}' {{ end }}>
 
     {{ partial "navigation" . }}
 

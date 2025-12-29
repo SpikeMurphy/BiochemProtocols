@@ -8,7 +8,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     .split(',')
     .map(p => p.trim());
 
-  if (!allowedPlans.includes(window.subscription.plan)) {
+  if (
+    window.subscription.status !== 'active' ||
+    !allowedPlans.includes(window.subscription.plan)
+  ) {
     window.location.replace('/BiochemProtocols/user/registration/pricing/');
   }
 });

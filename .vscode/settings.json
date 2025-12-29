@@ -1,30 +1,7 @@
 {
-  "todo-tree.general.tags": [
-    "CONTENT_NEW", // content created new and not finished
-    "CONTENT_TODO", // Todo in content
-    "CONTENT_DONE", // content finished but not tested
-
-    "SHORTCODE_TODO", // todo in shortcodes
-    "SHORTCODE_STREAMLINE", // understand and streamline the script
-    "SHORTCODE_CLASSES", // update all classes and id to unique values, where necessary
-    "SHORTCODE_INPROGRESS", // streamlining started
-    "SHORTCODE_DONE", // skript is rewritten and finished
-
-    "JS_TODO", // todo in javascript
-    "JS_COMMENTS", // add comments to all lines of the script
-    "JS_STREAMLINE", // understand and streamline the script
-    "JS_INPROGRESS", // streamlining started
-    "JS_DONE", // skript is understood, rewritten and finished
-
-    "CSS_TODO", // todo in css
-    "CSS_SEPARATE", // split styles into groups organized in individual css-files
-    "CSS_STREAMLINE", // understand and streamline the script
-    "CSS_INPROGRESS", // streamlining started
-    "CSS_DONE", // skript is understood, rewritten and finished
-    
-    "FIX", // feature to be fixed
-    "BUG", // bug to be fixed
-  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
   "cSpell.words": [
     "acrylamid",
     "anhydrotetracycline",
@@ -91,5 +68,46 @@
     "ultrasonicate",
     "ultrasonicator",
     "unneccicery"
+  ],
+  "deno.enablePaths": [
+    "supabase/functions"
+  ],
+  "deno.lint": true,
+  "deno.unstable": [
+    "bare-node-builtins",
+    "byonm",
+    "sloppy-imports",
+    "unsafe-proto",
+    "webgpu",
+    "broadcast-channel",
+    "worker-options",
+    "cron",
+    "kv",
+    "ffi",
+    "fs",
+    "http",
+    "net"
+  ],
+  "todo-tree.general.tags": [
+    "CONTENT_NEW",
+    "CONTENT_TODO",
+    "CONTENT_DONE",
+    "SHORTCODE_TODO",
+    "SHORTCODE_STREAMLINE",
+    "SHORTCODE_CLASSES",
+    "SHORTCODE_INPROGRESS",
+    "SHORTCODE_DONE",
+    "JS_TODO",
+    "JS_COMMENTS",
+    "JS_STREAMLINE",
+    "JS_INPROGRESS",
+    "JS_DONE",
+    "CSS_TODO",
+    "CSS_SEPARATE",
+    "CSS_STREAMLINE",
+    "CSS_INPROGRESS",
+    "CSS_DONE",
+    "FIX",
+    "BUG"
   ]
 }

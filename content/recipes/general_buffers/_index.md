@@ -9,7 +9,7 @@ version = ''
 version_explanation = 'first: major revisions - second: minor revisions - third: revisions without changing procedure'
 updated = ''
 [cascade]
-required_plan = 'free,chemicals,office,admin'
+required_plan = ['Free', 'Prepare', 'Execute', 'Document', 'Optimize', 'Admin']
 +++
 
 

@@ -14,6 +14,25 @@ tested = false
 
 {{< stripe_pricing_table >}}
 
+<div id="subscription-message" style="display:none; margin-top:1rem;"></div>
+
+<script>
+(() => {
+  const params = new URLSearchParams(window.location.search);
+  const msg = document.getElementById("subscription-message");
+
+  if (params.get("success")) {
+    msg.textContent = "✅ Subscription successful! You now have access.";
+    msg.style.display = "block";
+  }
+
+  if (params.get("canceled")) {
+    msg.textContent = "❌ Subscription canceled. No charges were made.";
+    msg.style.display = "block";
+  }
+})();
+</script>
+
 <!--
 | | 💧 Free 💧 | 🧪 Chemicals ⚗️ | 🦠 Labbench 🧫 | 📓 Office 🖥️ |
 | :-- | :--: | :--: | :--: | :--: |

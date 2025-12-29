@@ -1,11 +1,25 @@
 <!-- SHORTCODE_STREAMLINE; SHORTCODE_CLASSES -->
 
-<form class="contact-form" action="https://formsubmit.co/my@email.here" method="POST">
+<form class="contact-form" action="https://formsubmit.co/biochemprotocols@gmail.com" method="POST">
   
-  <!-- FormSubmit options -->
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
   <input type="hidden" name="_next" value="https://spikemurphy.github.io/Laboratory/contact/thanks_for_submission">
+
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="surname">Surname</label>
+  <input type="text" id="surname" name="surname" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="country">Country</label>
+  <input type="text" id="country" name="country" >
+
+  <label for="institution">Institution</label>
+  <input type="text" id="institution" name="institution" required>
 
   <label for="topic">Current position</label>
   <select id="topic" name="topic" required>
@@ -23,28 +37,17 @@
     <option value="data_request">Head of Center</option>
   </select>
 
-  <label for="name">Name</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="surname">Surname</label>
-  <input type="text" id="surname" name="surname" required>
-
-  <label for="institution">Institution</label>
-  <input type="text" id="institution" name="institution" required>
-
-  <label for="country">Country</label>
-  <input type="text" id="country" name="country" >
-
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" required>
-
   <label for="topic">Topic</label>
   <select id="topic" name="topic" required>
     <option value="" disabled selected>Select your topic</option>
-    <option value="general_request">Chemical Recipe</option>
-    <option value="collaboration">Buffer Recipe</option>
-    <option value="data_request">Methode</option>
-    <option value="data_request">Workflow</option>
+    <option value="general_request">Chemical Formulation</option>
+    <option value="collaboration">Buffer Formulation</option>
+    <option value="data_request">Standard Operating Procedure</option>
+    <option value="data_request">Electronic Lab Notebook</option>
+    <option value="data_request">SOP Service</option>
+    <option value="data_request">Institutional Inquiries</option>
+    <option value="data_request">Company Cooperations</option>
+    <option value="data_request">Bugfixes</option>
     <option value="other">Other</option>
   </select>
 

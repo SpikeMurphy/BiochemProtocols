@@ -16,12 +16,18 @@ login_link.addEventListener('click', ()=> {
     wrapper_login.classList.remove('active');
 });
 
+// CHANGED281225
 btn_login.addEventListener('click', (e) => {
-    e.preventDefault();
-    wrapper_login.classList.add('active_popup');
-    login_overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+  e.preventDefault();
+  if (btn_login.dataset.state === 'logged-in') {
+    logout();
+    return;
+  }
+  wrapper_login.classList.add('active_popup');
+  login_overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
 });
+// CHANGED281225
 
 icon_close.addEventListener('click', ()=> {
     wrapper_login.classList.remove('active_popup');
@@ -72,9 +78,6 @@ if (loginForm) {
     wrapper_login.classList.remove('active_popup');
     login_overlay.classList.remove('active');
     document.body.style.overflow = '';
-
-    // ✅ Optional: update UI immediately
-    document.dispatchEvent(new Event('auth:login'));
   });
 }
 
@@ -99,7 +102,9 @@ if (registerForm) {
           'https://spikemurphy.github.io/BiochemProtocols/user/registration/callback',
         data: {
           first_name: firstName,
-          last_name: lastName
+          last_name: lastName,
+          accepted_terms: true,
+          accepted_terms_at: new Date().toISOString()
         }
       }
     });

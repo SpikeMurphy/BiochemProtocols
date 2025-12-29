@@ -1,5 +1,6 @@
 // JS_STREAMLINE
 // JS_COMMENTS
+// FIX: alignment, also refer to CSS file
 
 document.addEventListener('DOMContentLoaded', () => {
   // Shortcode nicht auf der Seite → nichts tun

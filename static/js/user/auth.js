@@ -57,15 +57,26 @@ window.getCurrentUser = getCurrentUser;
 window.requireAuth = requireAuth;
 window.logout = logout;
 
+// CHANGED281225
+function updateLoginButton() {
+  const btn = document.querySelector('.btn_login');
+  if (!btn) return;
+  if (window.auth.user) {
+    btn.textContent = 'Logout';
+    btn.dataset.state = 'logged-in';
+  } else {
+    btn.textContent = 'Login';
+    btn.dataset.state = 'logged-out';
+  }
+}
 document.addEventListener('DOMContentLoaded', async () => {
   await initAuth();
-
-  const btn = document.querySelector('.btn_login');
-  if (btn && window.auth.user) {
-    btn.textContent = 'Logout';
-    btn.onclick = logout;
-  }
+  updateLoginButton();
 });
+supabaseClient.auth.onAuthStateChange(() => {
+  updateLoginButton();
+});
+// CHANGED281225
 
 document.addEventListener('auth:login', async () => {
   const user = await getCurrentUser();

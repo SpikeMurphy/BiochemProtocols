@@ -244,7 +244,11 @@
   </url><url>
     <loc>https://spikemurphy.github.io/BiochemProtocols/categories/</loc>
   </url><url>
+    <loc>https://spikemurphy.github.io/BiochemProtocols/user/registration/checkout/</loc>
+  </url><url>
     <loc>https://spikemurphy.github.io/BiochemProtocols/user/registration/callback/</loc>
+  </url><url>
+    <loc>https://spikemurphy.github.io/BiochemProtocols/user/registration/success/</loc>
   </url><url>
     <loc>https://spikemurphy.github.io/BiochemProtocols/tags/</loc>
   </url>

@@ -10,7 +10,7 @@ version = ''
 version_explanation = 'first: major revisions - second: minor revisions - third: revisions without changing procedure'
 updated = ''
 finished = false
-required_plan = 'office,admin'
+required_plan = ['Document', 'Optimize', 'Admin']
 +++
 
 {{< labjournal >}}

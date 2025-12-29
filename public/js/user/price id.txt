@@ -1,0 +1,27 @@
+const PLAN_MAP: Record<string, string> = {
+  // Explore
+  "price_1SjHYKRrC5pt0KcWz0XLi9PO": "Explore", // monthly
+  "price_1SjLXGRrC5pt0KcWd1sxWiUZ": "Explore", // yearly
+
+  // Prepare
+  "price_1SjL9sRrC5pt0KcWvY7lbJtL": "Prepare", // monthly
+  "price_1SjL9sRrC5pt0KcWvY7lbJtL": "Prepare", // yearly
+
+  // Execute
+  "price_1SjLAlRrC5pt0KcWKmnb6RrI": "Execute", // monthly
+  "price_1SjLEQRrC5pt0KcWsaR84PUA": "Execute", // yearly
+
+  // Document
+  "price_1SjLB7RrC5pt0KcWcniCIPhU": "Document", // monthly
+  "price_1SjLHjRrC5pt0KcW79OoPw5M": "Document", // yearly
+
+  // Optimise
+  "price_1SjLBURrC5pt0KcWFTXzDOzt": "Optimise", // monthly
+  "price_1SjLFDRrC5pt0KcWltgAgVsA": "Optimise", // yearly
+  "price_1SjLGARrC5pt0KcWDsa1EfYG": "Optimise", // one-off
+
+  // Learn
+  "price_1SjL64RrC5pt0KcWJw4fkK81": "Optimise", // monthly
+  "price_1SjLDJRrC5pt0KcWmNDdCHXi": "Optimise", // yearly
+  "price_1SjLGiRrC5pt0KcWe4FUJLBh": "Optimise", // one-off
+};

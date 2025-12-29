@@ -4,7 +4,7 @@
 // ------------------------------------
 
 window.subscription = {
-  plan: 'free',
+  plan: null,
   status: null,
   loaded: false
 };
@@ -35,9 +35,12 @@ async function loadSubscription() {
     .single();
 
   if (error || !data) {
+    window.subscription.plan = null;
+    window.subscription.status = null;
     window.subscription.loaded = true;
     return;
   }
+
 
   window.subscription.plan = data.plan;
   window.subscription.status = data.status;

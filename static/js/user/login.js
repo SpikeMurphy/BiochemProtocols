@@ -78,9 +78,10 @@ if (loginForm) {
     wrapper_login.classList.remove('active_popup');
     login_overlay.classList.remove('active');
     document.body.style.overflow = '';
+    // 🔄 re-run guard with authenticated state
+    window.location.reload();
   });
 }
-
 
 // Registrierung anbinden //
 const registerForm = document.querySelector('.registration_form form');

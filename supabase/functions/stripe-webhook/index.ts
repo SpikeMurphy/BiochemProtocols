@@ -151,7 +151,12 @@ serve(async (req) => {
       );
 
       const priceId = subscription.items.data[0]?.price.id ?? "";
-      const plan = PRICE_TO_PLAN[priceId] ?? "free";
+      const plan = PRICE_TO_PLAN[priceId];
+
+      if (!plan) {
+        console.error("❌ Unknown priceId:", priceId);
+        return new Response("Unknown priceId", { status: 400 });
+      }
 
       // ✅ Update profile with Stripe customer ID
       await supabase

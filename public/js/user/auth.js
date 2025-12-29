@@ -49,7 +49,13 @@ async function requireAuth(redirectTo = '/login/') {
 // Logout
 async function logout() {
   await supabaseClient.auth.signOut();
-  window.location.reload();
+
+  // Clear local state explicitly
+  window.auth.user = null;
+  window.auth.session = null;
+
+  // Optional: redirect to homepage
+  window.location.replace('/BiochemProtocols/');
 }
 
 // Expose helpers
@@ -77,15 +83,3 @@ supabaseClient.auth.onAuthStateChange(() => {
   updateLoginButton();
 });
 // CHANGED281225
-
-document.addEventListener('auth:login', async () => {
-  const user = await getCurrentUser();
-  console.log('User after login:', user);
-
-  // Example: change Login button to Logout
-  const btn = document.querySelector('.btn_login');
-  if (btn && user) {
-    btn.textContent = 'Logout';
-    btn.onclick = logout;
-  }
-});

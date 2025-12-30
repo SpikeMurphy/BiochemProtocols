@@ -9,25 +9,73 @@
     {{ end }}
   </header>
 
-  {{ if eq .RelPermalink "/biochemsheets/chemicals/" }}
+  {{/* ===================================== */}}
+  {{/* LEVEL 0 — chemicals landing page     */}}
+  {{/* ===================================== */}}
+  {{ if and .IsSection (eq .CurrentSection.Title "Chemicals") }}
 
-    <ul class="chapter-list">
+    <ul class="sheets-list">
       {{ range .Sections.ByTitle }}
         <li>
           <a href="{{ .RelPermalink }}">
-            {{ .Title }}
+            <span class="sheets-left">
+              <span class="sheets-name">{{ .Title }}</span>
+            </span>
+
+            <span class="sheets-leader"></span>
           </a>
         </li>
       {{ end }}
     </ul>
 
+  {{/* ===================================== */}}
+  {{/* LEVEL 1 — chapter page               */}}
+  {{/* ===================================== */}}
+  {{ else if gt (len .Sections) 0 }}
+
+    {{ range .Sections.ByTitle }}
+
+      <div class="subchapter-row">
+        <a href="{{ .RelPermalink }}">
+          <span class="sheets-left">
+            <span class="subchapter-name">{{ .Title }}</span>
+          </span>
+          <span class="sheets-leader"></span>
+        </a>
+      </div>
+
+      <ul class="sheets-list">
+        {{ range .Pages.ByTitle }}
+          <li>
+            <a href="{{ .RelPermalink }}">
+              <span class="sheets-left">
+                <span class="sheets-name">{{ .Title }}</span>
+                {{ with .Params.formula }}
+                  <span class="sheets-formula">({{ . }})</span>
+                {{ end }}
+              </span>
+
+              <span class="sheets-leader"></span>
+
+              <span class="sheets-right">
+                {{ with .Params.cas }}{{ . }}{{ end }}
+              </span>
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+
+    {{ end }}
+
+  {{/* ===================================== */}}
+  {{/* LEVEL 2 — subchapter page             */}}
+  {{/* ===================================== */}}
   {{ else }}
 
     <ul class="sheets-list">
       {{ range .Pages.ByTitle }}
         <li>
           <a href="{{ .RelPermalink }}">
-
             <span class="sheets-left">
               <span class="sheets-name">{{ .Title }}</span>
               {{ with .Params.formula }}
@@ -38,11 +86,8 @@
             <span class="sheets-leader"></span>
 
             <span class="sheets-right">
-              {{ with .Params.cas }}
-                {{ . }}
-              {{ end }}
+              {{ with .Params.cas }}{{ . }}{{ end }}
             </span>
-
           </a>
         </li>
       {{ end }}

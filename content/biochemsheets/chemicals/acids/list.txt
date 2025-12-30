@@ -1,0 +1,154 @@
+Very common / core
+Hydrochloric acid (hydrogen chloride)
+Phosphoric acid (tetraoxophosphoric acid)
+Acetic acid (ethanoic acid)
+Formic acid (methanoic acid)
+Trifluoroacetic acid (2,2,2-trifluoroacetic acid)
+Citric acid (2-hydroxypropane-1,2,3-tricarboxylic acid)
+Lactic acid (2-hydroxypropanoic acid)
+Ascorbic acid ((5R)-[(1S)-1,2-dihydroxyethyl]-3,4-dihydroxyfuran-2(5H)-one)
+
+Buffers & pH adjustment
+Carbonic acid (trioxocarbonic acid)
+Boric acid (trioxoboric acid)
+Sulfuric acid (tetraoxosulfuric acid) (mostly for cleaning / stock prep, not assays)
+
+Metabolic & biochemical relevance
+Pyruvic acid (2-oxopropanoic acid)
+Malic acid (2-hydroxybutanedioic acid)
+Succinic acid (butanedioic acid)
+Fumaric acid ((E)-but-2-enedioic acid)
+Oxalic acid (ethanedioic acid)
+
+Occasionally used / niche in bio labs
+These appear in specific techniques, facilities, or research niches, but are not universal.
+Nitric acid (trioxonitric acid) (ICP sample digestion, cleaning)
+Sulfurous acid (trioxosulfuric acid)
+Perchloric acid (tetraoxochloric acid) (rare, tightly regulated)
+Trifluoromethanesulfonic acid (trifluoromethanesulfonic acid)
+Methanesulfonic acid (methanesulfonic acid)
+Benzoic acid (benzenecarboxylic acid)
+Salicylic acid (2-hydroxybenzoic acid)
+Gallic acid (3,4,5-trihydroxybenzoic acid)
+Tartaric acid (2,3-dihydroxybutanedioic acid)
+Glycolic acid (2-hydroxyethanoic acid)
+
+
+
+
+
+aminoacids to link:
+Aspartic acid (2-aminobutanedioic acid)
+Glutamic acid (2-aminopentanedioic acid)
+
+
+
+
+
+
+
+
+
+
+
+Very comprehensive list (not all regularly used)
+
+Inorganic (Mineral) Acids
+Hydrochloric acid (hydrogen chloride)
+Hydrobromic acid (hydrogen bromide)
+Hydroiodic acid (hydrogen iodide)
+Hydrofluoric acid (hydrogen fluoride)
+Nitric acid (trioxonitric acid)
+Nitrous acid (dioxonitric acid)
+Sulfuric acid (tetraoxosulfuric acid)
+Sulfurous acid (trioxosulfuric acid)
+Perchloric acid (tetraoxochloric acid)
+Chloric acid (trioxochloric acid)
+Chlorous acid (dioxochloric acid)
+Hypochlorous acid (oxochloric acid)
+Phosphoric acid (tetraoxophosphoric acid)
+Phosphorous acid (trioxophosphoric acid)
+Hypophosphorous acid (oxophosphinic acid)
+Boric acid (trioxoboric acid)
+Carbonic acid (trioxocarbonic acid)
+Chromic acid (tetraoxochromic acid)
+Dichromic acid (heptaoxodichromic acid)
+Selenic acid (tetraoxoselenic acid)
+Selenous acid (trioxoselenic acid)
+Arsenic acid (tetraoxoarsenic acid)
+Arsenous acid (trioxoarsenic acid)
+Silicic acid (tetrahydroxysilane)
+
+Organic Acids – Carboxylic Acids
+Simple & Common
+Formic acid (methanoic acid)
+Acetic acid (ethanoic acid)
+Propionic acid (propanoic acid)
+Butyric acid (butanoic acid)
+Valeric acid (pentanoic acid)
+Caproic acid (hexanoic acid)
+Caprylic acid (octanoic acid)
+Capric acid (decanoic acid)
+Lauric acid (dodecanoic acid)
+Myristic acid (tetradecanoic acid)
+Palmitic acid (hexadecanoic acid)
+Stearic acid (octadecanoic acid)
+
+Unsaturated Fatty Acids
+Oleic acid ((9Z)-octadec-9-enoic acid)
+Linoleic acid ((9Z,12Z)-octadeca-9,12-dienoic acid)
+Linolenic acid ((9Z,12Z,15Z)-octadeca-9,12,15-trienoic acid)
+Arachidonic acid ((5Z,8Z,11Z,14Z)-eicosa-5,8,11,14-tetraenoic acid)
+
+Dicarboxylic & Tricarboxylic
+Oxalic acid (ethanedioic acid)
+Malonic acid (propanedioic acid)
+Succinic acid (butanedioic acid)
+Glutaric acid (pentanedioic acid)
+Adipic acid (hexanedioic acid)
+Maleic acid ((Z)-but-2-enedioic acid)
+Fumaric acid ((E)-but-2-enedioic acid)
+Tartaric acid (2,3-dihydroxybutanedioic acid)
+Citric acid (2-hydroxypropane-1,2,3-tricarboxylic acid)
+
+Hydroxy Acids & Biochemical Acids
+Lactic acid (2-hydroxypropanoic acid)
+Glycolic acid (2-hydroxyethanoic acid)
+Malic acid (2-hydroxybutanedioic acid)
+Pyruvic acid (2-oxopropanoic acid)
+Ascorbic acid ((5R)-[(1S)-1,2-dihydroxyethyl]-3,4-dihydroxyfuran-2(5H)-one)
+Dehydroascorbic acid (3,4-dihydroxy-5-(1,2-dioxoethyl)furan-2(5H)-one)
+
+Amino Acids (Acidic & General)
+Aspartic acid (2-aminobutanedioic acid)
+Glutamic acid (2-aminopentanedioic acid)
+Glycine (aminoacetic acid)
+Alanine (2-aminopropanoic acid)
+Cysteine (2-amino-3-sulfanylpropanoic acid)
+
+Sulfonic & Related Acids
+Methanesulfonic acid (methanesulfonic acid)
+Ethanesulfonic acid (ethanesulfonic acid)
+p-Toluenesulfonic acid (4-methylbenzenesulfonic acid)
+Trifluoromethanesulfonic acid (trifluoromethanesulfonic acid)
+Benzenesulfonic acid (benzenesulfonic acid)
+
+Aromatic & Phenolic Acids
+Benzoic acid (benzenecarboxylic acid)
+Salicylic acid (2-hydroxybenzoic acid)
+Gallic acid (3,4,5-trihydroxybenzoic acid)
+Phthalic acid (benzene-1,2-dicarboxylic acid)
+Terephthalic acid (benzene-1,4-dicarboxylic acid)
+
+Biochemical & Nucleic Acids
+Phosphoric acid (tetraoxophosphoric acid)
+Deoxyribonucleic acid (poly(deoxyribonucleotide))
+Ribonucleic acid (poly(ribonucleotide))
+Adenylic acid (adenosine monophosphate)
+Guanylic acid (guanosine monophosphate)
+Cytidylic acid (cytidine monophosphate)
+Uridylic acid (uridine monophosphate)
+Strong & Superacids (Educational Reference)
+Fluorosulfuric acid (fluorosulfuric acid)
+Magic acid (fluorosulfuric acid–antimony pentafluoride system)
+Trifluoroacetic acid (2,2,2-trifluoroacetic acid)

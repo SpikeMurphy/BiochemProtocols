@@ -6,8 +6,22 @@
     <description>Recent content in Welcome to BiochemProtocols Web on BiochemProtocols</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Dec 2025 16:17:59 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 30 Dec 2025 14:20:59 +0100</lastBuildDate>
     <atom:link href="https://spikemurphy.github.io/BiochemProtocols/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test 1</title>
+      <link>https://spikemurphy.github.io/BiochemProtocols/biochemsheets/chemicals/test/testsubchapter1/test1/</link>
+      <pubDate>Tue, 30 Dec 2025 14:20:59 +0100</pubDate>
+      <guid>https://spikemurphy.github.io/BiochemProtocols/biochemsheets/chemicals/test/testsubchapter1/test1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test 2</title>
+      <link>https://spikemurphy.github.io/BiochemProtocols/biochemsheets/chemicals/test/testsubchapter1/test2/</link>
+      <pubDate>Tue, 30 Dec 2025 14:20:59 +0100</pubDate>
+      <guid>https://spikemurphy.github.io/BiochemProtocols/biochemsheets/chemicals/test/testsubchapter1/test2/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Single Antibody Incubation Following Western Blotting</title>
       <link>https://spikemurphy.github.io/BiochemProtocols/methods/sds-page_and_western_blotting/single_antibody_following_wb/</link>

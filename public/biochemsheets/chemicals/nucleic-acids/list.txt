@@ -1,0 +1,23 @@
+Polymeric nucleic acids
+Deoxyribonucleic acid (poly(deoxyribonucleotide))
+Ribonucleic acid (poly(ribonucleotide))
+
+Nucleotides
+Adenylic acid (adenosine monophosphate)
+Guanylic acid (guanosine monophosphate)
+Cytidylic acid (cytidine monophosphate)
+Uridylic acid (uridine monophosphate)
+Deoxyadenylic acid (deoxyadenosine monophosphate)
+Deoxyguanylic acid (deoxyguanosine monophosphate)
+Deoxycytidylic acid (deoxycytidine monophosphate)
+Thymidylic acid (deoxythymidine monophosphate)
+
+Nucleosides (often included for completeness)
+Adenosine (9-β-D-ribofuranosyladenine)
+Guanosine (9-β-D-ribofuranosylguanine)
+Cytidine (4-amino-1-β-D-ribofuranosylpyrimidin-2-one)
+Uridine (1-β-D-ribofuranosylpyrimidine-2,4-dione)
+Deoxyadenosine (9-(2-deoxy-β-D-ribofuranosyl)adenine)
+Deoxyguanosine (9-(2-deoxy-β-D-ribofuranosyl)guanine)
+Deoxycytidine (4-amino-1-(2-deoxy-β-D-ribofuranosyl)pyrimidin-2-one)
+Thymidine (1-(2-deoxy-β-D-ribofuranosyl)-5-methylpyrimidine-2,4-dione)

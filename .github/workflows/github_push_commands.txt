@@ -51,6 +51,7 @@ hugo server
 rm -rf public
 hugo
 git add .
-git commit -m "update: public pricing table"
+git commit -m "update: biochemsheets layout"
 git push
 --------------------------------------------
+hugo new biochemsheets/chemicals/acids/

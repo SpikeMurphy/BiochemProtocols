@@ -1,0 +1,48 @@
+Proteinogenic
+
+Nonpolar / Aliphatic
+Glycine (2-aminoacetic acid)
+Alanine (2-aminopropanoic acid)
+Valine (2-amino-3-methylbutanoic acid)
+Leucine (2-amino-4-methylpentanoic acid)
+Isoleucine (2-amino-3-methylpentanoic acid)
+Proline ((S)-pyrrolidine-2-carboxylic acid)
+
+Aromatic
+Phenylalanine (2-amino-3-phenylpropanoic acid)
+Tyrosine (2-amino-3-(4-hydroxyphenyl)propanoic acid)
+Tryptophan (2-amino-3-(1H-indol-3-yl)propanoic acid)
+
+Polar, Uncharged
+Serine (2-amino-3-hydroxypropanoic acid)
+Threonine (2-amino-3-hydroxybutanoic acid)
+Asparagine (2-amino-3-carbamoylpropanoic acid)
+Glutamine (2-amino-4-carbamoylbutanoic acid)
+Cysteine (2-amino-3-sulfanylpropanoic acid)
+Methionine (2-amino-4-(methylsulfanyl)butanoic acid)
+
+Charged / Acidic & Basic
+Aspartic acid (2-aminobutanedioic acid)
+Glutamic acid (2-aminopentanedioic acid)
+Lysine (2,6-diaminohexanoic acid)
+Arginine (2-amino-5-guanidinopentanoic acid)
+Histidine (2-amino-3-(1H-imidazol-4-yl)propanoic acid)
+
+
+Commonly Used Non-Proteinogenic Amino Acids (Bio Labs)
+
+Ornithine (2,5-diaminopentanoic acid)
+Citrulline (2-amino-5-(carbamoylamino)pentanoic acid)
+Homocysteine (2-amino-4-sulfanylbutanoic acid)
+Homoserine (2-amino-4-hydroxybutanoic acid)
+β-Alanine (3-aminopropanoic acid)
+γ-Aminobutyric acid (4-aminobutanoic acid)
+Taurine (2-aminoethanesulfonic acid)
+Selenocysteine (2-amino-3-selenanylpropanoic acid)
+Pyrrolysine (2-amino-6-(pyrroline-5-carboxamido)hexanoic acid)
+
+Modified / Biochemically Relevant Amino Acids
+Hydroxyproline ((2S,4R)-4-hydroxypyrrolidine-2-carboxylic acid)
+Hydroxylysine ((5R)-5-hydroxy-L-lysine)
+N-acetylcysteine ((2R)-2-acetamido-3-sulfanylpropanoic acid)
+L-DOPA ((2S)-2-amino-3-(3,4-dihydroxyphenyl)propanoic acid)

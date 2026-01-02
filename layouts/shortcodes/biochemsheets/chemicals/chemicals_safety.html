@@ -1,0 +1,63 @@
+<dl class="chemicals-safety">
+
+{{- if or 
+    .Page.Params.signal_word 
+    .Page.Params.physical_hazard_classes 
+    .Page.Params.health_hazard_classes 
+    .Page.Params.environmental_hazard_classes 
+}}
+<dt class="section">Global Harmonized System</dt>
+{{ end }}
+
+{{- with .Page.Params.signal_word }}
+<dt>Signal word</dt> 
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.physical_hazard_classes }}
+<dt>Physical hazard</dt> 
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.health_hazard_classes }}
+<dt>Health hazard</dt> 
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.environmental_hazard_classes }}
+<dt>Environmental hazard</dt> 
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- if or .Page.Params.gloves .Page.Params.mask .Page.Params.fume_hood }}
+<dt class="section">Personal protection</dt>
+{{ end }}
+
+
+{{- with .Page.Params.gloves }}
+<dt>Gloves</dt> 
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.mask }}
+<dt>Mask</dt> 
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.fume_hood }}
+<dt>Fume hood</dt> 
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+</dl>
+
+<br>
+
+<dl class="chemicals-safety-sub">
+{{- if or 
+    .Page.Params.signal_word 
+    .Page.Params.hazard_class 
+}}
+<dt>Always consult institutional safety documentation and safety data sheet before use.</dt>
+{{ end }}
+</dl>

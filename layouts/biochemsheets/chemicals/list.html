@@ -51,14 +51,14 @@
               <span class="sheets-left">
                 <span class="sheets-name">{{ .Title }}</span>
                 {{ with .Params.formula }}
-                  <span class="sheets-formula">({{ . }})</span>
+                  <span class="sheets-formula">({{ delimit . ", " | safeHTML }})</span>
                 {{ end }}
               </span>
 
               <span class="sheets-leader"></span>
 
               <span class="sheets-right">
-                {{ with .Params.cas }}{{ . }}{{ end }}
+                {{ with .Params.cas_number }}{{ . }}{{ end }}
               </span>
             </a>
           </li>
@@ -79,7 +79,7 @@
             <span class="sheets-left">
               <span class="sheets-name">{{ .Title }}</span>
               {{ with .Params.formula }}
-                <span class="sheets-formula">({{ . }})</span>
+                <span class="sheets-formula">({{ delimit . ", " | safeHTML }})</span>
               {{ end }}
             </span>
 

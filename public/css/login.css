@@ -1,0 +1,237 @@
+/* =================================== */
+/* =================================== */
+/* CSS_DONE */
+/* =================================== */
+/* =================================== */
+
+
+/* =================================== */
+/* ========== login overlay ========== */
+/* =================================== */
+.login_overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.login_overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* =================================== */
+/* ========== login wrapper ========== */
+/* =================================== */
+.wrapper_login {
+    position: fixed;
+    inset: 0;
+    margin: auto; 
+    width: 400px;
+    height: 450px;
+    background: linear-gradient(90deg, #1f2937aa, #111827aa);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 6px rgb(116, 136, 162);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: height 0.5s ease-in-out,
+                transform 0.3s ease-in-out;
+    overflow: hidden;
+    transform: scale(0);
+}
+body.darkmode .wrapper_login {
+    background: linear-gradient(90deg, #111827aa, #000000aa);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 6px rgb(29, 47, 68);
+}
+.wrapper_login.active {
+    height: 520px;
+}
+.wrapper_login.active_popup {
+    transform: scale(1);
+}
+
+/* ================================= */
+/* ========== login close ========== */
+/* ================================= */
+.wrapper_login .icon_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    color: #d2e9ff;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+.wrapper_login .icon_close:hover {
+    transform: scale(1.10);
+    color: #3482ff;
+    transition: transform 0.3s ease-in-out;
+}
+.wrapper_login .icon_close:active {
+    color: #d2e9ff;
+}
+
+/* ================================= */
+/* ========== login forms ========== */
+/* ================================= */
+.wrapper_login .login_form {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 40px;
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+}
+.wrapper_login.active .login_form {
+    transform: translateX(-400px);
+    transition: transform 0.5s ease;
+}
+.wrapper_login .registration_form {
+    position: absolute;
+    transform: translateX(400px);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 40px;
+    transition: transform 0.5s ease;
+}
+.wrapper_login.active .registration_form {
+    transform: translateX(0);
+    transition: transform 0.5s ease;
+}
+
+/* ======================================== */
+/* ========== login form content ========== */
+/* ======================================== */
+
+/* ========== header ========== */
+.login_form h2 {
+    font-size: 2em;
+    color: #d2e9ff;
+    text-align: center;
+}
+.registration_form h2 {
+    font-size: 2em;
+    color: #d2e9ff;
+    text-align: center;
+}
+/* ========== names ========== */
+.registration_form_names {
+    gap: 14px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+}
+/* ========== inputs ========== */
+.input_box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 22px;
+}
+.input_box input {
+    width: 100%;
+    padding: 12px 14px 12px 40px;
+    background: transparent;
+    border: 1px solid #d2e9ff;
+    border-radius: 10px;
+    color: #d2e9ff;
+    font-size: 0.95rem;
+    outline: none;
+}
+.input_box input:focus {
+    border-color: #3b82f6;
+}
+.input_box label {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    color: #9fb4d9;
+    font-size: 0.85rem;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+.input_box input:focus + label,
+.input_box input:valid + label {
+    top: -8px;
+    left: 14px;
+    font-size: 0.75rem;
+    padding: 0 6px;
+    color: #3b82f6;
+}
+.input_box .icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #d2e9ff;
+    font-size: 1.1rem;
+}
+/* ========== remember/forget ========== */
+.remember_forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+}
+.remember_forgot label {
+    display: flex;
+    align-items: center;
+    color: #d2e9ff;;
+    gap: 6px;
+}
+.remember_forgot a {
+    color: #81c2ff;
+    cursor: pointer;
+}
+.remember_forgot a:hover {
+    color: #3b82f6;
+}
+/* ========== login btn ========== */
+.btn_login_form {
+    background: transparent;
+    border: 1px solid #d2e9ff;
+    border-radius: 10px;
+    color: #d2e9ff;
+    cursor: pointer;
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: 600;
+    transition: transform 0.3s ease-in-out,
+                box-shadow 0.15s ease-in-out;
+}
+.btn_login_form:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.5);
+}
+.btn_login_form:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
+}
+/* ========== login/register ========== */
+.login_register {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+.login_register p {
+    color: #d2e9ff;
+}
+.login_register a {
+    color: #81c2ff;
+    cursor: pointer;
+}
+.login_register a:hover {
+    color: #3482ff;
+}

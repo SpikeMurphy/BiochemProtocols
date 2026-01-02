@@ -1,0 +1,44 @@
+/* =================================== */
+/* =================================== */
+/* CSS_STREAMLINE */
+/* =================================== */
+/* =================================== */
+
+
+/* ========== Protocol Header (minimal) ========== */
+.protocol-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 18px;
+}
+
+/* ----- Titles ----- */
+.protocol-titles h1 {
+  margin: 0;
+}
+
+.protocol-titles h2 {
+  margin: 2px 0 0 0;
+}
+
+/* ----- Meta ----- */
+.protocol-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Authors */
+.protocol-authors h5 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Affiliations */
+.protocol-affiliations h5 {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.25;
+}

@@ -1,0 +1,34 @@
+{{ if .Params.sponsored }}
+  {{ $key := .Params.sponsor }}
+  {{ with index site.Data.sponsors $key }}
+<a href="{{ .url }}"
+   class="sponsor-link"
+   style="
+    --sponsor-accent1: {{ .accent1 | default "#0d54c6" }};
+    --sponsor-accent2: {{ .accent2 | default "#3b82f6" }};
+   "
+   target="_blank"
+   rel="sponsored noopener"
+   aria-label="Sponsored: {{ .name }}">
+
+<section class="sponsor-banner">
+  <span class="sponsor-badge">Sponsored</span>
+  <div class="sponsor-inner">
+
+    {{ if .logo }}
+      <div class="sponsor-brand">
+        <img src="{{ .logo }}" alt="{{ .name }} logo">
+      </div>
+    {{ end }}
+
+    <div class="sponsor-text">
+      <strong class="sponsor-name">{{ .name }}</strong>
+      <span class="sponsor-tagline">{{ .tagline }}</span>
+    </div>
+
+  </div>
+</section>
+
+</a>
+  {{ end }}
+{{ end }}

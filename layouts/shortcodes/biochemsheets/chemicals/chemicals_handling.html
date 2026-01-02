@@ -1,0 +1,108 @@
+<dl class="chemicals-handling">
+
+{{- if or
+    .Page.Params.appearance
+    .Page.Params.melting_point
+    .Page.Params.boiling_point
+    .Page.Params.solubility
+    .Page.Params.pKa
+    .Page.Params.ph_range_effective
+    .Page.Params.acid_base_properties
+    .Page.Params.net_charge
+    .Page.Params.isoelectric_point
+}}
+<dt class="section">Physical properties</dt>
+{{ end }}
+
+{{ with .Page.Params.appearance }}
+<dt>Appearance</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{ with .Page.Params.melting_point }}
+<dt>Melting point</dt>
+<dd>{{ delimit . ", " }} °C</dd>
+{{ end }}
+
+{{ with .Page.Params.boiling_point }}
+<dt>Boiling point</dt>
+<dd>{{ delimit . ", " }} °C</dd>
+{{ end }}
+
+{{- with .Page.Params.solubility }}
+<dt>Solubility</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.pKa }}
+<dt>pKa</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.ph_range_effective }}
+<dt>Effective pH range</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.acid_base_properties }}
+<dt>Acid/base properties</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.net_charge }}
+<dt>Net charge</dt>
+<dd>{{ delimit . ", " }}</dd>
+
+{{ end }}
+{{- with .Page.Params.isoelectric_point }}
+<dt>Isoelectric point</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- if or 
+    .Page.Params.stability 
+    .Page.Params.storage_conditions 
+    .Page.Params.shelf_life 
+}}
+<dt class="section">Stability & storage</dt>
+{{ end }}
+
+{{- with .Page.Params.stability }}
+<dt>Stability</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.storage_conditions }}
+<dt>Storage conditions</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.shelf_life }}
+<dt>Shelf life</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- if or 
+    .Page.Params.typical_stock_concentrations 
+    .Page.Params.incompatibilities 
+}}
+<dt class="section">Compatibility & Use</dt>
+{{ end }}
+
+{{- with .Page.Params.typical_stock_concentrations }}
+<dt>Typical stocks</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- with .Page.Params.incompatibilities }}
+<dt>Avoid contact with</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+</dl>
+
+<br>
+
+<dl class="chemicals-handling-sub">
+<dt></dt>
+</dl>

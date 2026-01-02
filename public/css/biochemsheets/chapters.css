@@ -1,0 +1,135 @@
+/* =============================== */
+/* Book container                  */
+/* =============================== */
+.chem-book {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+  font-family: ui-serif, Georgia, Cambria, serif;
+  color: #111827;
+}
+
+/* =============================== */
+/* Header                          */
+/* =============================== */
+.chem-header h1 {
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.chem-intro {
+  font-size: 16px;
+  color: #4b5563;
+  max-width: 640px;
+}
+
+/* =============================== */
+/* Chapter list (TOC style)        */
+/* =============================== */
+.chapter-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 36px;
+}
+
+.chapter-list li {
+  margin: 16px 0;
+}
+
+.chapter-list a {
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #1f2937;
+}
+
+.chapter-list a:hover {
+  text-decoration: underline;
+}
+
+/* =============================== */
+/* Chemical index list             */
+/* =============================== */
+.chemical-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 40px;
+}
+
+/* One row */
+.chemical-list li {
+  margin: 10px 0;
+}
+
+/* Clickable row */
+.chemical-list a {
+  display: flex;
+  align-items: baseline;
+  text-decoration: none;
+  color: #111827;
+}
+
+/* =============================== */
+/* Left: name + formula            */
+/* =============================== */
+.chem-left {
+  display: inline-flex;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+/* Name */
+.chem-name {
+  font-weight: 500;
+}
+
+/* Formula */
+.chem-formula {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* =============================== */
+/* Dot leader (elastic)            */
+/* =============================== */
+.chem-leader {
+  flex: 1;
+  margin: 0 12px;
+  border-bottom: 1px dotted #c7d2fe; /* subtle blue */
+  transform: translateY(-3px);
+}
+
+/* =============================== */
+/* Right: CAS                     */
+/* =============================== */
+.chem-right {
+  white-space: nowrap;
+  font-size: 14px;
+  color: #1e40af; /* darker blue */
+}
+
+/* =============================== */
+/* Hover                          */
+/* =============================== */
+.chemical-list a:hover .chem-name {
+  text-decoration: underline;
+}
+
+/* =============================== */
+/* Mobile                          */
+/* =============================== */
+@media (max-width: 700px) {
+  .chemical-list a {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .chem-leader {
+    display: none;
+  }
+
+  .chem-right {
+    color: #374151;
+  }
+}

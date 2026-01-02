@@ -9,19 +9,19 @@
     <link rel="stylesheet" href="{{ "css/backbone/login.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/backbone/header.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/backbone/footer.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/backbone/sponsor_banner.css" | relURL }}">
     <!-- backbone -->
     <!-- unorganized styling -->
     <link rel="stylesheet" href="{{ "css/styles.css" | relURL }}">
-
     <link rel="stylesheet" href="{{ "css/pricing_table_public.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/buttons.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/dropdowns.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/calc_bacterial_growth.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/table_sds-page_gels.css" | relURL }}">
-
     <!-- /unorganized styling -->
     <!-- biochemsheets -->
     <link rel="stylesheet" href="{{ "css/biochemsheets/backbone.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/biochemsheets/chemicals.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/biochemsheets/table_of_contents.css" | relURL }}">
     <!-- biochemsheets -->
     <!-- math -->
@@ -43,6 +43,10 @@
       {{ partial "header" . }}
     {{ end }}
     
+    {{ if .Params.sponsored }}
+      {{ partial "sponsor_banner" . }}
+    {{ end }}
+
     <main>
 
             {{block "main" . }}

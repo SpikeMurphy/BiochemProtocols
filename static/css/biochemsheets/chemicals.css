@@ -1,0 +1,122 @@
+/* ========== infobox context ========== */
+.chemicals-metadata {
+  display: grid;
+  padding-top: 20px;
+  grid-template-columns: 180px 1fr;
+  row-gap: 0.6rem;
+  column-gap: 1.2rem;
+  margin: 0;
+}
+.chemicals-metadata dt {
+  font-weight: 600;
+  color: #274f87;
+}
+.chemicals-metadata dd {
+  margin: 0;
+  color: #274f87;
+}
+.chemicals-metadata-sub dt {
+  color: #274f87;
+}
+.chemicals-metadata dt.section {
+  grid-column: 1 / -1;
+  margin-bottom: 0.2rem;
+  padding-top: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #0f234b;
+  border-bottom: 1px solid #0f234b40;
+}
+@media (max-width: 600px) {
+  .chemicals-metadata {
+    grid-template-columns: 1fr;
+  }
+  .chemicals-metadata dt {
+    margin-top: 0.6rem;
+  }
+}
+/* ========== /infobox context ========== */
+
+/* ========== infobox safety ========== */
+.chemicals-safety {
+  display: grid;
+  padding-top: 20px;
+  grid-template-columns: 180px 1fr;
+  row-gap: 0.6rem;
+  column-gap: 1.2rem;
+  margin: 0;
+}
+.chemicals-safety dt {
+  font-weight: 600;
+  color: #711111;
+}
+.chemicals-safety dd {
+  margin: 0;
+  color: #711111;
+}
+.chemicals-safety dt.section {
+  grid-column: 1 / -1;
+  margin-bottom: 0.2rem;
+  padding-top: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #4b0f0f;
+  border-bottom: 1px solid #4b0f0f40;
+}
+.chemicals-safety-sub dt {
+  color: #711111;
+}
+@media (max-width: 600px) {
+  .chemicals-safety {
+    grid-template-columns: 1fr;
+  }
+  .chemicals-safety dt {
+    margin-top: 0.6rem;
+  }
+}
+/* ========== /infobox safety ========== */
+
+/* ========== infobox handling ========== */
+.chemicals-handling {
+  display: grid;
+  padding-top: 20px;
+  grid-template-columns: 180px 1fr;
+  row-gap: 0.6rem;
+  column-gap: 1.2rem;
+  margin: 0;
+}
+.chemicals-handling dt {
+  font-weight: 600;
+  color: #674516;
+}
+.chemicals-handling dd {
+  margin: 0;
+  color: #674516;
+}
+.chemicals-handling dt.section {
+  grid-column: 1 / -1;
+  margin-bottom: 0.2rem;
+  padding-top: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #4b2f0f;
+  border-bottom: 1px solid #4b2f0f40;
+}
+.chemicals-handling-sub dt {
+  color: #674516;
+}
+@media (max-width: 600px) {
+  .chemicals-handling {
+    grid-template-columns: 1fr;
+  }
+  .chemicals-handling dt {
+    margin-top: 0.6rem;
+  }
+}
+/* ========== /infobox handling ========== */

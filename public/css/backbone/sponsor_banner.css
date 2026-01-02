@@ -1,0 +1,139 @@
+/* CSS_TODO: streamline & enhance*/
+
+
+
+/* ============================================
+   Sponsor Banner – clickable card
+   ============================================ */
+
+/* ---- Link wrapper (no underline, full card clickable) ---- */
+.sponsor-link {
+  display: block;
+  margin: -6px 10% 26px;
+  text-decoration: none;
+  color: inherit;
+
+}
+
+
+.sponsor-link:visited,
+.sponsor-link:hover,
+.sponsor-link:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---- Inner layout ---- */
+.sponsor-inner {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+}
+
+/* ---- Brand block ---- */
+.sponsor-brand {
+  display: flex;
+  align-items: center;
+  padding: 4px 6px;
+  border-radius: 8px;
+}
+
+.sponsor-brand img {
+  height: 100px;
+  width: auto;
+  border-radius: 6px;
+}
+
+/* ---- Text block ---- */
+.sponsor-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.25;
+  color: var(--sponsor-accent1);
+}
+
+/* ---- Badge ---- */
+.sponsor-badge {
+  position: absolute;
+  top: 18px;
+  right: -46px;
+  width: 160px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgb(123, 0, 0);
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.45), rgba(255, 55, 55, 0.45));
+  transform: rotate(45deg);
+  transform-origin: center;
+  pointer-events: none;
+  user-select: none;
+  z-index: 5;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+.sponsor-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 6px;
+  background: linear-gradient(180deg, #e8f4ff, #ffffff);
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgb(116, 136, 162);
+}
+
+/* ---- Sponsor name ---- */
+.sponsor-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ---- Tagline ---- */
+.sponsor-tagline {
+  font-size: 0.9rem;
+  color: var(--sponsor-accent2);
+}
+body.darkmode .sponsor-tagline {
+  color: var(--sponsor-accent2);
+}
+
+/* ---- Hover interaction (whole card) ---- */
+.sponsor-link:hover .sponsor-banner {
+  box-shadow: 0 4px 14px color-mix(in srgb, lightblue, transparent 65%);
+  transform: translateY(-1px);
+}
+
+body.darkmode .sponsor-tagline {
+  color: var(--sponsor-accent1);
+}
+/* ============================================
+   Dark mode
+   ============================================ */
+
+body.darkmode .sponsor-name {
+  color: var(--sponsor-accent1);
+
+}
+
+body.darkmode .sponsor-tagline {
+  color: var(--sponsor-accent2);
+
+}
+
+body.darkmode .sponsor-link:hover .sponsor-banner {
+  box-shadow: 0 4px 14px rgba(96, 165, 250, 0.25);
+}
+
+/* ============================================
+   Print: hide sponsor
+   ============================================ */
+
+@media print {
+  .sponsor-link {
+    display: none !important;
+  }
+}

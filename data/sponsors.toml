@@ -1,0 +1,15 @@
+[ThermoFisher]
+name = "Thermo Fisher Scientific"
+tagline = "Reagents & instruments for molecular biology"
+url = "https://www.thermofisher.com"
+logo = "/BiochemProtocols/images/sponsors/.png"
+accent1= "#ba0028ff"
+accent2= "#b63954ff"
+
+[CarlROTH]
+name = "Carl ROTH"
+tagline = "Ihr professioneller Laborpartner"
+url = "https://www.carlroth.com/"
+logo = "/BiochemProtocols/images/sponsors/.png"
+accent1= "#ba0028ff"
+accent2= "#b63954ff"

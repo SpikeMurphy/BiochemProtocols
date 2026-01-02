@@ -1,0 +1,62 @@
+<dl class="chemicals-metadata">
+
+{{- if or 
+    .Page.Params.common_name 
+    .Page.Params.short_name 
+    .Page.Params.IUPAC 
+    .Page.Params.other_names 
+    .Page.Params.cas_number 
+}}
+<dt class="section">Identity</dt>
+{{ end }}
+
+{{ with .Page.Params.common_name }}
+<dt>Name</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{ with .Page.Params.short_name }}
+<dt>Short name</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{ with .Page.Params.IUPAC }}
+<dt>IUPAC name</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{ with .Page.Params.other_names }}
+<dt>Other name</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+{{- if or 
+    .Page.Params.formula 
+    .Page.Params.molecular_weight 
+    .Page.Params.cas_number 
+}}
+<dt class="section">Composition & structure</dt>
+{{ end }}
+
+{{ with .Page.Params.formula }}
+<dt>Molecular formula</dt>
+<dd>{{ delimit . ", " | safeHTML }}</dd>
+{{ end }}
+
+{{ with .Page.Params.molecular_weight }}
+<dt>Molecular weight</dt>
+<dd>{{ delimit . ", " }} g/mol</dd>
+{{ end }}
+
+{{ with .Page.Params.cas_number }}
+<dt>CAS number</dt>
+<dd>{{ delimit . ", " }}</dd>
+{{ end }}
+
+</dl>
+
+<br>
+
+<dl class="chemicals-metadata-sub">
+<dt></dt>
+</dl>

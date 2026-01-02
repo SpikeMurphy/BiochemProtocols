@@ -4,14 +4,13 @@ draft = false
 construction = true
 title = 'Test 2'
 noheader = true
-formula = "CH2COOH"
-cas = "CAS12-222-090"
+formula = "CH<sub>2</sub>COOH"
+cas_number = "CAS12-222-090"
 subtitle = ''
 author = ''
 version = ''
 version_explanation = 'first: major revisions - second: minor revisions - third: revisions without changing procedure'
 updated = ''
-outputs = ["html", "JournalIndex"]
 [cascade]
 outputs = ["html", "Body"]
 +++

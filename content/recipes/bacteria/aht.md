@@ -14,7 +14,7 @@ updated = ''
 finished = true
 tested = false
 +++
-<!-- DONE: tested = true, delete -->
+<!-- CONTENT_TODO: calculator -->
 
 {{< infobox type="info" title="" >}}
 ⚠️ AHT is a light sensitive chemical.
@@ -35,7 +35,7 @@ tested = false
 <!-- markdownlint-disable MD033 -->
 | Material | Molecular Weight | Specifications | Location |
 | :-- | :-- | :-- | :-- |
-| anhydrotetracycline hydrochloride *AHT* [<sup>SDS</sup>](https://www.carlroth.com/.../) | 478.88 g/mol | solid | {{< chemical_location chemical="aht_solid" >}} |
+| [anhydrotetracycline hydrochloride *AHT*]({{< relref "/biochemsheets/chemicals/antibiotics/tetracyclines/chem_aht" >}}) [<sup>SDS</sup>](https://documents.thermofisher.com/DirectWebViewer/private/document.aspx?prd=ALFAAJ66688~~PDF~~MTR~~CLP1~~EE~~2024-02-11%2003:53:11~~Anhydrotetracycline%20hydrochloride~~) | 462.88 g/mol | solid | {{< chemical_location chemical="aht_solid" >}} |
 | <span id="alt_aht_m_m_dmso">(methanesulfinyl)methane (= dimethylsulfoxid) *DMSO* [<sup>SDS</sup>](https://www.carlroth.com/medias/SDS-7029-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNjE5ODN8YXBwbGljYXRpb24vcGRmfGFHSmxMMmc1Wmk4NU1qQTJOelkyTURRek1UWTJMMU5FUWw4M01ESTVYMFJGWDBWT0xuQmtaZ3xmZTllZjBmZjI2OGQ4YjNhZDdlZjhjNjI2MTgwNWY2NGUwMGJlZTNhYWE3ODY2NTllNWMzY2VlYTJiN2JhYTEz)</span>     <span id="alt_aht_m_m_etoh" style="display:none">Ethanol *EtOH*</span> {{< alternative_switches/alt_aht_dmso >}} | <span id="alt_aht_m_mw_dmso">78.13 g/mol</span>     <span id="alt_aht_m_mw_etoh" style="display:none">46.068 g/mol</span> | <span id="alt_aht_m_specs_dmso">organic solvent</span>     <span id="alt_aht_m_specs_etoh" style="display:none">alternative organic solvent</span> | <span id="alt_aht_m_l_dmso">{{< chemical_location chemical="dmso" >}}</span>     <span id="alt_aht_m_l_etoh" style="display:none">{{< chemical_location chemical="etoh_100%" >}}</span> |
 <!-- markdownlint-enable MD033 -->
 
@@ -51,7 +51,7 @@ tested = false
 <!-- markdownlint-disable MD033 -->
 | | Material/Step | Volume/Mass | molar/%/comment |
 | :-- | :-- | :-- | :-- |
-| {{< checkbox >}} | AHT | 2 mg | 4.2 mM |
+| {{< checkbox >}} | AHT | 2 mg | 4.32 mM |
 | {{< checkbox >}} | <span id="alt_aht_r_ms_dmso">DMSO</span>     <span id="alt_aht_r_ms_etoh" style="display:none">EtOH</span> | <span id="alt_aht_r_vm_dmso">1 mL</span>     <span id="alt_aht_r_vm_etoh" style="display:none">1 mL</span> | |
 | {{< checkbox >}} | filter through 0.22 µm syringe filter | | |
 | {{< checkbox >}} | store in 100 µL aliquots @ -20 °C | | |
@@ -65,7 +65,7 @@ tested = false
 
 | Use Case | Specifications |
 | :-- | :-- |
-| [Bacterial Protein Expression Culture]({{< relref "protein_expression_culture" >}}) | Typical concentration of 0.42 (0.021-0.42) µM for induction of tet-controlled promoters (Tet-On/Tet-Off systems, Ptet promoters, tetO operators, TetR-regulated promoters, tet-regulated CRISPRi/CRISPRa systems) |
+| [Bacterial Protein Expression Culture]({{< relref "protein_expression_culture" >}}) | Typical concentration of 4.32 (21.6-4.32) nM for induction of tet-controlled promoters (Tet-On/Tet-Off systems, Ptet promoters, tetO operators, TetR-regulated promoters, tet-regulated CRISPRi/CRISPRa systems) |
 
 {{< /tab >}}
 

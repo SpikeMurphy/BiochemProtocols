@@ -13,8 +13,9 @@ version_explanation = 'first: major revisions - second: minor revisions - third:
 updated = '05.09.2025'
 finished = true
 tested = false
+math = true
 +++
-<!-- CONTENT_NEW: delete when finished = true + tested = true -->
+<!-- CONTENT_TODO: calculator -->
 
 {{< tab >}}
 
@@ -22,8 +23,8 @@ tested = false
 
 | Material | Molecular Weight | Specifications | Location |
 | :---- | :----- | :----- | :----- |
-| [ampicillin]({{< relref "/biochemsheets/chemicals/antibiotics/betalactams/ampicillin.md" >}}) [<sup>SDS</sup>](https://www.carlroth.com/medias/SDB-K029-CH-DE.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNjc2Mzh8YXBwbGljYXRpb24vcGRmfGFEQXpMMmd3Wmk4NU1UYzJPRGsxTkRnNE1ETXdMMU5FUWw5TE1ESTVYME5JWDBSRkxuQmtaZ3wwMTFkZjg4YWY1ZDUzNGJkNzY0ODQ2MTljNjFkMDkwM2ZiOTczMDJjYTY3N2VjYTNiZWZhMTMyYzY2NzkyMjg3) | 349.406 g/mol  | solid | {{< chemical_location chemical="ampicillin_solid" >}} |
-| deionized sterilized Water *dsH<sub>2</sub>O* | 18.015 g/mol | liquid |  |
+| [ampicillin sodium salt *Amp-Na*]({{< relref "/biochemsheets/chemicals/antibiotics/betalactams/chem_ampicillin.md" >}}) [<sup>SDS</sup>](https://www.carlroth.com/medias/SDB-K029-CH-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyNjAzNzd8YXBwbGljYXRpb24vcGRmfGFEYzJMMmcxTVM4NU1qRXdNRGsxTlRrNU5qUTJMMU5FUWw5TE1ESTVYME5JWDBWT0xuQmtaZ3xlM2VjMWE1NjlkNTVjOTQ2MDgyN2NmZDM5MTFmNDY4MWZlZmE2MGRmZmY5YWY4YzIzYjZmZmY5NWNlNWZmNzU0) | 371.39 g/mol | solid | {{< chemical_location chemical="ampicillin_solid" >}} |
+| deionized sterilized Water *dsH<sub>2</sub>O* | 18.015 g/mol | liquid | |
 | syringe filter | | 0.22 µm | {{< chemical_location chemical="syringe filter" >}} |
 | store in 1 mL aliquots @ -20 °C | | | |
 
@@ -38,23 +39,30 @@ tested = false
 <!-- { {< calculators/calc_recipe_x >}} -->
 <!-- { {< calculators/calc_recipe_mol >}} -->
 
-|  | Material/Step | Volume/Mass | molar/%/comment |
-|  :-- | :---- | :----- | :----- |
-| {{< checkbox >}} | ampicillin | 2 g | 286 mM (100 mg/mL) |
+| | Material/Step | Volume/Mass | molar/%/comment |
+| :-- | :---- | :----- | :----- |
+| {{< checkbox >}} | Amp-Na | 2 g | 269 mM |
 | {{< checkbox >}} | dsH<sub>2</sub>O | 20 mL | |
 | {{< checkbox >}} | filter through 0.22 µm syringe filter | | |
-| {{< checkbox >}} | aliquot in 1 mL fractions  | | |
+| {{< checkbox >}} | aliquot in 1 mL fractions | | |
+
+{{< infobox type="info" >}}
+⚠️ 100 mg/mL Amp-Na equal $\equiv$ 94 mg/mL free Amp acid  
+❗️ 269 mM Amp-Na equal = 269 mM free Amp acid
+{{< /infobox >}}
+
 {{< /tab >}}
 
 {{< tab >}}
 
 ## Use Cases
 
-| Use Case | Specifications |
+| Use Case | Specifications |
 | :---- | :----- |
-| [Bacterial Plasmid Preparation Culture]({{< relref "methods/bacteria/plasmid_prep_culture.md" >}}) | usually 100 mg/L |
-| [Bacterial Expression Culture]({{< relref "methods/bacteria/protein_expression_culture.md" >}}) | usually 100 mg/L |
-| [Luria-Bertani Agar Medium]({{< relref "recipes/bacteria/lb-agar.md" >}}) | usually 100 mg/L |
+| [Bacterial Plasmid Preparation Culture]({{< relref "methods/bacteria/plasmid_prep_culture.md" >}}) | typically 100 mg/L |
+| [Bacterial Expression Culture]({{< relref "methods/bacteria/protein_expression_culture.md" >}}) | typically 100 mg/L |
+| [Luria-Bertani Agar Medium]({{< relref "recipes/bacteria/lb-agar.md" >}}) | typically 100 mg/L |
+
 {{< /tab >}}
 
 {{< tab >}}

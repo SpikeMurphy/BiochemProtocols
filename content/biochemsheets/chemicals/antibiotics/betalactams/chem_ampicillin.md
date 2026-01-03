@@ -13,7 +13,7 @@ finished = true
 tested = false
 
 common_name = ['Ampicillin Sodium']
-short_name = ['AMP', 'Amp']
+short_name = ['Amp']
 IUPAC = ['sodium (2S,5R,6R)-6-[(2R)-2-amino-2-phenylacetamido]-3,3-dimethyl-7-oxo-4-thia-1-azabicyclo[3.2.0]heptane-2-carboxylic acid']
 other_names = ['Ampicillin', 'α-Aminobenzylpenicillin sodium', 'Ampicillin sodium salt']
 cas_number = ['69-52-3']
@@ -27,7 +27,8 @@ health_hazard_classes = ['respiratory sensitization', 'skin sensitization']
 environmental_hazard_classes = []
 
 gloves = ['nitrile gloves, EN ISO 374-1 type B']
-mask = ['not required', 'recommended when dust forms']
+eye_protection = []
+mask = ['not normally required; use dust mask if powder handling generates aerosols']
 fume_hood = ['not required']
 
 appearance = ['white to off-white powder']
@@ -42,7 +43,11 @@ net_charge = ['neutral at pH 7', 'negatively charged above pH x.x', 'positively 
 isoelectric_point = ['pI ≈ 5.3']
 
 storage_conditions = ['powder at 4 °C', 'protected from light']
-stability = ['stable in air', 'hydrolyzes in aqueous solution', 'looses 65 % of its initial activity when stored in Water at 4 °C for seven days']
+stability = [
+    'photosensitive',
+    'stable in air',
+    'hydrolyzes in aqueous solution',
+    'looses 65 % of its initial activity when stored in Water at 4 °C for seven days']
 shelf_life = ['2–3 years under proper storage conditions']
 common_use_cases = ['bacterial selection marker']
 incompatibilities = ['strong acids', 'strong bases', 'oxidizing agents', 'β-lactamase enzymes']

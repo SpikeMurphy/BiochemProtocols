@@ -27,7 +27,8 @@ health_hazard_classes = ['']
 environmental_hazard_classes = ['']
 
 gloves = ['nitrile gloves, EN ISO 374-1 type A/B/C, EN ISO 374-5 bacteria & fungi + VIRUSES']
-mask = ['not required']
+eye_protection = ['recommended']
+mask = ['not normally required; use dust mask if powder handling generates aerosols']
 fume_hood = ['not required']
 
 appearance = ['white crystalline solid']
@@ -41,12 +42,13 @@ acid_base_properties = ['weak/strong acid/base with an effective buffering range
 net_charge = ['neutral at pH 7', 'negatively charged above pH x.x', 'positively charged below pH x.x']
 isoelectric_point = ['pI x.x']
 
-storage_conditions = ['room temperature']
+storage_conditions = ['room temperature', 'protected from light']
 stability = ['stable in air']
 shelf_life = ['indefinite under proper storage conditions']
 common_use_cases = ['']
 incompatibilities = ['']
 typical_stock_concentrations = ['']
+recipe = ['']
 
 example_SDS = ['']
 
@@ -78,39 +80,39 @@ references = [
 # <!---------- frontmatter examples ---------->
 
 physical_hazard_classes = [
-  "explosive",
-  "flammable gas",
-  "flammable liquid",
-  "flammable solid",
-  "oxidizing agent",
-  "self-reactive substance",
-  "pyrophoric substance",
-  "self-heating substance",
-  "water-reactive substance",
-  "organic peroxide",
-  "gas under pressure",
-  "corrosive to metals",
-  "desensitized explosive"
+  'explosive',
+  'flammable gas',
+  'flammable liquid',
+  'flammable solid',
+  'oxidizing agent',
+  'self-reactive substance',
+  'pyrophoric substance',
+  'self-heating substance',
+  'water-reactive substance',
+  'organic peroxide',
+  'gas under pressure',
+  'corrosive to metals',
+  'desensitized explosive'
 ]
 health_hazard_classes = [
-  "acute toxicity",
-  "skin corrosion",
-  "skin irritation",
-  "serious eye damage",
-  "eye irritation",
-  "respiratory sensitization",
-  "skin sensitization",
-  "germ cell mutagenicity",
-  "carcinogenicity",
-  "reproductive toxicity",
-  "specific target organ toxicity – single exposure",
-  "specific target organ toxicity – repeated exposure",
-  "aspiration hazard"
+  'acute toxicity',
+  'skin corrosion',
+  'skin irritation',
+  'serious eye damage',
+  'eye irritation',
+  'respiratory sensitization',
+  'skin sensitization',
+  'germ cell mutagenicity',
+  'carcinogenicity',
+  'reproductive toxicity',
+  'specific target organ toxicity – single exposure',
+  'specific target organ toxicity – repeated exposure',
+  'aspiration hazard'
 ]
 environmental_hazard_classes = [
-  "hazardous to the aquatic environment – acute",
-  "hazardous to the aquatic environment – chronic",
-  "ozone layer hazard"
+  'hazardous to the aquatic environment – acute',
+  'hazardous to the aquatic environment – chronic',
+  'ozone layer hazard'
 ]
 signal_word = [
   'warning',

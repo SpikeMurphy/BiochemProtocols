@@ -48,6 +48,7 @@ shelf_life = ['indefinite under proper storage conditions']
 common_use_cases = ['buffers', 'osmotic strength and osmolarity balancing']
 incompatibilities = []
 typical_stock_concentrations = ['5 M in aqueous solution']
+recipe = []
 
 example_SDS = ['https://www.carlroth.com/medias/SDB-3957-DE-EN.pdf?context=bWFzdGVyfHNlY3VyaXR5RGF0YXNoZWV0c3wyMjczMTF8YXBwbGljYXRpb24vcGRmfGFEYzFMMmd4T1M4NU1qQTJOamd6TkRBeU1qY3dMMU5FUWw4ek9UVTNYMFJGWDBWT0xuQmtaZ3wzNTAyOTI3ZDZjZWM0YzNlN2E3N2YxN2VlMGM5YzhjNTNhYTJlMDZiNWY2MjdkNmExZDUwZjVmMzlkODNkMTdh']
 
